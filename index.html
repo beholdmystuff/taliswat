@@ -1,0 +1,334 @@
+<html>
+<head>
+<style>
+body
+{
+    margin: 0;
+}
+#gameMap
+{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url(bg.jpg);
+    background-size: 100% 100%;
+}
+#gameMap img
+{
+    pointer-events: none;
+    position: absolute;
+    outline: none;
+    border: 0px;
+}
+#gameMap div
+{
+    width: 6353px;
+    height: 3792px;
+    cursor: grab;
+    user-select: none;
+    transform-origin: center;
+}
+.boardBase
+{
+    width: 4096px;
+    height: 2048px;
+    top: 885px;
+    left: 1114px;
+    z-index: 2;
+}
+.boardExpansion
+{
+    width: 2560px;
+    height: 1792px;
+    z-index: 1;
+}
+.boardWoodlands
+{
+    top: 1990px;
+    left: 3790px;
+}
+.boardCity
+{
+    top: 0px;
+    left: 0px;
+}
+.boardDungeon
+{
+    top: 0px;
+    left: 3790px;
+}
+.boardHighlands
+{
+    top: 1990px;
+    left: 0px;
+}
+
+</style>
+</head>
+<body>
+<div id="gameMap"><div>
+    <img class="boardBase">
+    <img class="boardExpansion boardWoodlands">
+    <img class="boardExpansion boardCity">
+    <img class="boardExpansion boardDungeon">
+    <img class="boardExpansion boardHighlands">
+</div></div>
+
+</body>
+<script>
+function fetch(url, type)
+{
+    return new Promise((resolve, reject)=>
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+
+        if (type)
+            xhr.responseType = type;
+
+        xhr.addEventListener("load", function ()
+        {
+            if (xhr.status !== 200)
+                resolve(false);
+            else
+                resolve(xhr.response);
+
+        }, false);
+        xhr.send();
+    });
+}
+
+function storagePut(cmd)
+{
+    return new Promise(function(resolve, reject)
+    {
+        let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+        var dbRequest = indexedDB.open(cmd.db);
+
+        dbRequest.onerror = function(event)
+        {
+            reject(event);
+        };
+
+        dbRequest.onupgradeneeded = function(event)
+        {
+            var database = event.target.result;
+            var objectStore = database.createObjectStore(cmd.store);//, {keyPath: "id"});
+        };
+
+        dbRequest.onsuccess = function(event)
+        {
+            var database = event.target.result;
+            var transaction = database.transaction([cmd.store], 'readwrite');
+            var objectStore = transaction.objectStore(cmd.store);
+            var objectRequest = objectStore.put(cmd.data, cmd.name); // Overwrite if exists
+
+            objectRequest.onerror = function(event)
+            {
+                reject(event);
+            };
+
+            objectRequest.onsuccess = function(event)
+            {
+                resolve(event.target.result);
+            };
+        };
+    });
+}
+
+function storageGet(cmd)
+{
+    return new Promise(function(resolve, reject)
+    {
+        let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+        var dbRequest = indexedDB.open(cmd.db);
+
+        dbRequest.onerror = function(event)
+        {
+            reject(event);
+        };
+
+        dbRequest.onupgradeneeded = function(event)
+        {
+            var database = event.target.result;
+            var objectStore = database.createObjectStore(cmd.store);//, {keyPath: "id"});
+        };
+
+        dbRequest.onsuccess = function(event)
+        {
+            var database = event.target.result;
+            var transaction = database.transaction([cmd.store], 'readwrite');
+            var objectStore = transaction.objectStore(cmd.store);
+            var objectRequest = objectStore.get(cmd.name); // Overwrite if exists
+
+            objectRequest.onerror = function(event)
+            {
+                reject(event);
+            };
+
+            objectRequest.onsuccess = function(event)
+            {
+                resolve(event.target.result);
+            };
+        };
+    });
+}
+
+function storageExists(cmd)
+{
+    return new Promise(function(resolve, reject)
+    {
+        let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+        var dbRequest = indexedDB.open(cmd.db);
+
+        dbRequest.onerror = function(event)
+        {
+            reject(event);
+        };
+
+        dbRequest.onupgradeneeded = function(event)
+        {
+            var database = event.target.result;
+            var objectStore = database.createObjectStore(cmd.store);//, {keyPath: "id"});
+        };
+
+        dbRequest.onsuccess = function(event)
+        {
+            var database = event.target.result;
+            var transaction = database.transaction([cmd.store], 'readwrite');
+            var objectStore = transaction.objectStore(cmd.store);
+            resolve(objectStore.indexNames.contains(cmd.name));
+        };
+    });
+}
+
+/* GAME MAP */
+let dragging = false;
+let rotating = false;
+let gameMap = document.querySelector("#gameMap");
+let gameMapInner = gameMap.querySelector("div");
+let computedStyle = window.getComputedStyle(gameMapInner);
+let innerWidth = parseInt(window.getComputedStyle(gameMapInner).width.replace("px", ""));
+let innerHeight = parseInt(window.getComputedStyle(gameMapInner).height.replace("px", ""));
+let transform = {translate: [innerWidth*-0.35, innerHeight*-0.37], scale: 0.4, rotate: 0}
+function setTransform()
+{
+    gameMapInner.style.setProperty("transform", "translate3d(" + transform.translate[0] + "px," + transform.translate[1] + "px, 0px) scale(" + transform.scale + ") rotate(" + Math.round(transform.rotate/5)*5 + "deg)");
+}
+// gameMapInner.style.setProperty("transform-origin", "center");
+setTransform();
+// gameMapInner.style.setProperty("transform-origin", "100% 50%");
+
+
+function translateMap(event)
+{
+    if (dragging && event.ctrlKey)
+    {
+        // gameMapInner.style.removeProperty("transform-origin");
+        transform.rotate += (event.movementX + event.movementY);
+        setTransform();
+        // gameMapInner.style.setProperty("transform-origin", "100% 50%");
+    }
+    else if (dragging && !event.ctrlKey)
+    {
+        transform.translate[0] += event.movementX * 2;
+        if (transform.translate[0] > 250)
+            transform.translate[0] = 250;
+        if (transform.translate[0] < -4346)
+            transform.translate[0] = -4346;
+
+        transform.translate[1] += event.movementY * 2;
+        if (transform.translate[1] > 250)
+            transform.translate[1] = 250;
+        if (transform.translate[1] < -2810)
+            transform.translate[1] = -2810;
+            
+        setTransform();
+    }
+}
+gameMap.addEventListener("mousedown", function(event)
+{
+    console.log(event);
+    dragging = true;
+    gameMapInner.style.setProperty("cursor", "grabbing");
+    gameMap.addEventListener("mousemove", translateMap);
+});
+
+gameMap.addEventListener("mouseup", function(event)
+{
+    dragging = false;
+    gameMapInner.style.setProperty("cursor", "grab");
+});
+function wheelZoom(event)
+{
+    transform.scale += (event.deltaY * -0.0005);
+    if (transform.scale < 0.2)
+        transform.scale = 0.2;
+    else if (transform.scale > 1)
+        transform.scale = 1;
+
+    setTransform();
+}
+document.addEventListener("wheel", wheelZoom); //set da event
+
+async function ass()
+{
+    //main board
+    let boardBase = await fetch(window.location.origin + "/assets/board_base.png", "blob");
+    let bbReq = {db: "Talisman", store: "boardAssets", data: boardBase, name: "boardBase"};
+    let bbRes = await storagePut(bbReq);
+    bbRes = await storageGet(bbReq);
+
+    var URL = window.URL || window.webkitURL;
+    var bbIMGURL = URL.createObjectURL(bbRes);
+    var bbElement = document.querySelector(".boardBase");
+    bbElement.setAttribute("src", bbIMGURL);
+
+    //highlands
+    let boardHighlands = await fetch(window.location.origin + "/assets/board_highlands.png", "blob");
+    let bhReq = {db: "Talisman", store: "boardAssets", data: boardHighlands, name: "boardHighlands"};
+    let bhRes = await storagePut(bhReq);
+    bhRes = await storageGet(bhReq);
+
+    var bhIMGURL = URL.createObjectURL(bhRes);
+    var bhElement = document.querySelector(".boardExpansion.boardHighlands");
+    bhElement.setAttribute("src", bhIMGURL);
+
+    //city
+    let boardCity = await fetch(window.location.origin + "/assets/board_city.png", "blob");
+    let bcReq = {db: "Talisman", store: "boardAssets", data: boardCity, name: "boardCity"};
+    let bcRes = await storagePut(bcReq);
+    bcRes = await storageGet(bcReq);
+
+    var bcIMGURL = URL.createObjectURL(bcRes);
+    var bcElement = document.querySelector(".boardExpansion.boardCity");
+    bcElement.setAttribute("src", bcIMGURL);
+
+    //dungeon
+    let boardWoodlands = await fetch(window.location.origin + "/assets/board_woodlands.png", "blob");
+    let bwReq = {db: "Talisman", store: "boardAssets", data: boardWoodlands, name: "boardWoodlands"};
+    let bwRes = await storagePut(bwReq);
+    bwRes = await storageGet(bwReq);
+
+    var bwIMGURL = URL.createObjectURL(bwRes);
+    var bwElement = document.querySelector(".boardExpansion.boardWoodlands");
+    bwElement.setAttribute("src", bwIMGURL);
+
+    //dungeon
+    let boardDungeon = await fetch(window.location.origin + "/assets/board_dungeon.png", "blob");
+    let bdReq = {db: "Talisman", store: "boardAssets", data: boardDungeon, name: "boardDungeon"};
+    let bdRes = await storagePut(bdReq);
+    bdRes = await storageGet(bdReq);
+
+    var bdIMGURL = URL.createObjectURL(bdRes);
+    var bdElement = document.querySelector(".boardExpansion.boardDungeon");
+    bdElement.setAttribute("src", bdIMGURL);
+
+    //removes image on opera
+    // URL.revokeObjectURL(imgURL);
+
+    console.log("DB save status:", res);
+}
+ass();
+</script>
+</html>
