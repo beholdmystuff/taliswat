@@ -5,6 +5,7 @@ body
 {
     margin: 0;
 }
+/* CONTAINERS */
 #gameMap
 {
     overflow: hidden;
@@ -13,14 +14,13 @@ body
     background-image: url(bg.jpg);
     background-size: 100% 100%;
 }
-#gameMap img
+#gameMapInner div
 {
-    pointer-events: none;
     position: absolute;
     outline: none;
     border: 0px;
 }
-#gameMap div
+#gameMapInner
 {
     width: 6353px;
     height: 3792px;
@@ -28,6 +28,7 @@ body
     user-select: none;
     transform-origin: center;
 }
+/* BOARD MAPS*/
 .boardBase
 {
     width: 4096px;
@@ -35,12 +36,14 @@ body
     top: 885px;
     left: 1114px;
     z-index: 2;
+    background-size: 100% 100%;
 }
 .boardExpansion
 {
     width: 2560px;
     height: 1792px;
     z-index: 1;
+    background-size: 100% 100%;
 }
 .boardWoodlands
 {
@@ -62,19 +65,254 @@ body
     top: 1990px;
     left: 0px;
 }
+/* BASE BOARD SPACES */
+.space
+{
+    position: absolute;
+    mix-blend-mode: screen;
+    opacity: 0.0;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    animation: fadeOut 0.5s;
+}
+.space:hover
+{
+    opacity: 0.5;
+    animation: fadeIn 1s infinite;
+}
+@keyframes fadeIn
+{
+    0% {opacity: 0.5}
+    50% {opacity: 0.75}
+    100% {opacity: 0.5}
+}
+@keyframes fadeOut
+{
+    0% {opacity: 0.5}
+    100% {opacity: 0.0}
+}
 
+.citySpace
+{
+    width: 555px;
+    height: 300px;
+    top: 33px;
+    left: 44px;
+}
+.fields1Space
+{
+    width: 585px;
+    height: 300px;
+    top: 33px;
+    left: 595px;
+}
+.hillsSpace
+{
+    width: 577px;
+    height: 300px;
+    top: 33px;
+    left: 1178px;
+}
+.plains1Space
+{
+    width: 577px;
+    height: 300px;
+    top: 33px;
+    left: 1754px;
+}
+.woodsSpace
+{
+    width: 570px;
+    height: 300px;
+    top: 33px;
+    left: 2331px;
+}
+.plains2Space
+{
+    width: 585px;
+    height: 300px;
+    top: 33px;
+    left: 2901px;
+}
+.tavernSpace
+{
+    width: 570px;
+    height: 315px;
+    top: 33px;
+    left: 3486px;
+}
+.fields2Space
+{
+    width: 450px;
+    height: 288px;
+    top: 348px;
+    left: 3605px;
+}
+.ruinsSpace
+{
+    width: 450px;
+    height: 272px;
+    top: 634px;
+    left: 3605px;
+}
+.plains3Space
+{
+    width: 450px;
+    height: 272px;
+    top: 906px;
+    left: 3605px;
+}
+.forest3Space
+{}
+.fields3Space
+{}
+.villageSpace
+{}
+.fields4Space
+{}
+.graveyardSpace
+{}
+.woods2Space
+{}
+.sentinelSpace
+{}
+.hills2Space
+{}
+.chapelSpace
+{}
+.fields5Space
+{}
+.cragsSpace
+{}
+.plains4Space
+{}
+.woods3Space
+{}
+.fields6Space
+{}
+/* SPACE HIHGLIGHT */
+.topLeftHighlight
+{
+    background-image: url(assets/board/glow/tl_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 25%;
+    top: 0px;
+    left: 0px;
+}
+.topHighlight
+{
+    background-image: url(assets/board/glow/t_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 25%;
+    top: 0px;
+    left: 25%;
+}
+.topRightHighlight
+{
+    background-image: url(assets/board/glow/tr_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 25%;
+    top: 0px;
+    right: 0px;
+}
+.rightHighlight
+{
+    background-image: url(assets/board/glow/r_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 50%;
+    top: 25%;
+    right: 0px;
+}
+.bottomRightHighlight
+{
+    background-image: url(assets/board/glow/br_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 25%;
+    bottom: 0px;
+    right: 0px;
+}
+.bottomHighlight
+{
+    background-image: url(assets/board/glow/b_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 25%;
+    bottom: 0px;
+    right: 25%;
+}
+.bottomLeftHighlight
+{
+    background-image: url(assets/board/glow/bl_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 25%;
+    top: 75%;
+    left: 0px;
+}
+.LeftHighlight
+{
+    background-image: url(assets/board/glow/l_alpha.png);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 50%;
+    bottom: 25%;
+    left: 0px;
+}
 </style>
 </head>
 <body>
-<div id="gameMap"><div>
-    <img class="boardBase">
-    <img class="boardExpansion boardWoodlands">
-    <img class="boardExpansion boardCity">
-    <img class="boardExpansion boardDungeon">
-    <img class="boardExpansion boardHighlands">
+<div id="gameMap"><div id="gameMapInner">
+    <div class="boardBase">
+        <div class="space citySpace"></div>
+        <div class="space fields1Space"></div>
+        <div class="space hillsSpace"></div>
+        <div class="space plains1Space"></div>
+        <div class="space woodsSpace"></div>
+        <div class="space plains2Space"></div>
+        <div class="space tavernSpace"></div>
+        <div class="space fields2Space"></div>
+        <div class="space ruinsSpace"></div>
+        <div class="space plains3Space"></div>
+        <div class="space forest3Space"></div>
+        <div class="space fields3Space"></div>
+        <div class="space villageSpace"></div>
+        <div class="space fields4Space"></div>
+        <div class="space graveyardSpace"></div>
+        <div class="space woods2Space"></div>
+        <div class="space sentinelSpace"></div>
+        <div class="space hills2Space"></div>
+        <div class="space chapelSpace"></div>
+        <div class="space fields5Space"></div>
+        <div class="space cragsSpace"></div>
+        <div class="space plains4Space"></div>
+        <div class="space woods3Space"></div>
+        <div class="space fields6Space"></div>
+    </div>
+    <div class="boardExpansion boardWoodlands">
+    </div>
+    <div class="boardExpansion boardCity">
+    </div>
+    <div class="boardExpansion boardDungeon">
+    </div>
+    <div class="boardExpansion boardHighlands">
+    </div>
 </div></div>
 
 </body>
+<script src="assets/text/spaces.js"></script>
 <script>
 function fetch(url, type)
 {
@@ -206,7 +444,7 @@ function storageExists(cmd)
 let dragging = false;
 let rotating = false;
 let gameMap = document.querySelector("#gameMap");
-let gameMapInner = gameMap.querySelector("div");
+let gameMapInner = gameMap.querySelector("#gameMapInner");
 let computedStyle = window.getComputedStyle(gameMapInner);
 let innerWidth = parseInt(window.getComputedStyle(gameMapInner).width.replace("px", ""));
 let innerHeight = parseInt(window.getComputedStyle(gameMapInner).height.replace("px", ""));
@@ -219,36 +457,45 @@ function setTransform()
 setTransform();
 // gameMapInner.style.setProperty("transform-origin", "100% 50%");
 
+function capMovement()
+{
+    if (transform.translate[0] > 250)
+        transform.translate[0] = 250;
+    if (transform.translate[0] < -4346)
+        transform.translate[0] = -4346;
+    if (transform.translate[1] > 250)
+        transform.translate[1] = 250;
+    if (transform.translate[1] < -2810)
+        transform.translate[1] = -2810;
+}
+
+function moveMap(event)
+{
+    transform.translate[0] += event.movementX * (2 * transform.scale);
+    transform.translate[1] += event.movementY * (2 * transform.scale);
+
+    capMovement()
+    setTransform();
+}
+function rotateMap(event)
+{
+    // gameMapInner.style.removeProperty("transform-origin");
+    transform.rotate += (event.movementX + (event.movementY * -1));
+    setTransform();
+    // gameMapInner.style.setProperty("transform-origin", "100% 50%");
+}
 
 function translateMap(event)
 {
+    gameMapInner.style.setProperty("transition", "transform 0.0s linear");
     if (dragging && event.ctrlKey)
-    {
-        // gameMapInner.style.removeProperty("transform-origin");
-        transform.rotate += (event.movementX + event.movementY);
-        setTransform();
-        // gameMapInner.style.setProperty("transform-origin", "100% 50%");
-    }
+        rotateMap(event);
     else if (dragging && !event.ctrlKey)
-    {
-        transform.translate[0] += event.movementX * 2;
-        if (transform.translate[0] > 250)
-            transform.translate[0] = 250;
-        if (transform.translate[0] < -4346)
-            transform.translate[0] = -4346;
-
-        transform.translate[1] += event.movementY * 2;
-        if (transform.translate[1] > 250)
-            transform.translate[1] = 250;
-        if (transform.translate[1] < -2810)
-            transform.translate[1] = -2810;
-            
-        setTransform();
-    }
+        moveMap(event);
+    capMovement();
 }
 gameMap.addEventListener("mousedown", function(event)
 {
-    console.log(event);
     dragging = true;
     gameMapInner.style.setProperty("cursor", "grabbing");
     gameMap.addEventListener("mousemove", translateMap);
@@ -261,12 +508,35 @@ gameMap.addEventListener("mouseup", function(event)
 });
 function wheelZoom(event)
 {
+    let scaleMin = 0.2;
+    let scaleMax = 1;
     transform.scale += (event.deltaY * -0.0005);
-    if (transform.scale < 0.2)
-        transform.scale = 0.2;
-    else if (transform.scale > 1)
-        transform.scale = 1;
+    if (transform.scale < scaleMin)
+        transform.scale = scaleMin;
+    else if (transform.scale > scaleMax)
+        transform.scale = scaleMax;
 
+    let x = event.clientX; //x position in viewport
+    let y = event.clientY;  //y position in viewport
+    let center = {x: (window.innerWidth)/2, y: (window.innerHeight) /2};
+    let translateDelta = {x: x - center.x, y: y - center.y};
+    let deltaFraction = 0.2;
+
+    if (transform.scale > scaleMin && transform.scale < scaleMax)
+    {
+        if (event.deltaY < 0) //if zoom in
+            transform.translate[1] -= translateDelta.y * (deltaFraction * 1.5);
+        else
+            transform.translate[1] -= translateDelta.y * (deltaFraction);
+
+        if (event.deltaY < 0)
+            transform.translate[0] -= translateDelta.x * deltaFraction;
+        else
+            transform.translate[0] -= translateDelta.x * deltaFraction;
+
+        capMovement();
+    }
+    gameMapInner.style.setProperty("transition", "transform 0.1s linear");
     setTransform();
 }
 document.addEventListener("wheel", wheelZoom); //set da event
@@ -274,7 +544,7 @@ document.addEventListener("wheel", wheelZoom); //set da event
 async function ass()
 {
     //main board
-    let boardBase = await fetch(window.location.origin + "/assets/board_base.png", "blob");
+    let boardBase = await fetch(window.location.origin + "/assets/board/base.png", "blob");
     let bbReq = {db: "Talisman", store: "boardAssets", data: boardBase, name: "boardBase"};
     let bbRes = await storagePut(bbReq);
     bbRes = await storageGet(bbReq);
@@ -282,53 +552,104 @@ async function ass()
     var URL = window.URL || window.webkitURL;
     var bbIMGURL = URL.createObjectURL(bbRes);
     var bbElement = document.querySelector(".boardBase");
-    bbElement.setAttribute("src", bbIMGURL);
+    bbElement.style.setProperty("background-image", "url(" + bbIMGURL + ")");
 
     //highlands
-    let boardHighlands = await fetch(window.location.origin + "/assets/board_highlands.png", "blob");
+    let boardHighlands = await fetch(window.location.origin + "/assets/board/highlands.png", "blob");
     let bhReq = {db: "Talisman", store: "boardAssets", data: boardHighlands, name: "boardHighlands"};
     let bhRes = await storagePut(bhReq);
     bhRes = await storageGet(bhReq);
 
     var bhIMGURL = URL.createObjectURL(bhRes);
     var bhElement = document.querySelector(".boardExpansion.boardHighlands");
-    bhElement.setAttribute("src", bhIMGURL);
+    bhElement.style.setProperty("background-image", "url(" + bhIMGURL + ")");
 
     //city
-    let boardCity = await fetch(window.location.origin + "/assets/board_city.png", "blob");
+    let boardCity = await fetch(window.location.origin + "/assets/board/city.png", "blob");
     let bcReq = {db: "Talisman", store: "boardAssets", data: boardCity, name: "boardCity"};
     let bcRes = await storagePut(bcReq);
     bcRes = await storageGet(bcReq);
 
     var bcIMGURL = URL.createObjectURL(bcRes);
     var bcElement = document.querySelector(".boardExpansion.boardCity");
-    bcElement.setAttribute("src", bcIMGURL);
+    bcElement.style.setProperty("background-image", "url(" + bcIMGURL + ")");
 
     //dungeon
-    let boardWoodlands = await fetch(window.location.origin + "/assets/board_woodlands.png", "blob");
+    let boardWoodlands = await fetch(window.location.origin + "/assets/board/woodlands.png", "blob");
     let bwReq = {db: "Talisman", store: "boardAssets", data: boardWoodlands, name: "boardWoodlands"};
     let bwRes = await storagePut(bwReq);
     bwRes = await storageGet(bwReq);
 
     var bwIMGURL = URL.createObjectURL(bwRes);
     var bwElement = document.querySelector(".boardExpansion.boardWoodlands");
-    bwElement.setAttribute("src", bwIMGURL);
+    bwElement.style.setProperty("background-image", "url(" + bwIMGURL + ")");
 
     //dungeon
-    let boardDungeon = await fetch(window.location.origin + "/assets/board_dungeon.png", "blob");
+    let boardDungeon = await fetch(window.location.origin + "/assets/board/dungeon.png", "blob");
     let bdReq = {db: "Talisman", store: "boardAssets", data: boardDungeon, name: "boardDungeon"};
     let bdRes = await storagePut(bdReq);
     bdRes = await storageGet(bdReq);
 
     var bdIMGURL = URL.createObjectURL(bdRes);
     var bdElement = document.querySelector(".boardExpansion.boardDungeon");
-    bdElement.setAttribute("src", bdIMGURL);
+    bdElement.style.setProperty("background-image", "url(" + bdIMGURL + ")");
 
     //removes image on opera
     // URL.revokeObjectURL(imgURL);
 
-    console.log("DB save status:", res);
+
 }
+
+document.querySelectorAll(".space").forEach(function(space)
+{
+    space.addEventListener("mouseenter", function(event)
+    {
+        let tl = document.createElement("div");
+        tl.className = "highlight topLeftHighlight";
+
+        let t = document.createElement("div");
+        t.className = "highlight topHighlight";
+
+        let tr = document.createElement("div");
+        tr.className = "highlight topRightHighlight";
+
+        let r = document.createElement("div");
+        r.className = "highlight rightHighlight";
+
+        let br = document.createElement("div");
+        br.className = "highlight bottomRightHighlight";
+
+        let b = document.createElement("div");
+        b.className = "highlight bottomHighlight";
+
+        let bl = document.createElement("div");
+        bl.className = "highlight bottomLeftHighlight";
+
+        let l = document.createElement("div");
+        l.className = "highlight leftHighlight";
+
+        event.target.appendChild(tl);
+        event.target.appendChild(t);
+        event.target.appendChild(tr);
+        event.target.appendChild(t);
+        event.target.appendChild(br);
+        event.target.appendChild(r);
+        event.target.appendChild(b);
+        event.target.appendChild(bl);
+        event.target.appendChild(l);
+    });
+
+    space.addEventListener("mouseleave", function(event)
+    {
+        setTimeout(function(target)
+        {
+            target.querySelectorAll(".highlight").forEach(function(highlight)
+            {
+                highlight.parentNode.removeChild(highlight);
+            });
+        }, 300, event.target);
+    });
+});
 ass();
 </script>
 </html>
