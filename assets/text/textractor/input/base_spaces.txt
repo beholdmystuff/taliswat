@@ -1,0 +1,121 @@
+DEFSTRING(DRAW_ONE_CARD_SQUARE,"DRAW 1 CARD")
+DEFSTRING(DRAW_ONE_IF_REQUIRED,"Do not draw a card if there is already one in this space.")
+DEFSTRING(DRAW_TWO_CARD_SQUARE,"DRAW 2 CARDS")
+DEFSTRING(DRAW_TWO_IF_REQUIRED,"If there are any cards already in this space, draw only enough to take the total to two cards.")
+DEFSTRING(DRAW_THREE_CARD_SQUARE,"DRAW 3 CARDS")
+DEFSTRING(DRAW_THREE_IF_REQUIRED,"If there are any cards already in this space, draw only enough to take the total to three cards.")
+
+//portal of power
+DEFSTRING(PORTALOFPOWER_MESSAGE_1,"DRAW 1 CARD\n\nDo not draw a card if there is already one in this space. If you are crossing to the Plain of Peril, do not draw a card. Instead, you must first use Craft to pick the lock or Strength to force it.")
+DEFSTRING(PORTALOFPOWER_MESSAGE_2,"Choose which ability you are using and roll two dice. If the total is equal to or less than your chosen ability, move to the Plain of Peril. If it is higher, remain here and lose one from that ability.")
+
+
+DEFSTRING(VAMPIRESTOWER_MESSAGE, "SUFFER BLOOD LOSS\n\nRoll one die to determine how many lives the Vampire takes.\n\nYou may discard any number of Followers to avoid this loss of life.")
+DEFSTRING(VAMPIRESTOWER_DICE_FORFEITS,"Each Follower you discard prevents the loss of one life.\n\n1-2) Lose 1 life\n3-4) Lose 2 lives\n5-6) Lose 3 lives")
+
+
+DEFSTRING(MINES_MESSAGE,"ROLL 3 DICE\n\nSubtract your Craft from the total and move directly to:")
+DEFSTRING(MINES_DICE_FORFEITS,"0) Mines\n1) Plain of Peril\n2-3) Portal of Power\n4-5) Warlock's Cave\n6+) Tavern")
+
+DEFSTRING(CRYPT_MESSAGE,"ROLL 3 DICE\n\nSubtract your Strength from the total and move directly to:")
+DEFSTRING(CRYPT_DICE_FORFEITS,"0) Crypt\n 1) Plain of Peril\n 2-3) Portal of Power\n 4-5) Warlock's Cave\n 6+) City")
+
+DEFSTRING(PLAINOFPERIL_MESSAGE,"STOP HERE\n\nMove only one space per turn.")
+
+DEFSTRING(PITS_MESSAGE,"FIGHT THE PITFIENDS\n\nRoll one die and fight that many Pitfiends with Strength 4 each,\none-by-one, until you either lose a life or defeat all of the Pitfiends.\nYou may move on the turn after all are defeated.")
+
+DEFSTRING(WEREWOLFDEN_MESSAGE,"FIGHT THE WEREWOLF\n\nRoll two dice for the Werewolf's Strength, then fight it. If you lose, lose one life and you fight the same Werewolf again on your next turn. You cannot move on until you have defeated the Werewolf.")
+
+DEFSTRING(DICEWITHDEATH_MESSAGE,"DICE WITH DEATH\n\nRoll two dice for yourself and then two dice for Death. If the scores are equal: Dice with Death again on your next turn. If your score is lower: Lose one life and Dice with Death again on your next turn. If your score is higher: You may move on your next turn.")
+
+DEFSTRING(VALLEYOFFIRE_MESSAGE,"YOU MUST HAVE A TALISMAN TO ENTER\n\nYou can only enter if you have a Talisman. If you do not have one, you must turn back. The Crown of Command can only be reached from this space.")
+
+DEFSTRING(CHAPEL_LOSE_A_LIFE,"BASED ON ALIGNMENT\nEVIL: Lose one life.")
+DEFSTRING(CHAPEL_CHOOSE_HEAL,"\nNEUTRAL: Heal up to your life value at the cost of one gold each.\n")
+DEFSTRING(CHAPEL_CHOOSE_PRAY,"GOOD: Either heal up to your life value for free, or pray by rolling 1 die:\n1-4) Ignored. 5) Gain 1 life. 6) Gain 1 Spell.")
+
+DEFSTRING(CRAGS_MESSAGE,"ROLL 1 DIE\n\n1) Attacked by a Spirit with Craft 4.\n2-3) Lost; lose your next turn.\n4-5) Safe; no effect.\n6) A barbarian leads you out; gain 1 Strength.")
+
+DEFSTRING(CITY_VISIT_ENCHANTRESS,"VISIT THE ENCHANTRESS (Roll 1 die):\n1) Turned into a Toad.\n2) Lose 1 Strength.\n3) Lose 1 Craft.\n4) Gain 1 Craft.\n5) Gain 1 Strength.\n6) Gain 1 Spell.")
+DEFSTRING(CITY_VISIT_DOCTOR,"VISIT THE DOCTOR: Heal up to two lives at the cost of one gold each.")
+DEFSTRING(CITY_VISIT_ALCHEMIST,"VISIT THE ALCHEMIST: Discard any number of Objects you have and gain one gold for each.")
+
+DEFSTRING(GRAVEYARD_GOOD_LOSE_A_LIFE,"BASED ON ALIGNMENT\nGOOD: Lose one life.")
+DEFSTRING(GRAVEYARD_REPLENISH_NEUTRAL,"\nNEUTRAL: Replenish fate up to your fate value at the cost of one gold each.\n")
+DEFSTRING(GRAVEYARD_CHOOSE_REPLENISH,"EVIL: Either replenish fate up to your fate value for free, or pray by rolling one die:\n1-4) Ignored. 5) Gain 1 fate. 6) Gain 1 Spell.")
+
+DEFSTRING(TAVERN_MESSAGE,"ROLL 1 DIE\n1) Get drunk and collapse in a corner; miss 1 turn.\n2) Get tipsy and fight a farmer with Strength 3.\n3) Gamble and lose 1 gold.  4) Gamble and win 1 gold.\n5) A wizard offers to teleport you to any other space in this Region as your next move.\n6) A boatman offers to ferry you to the Temple as your next move.")
+
+DEFSTRING(FOREST_MESSAGE,"ROLL 1 DIE\n\n1) Attacked by a brigand with Strength 4.\n2-3) Lost; lose your next turn.\n4-5) Safe.\n6) A ranger guides you out, gain 1 Craft.")
+
+DEFSTRING(VILLAGE_MESSAGE_BLACKSMITH,"VISIT THE BLACKSMITH (Purchase any, if available):\nHelmet (2G)      Sword (2G)\nAxe (3G)      Shield (3G)\nArmour (4G)")
+DEFSTRING(VILLAGE_MESSAGE_HEALER,"VISIT THE HEALER: Heal up to your life value at the cost of one gold each.")
+DEFSTRING(VILLAGE_MESSAGE_MYSTIC,"VISIT THE MYSTIC (Roll 1 die):\n1) Become evil.\n2-3) Ignored.\n4) Become good.\n5) Gain 1 Craft.\n6) Gain 1 Spell.")
+
+DEFSTRING(SENTINEL_MESSAGE,"If you are crossing to the Middle Region, do not draw a card. Instead, you must first defeat the Sentinel with Strength 9. Do not fight the Sentinel when crossing from the Middle Region.")
+
+	// MIDDLE REGION messages
+
+DEFSTRING(TEMPLE_MESSAGE_1,"PRAY: ROLL 2 DICE\n\n2) Lose 2 lives.\n3) Lose 1 life.\n4) Lose 1 Follower.\n5) Enslaved: stay here until you roll a 4, 5, or 6 for your move.\n")
+DEFSTRING(TEMPLE_MESSAGE_2,"6) Gain 1 Strength.\n7) Gain 1 Craft.\n8-9) Gain 1 Spell.\n10) Gain a Talisman.\n11) Gain 2 fate.\n12) Gain 2 lives.")
+
+DEFSTRING(CHASM_MESSAGE,"Roll one die for yourself, and one for each of your Followers.\nIf a 1 or 2 is rolled for yourself, lose 1 life. If a 1 or 2 is rolled for a Follower, it is killed.")
+DEFSTRING(CURSED_GLADE_MESSAGE,"Strength and Craft derived from Objects and Magic Objects do not count on this space, nor may you use Magic Objects or cast Spells.")
+DEFSTRING(DESERT_MESSAGE,"LOSE 1 LIFE THEN DRAW 1 CARD")
+DEFSTRING(CASTLE_ROYAL_DOCTOR_DESCRIPTION,"ROYAL DOCTOR\n\nHeal up to your life value at the cost of one gold each.\n\nIf you have the Prince or Princess, heal up to two lives for free.")
+
+DEFSTRING(RUNES_ENEMY_ADD_TWO,"Any creatures that you fight here add 2 to their attack rolls.")
+
+DEFSTRING(BLACK_KNIGHT_DESCRIPTION,"SUFFER ONE PENALTY\n\nEither pay one gold or lose one life.")
+
+DEFSTRING(WARLOCKSCAVE_MESSAGE_1,"YOU MAY ROLL 1 DIE TO\nACCEPT A QUEST\n1) Take 1 life from another character.\n2) Kill 1 Enemy.\n3) Deliver (discard) 1 Follower.\n4) Deliver (discard) 1 Magic Object.\n5) Deliver (discard) 3 gold.")
+DEFSTRING(WARLOCKSCAVE_MESSAGE_2,"6) Deliver (discard) 2 gold.\n\nWhen you complete the quest, the Warlock immediately teleports you back here and gives you a Talisman, if available, as your reward.")
+
+DEFSTRING(GHOST_ENCOUNTER_TEXT,"A Ghost materialises in (roll 1 die):\n1) City\n2) Village\n3) Graveyard\n4) Chapel\n5) Castle\n6) Temple\nIt now haunts this area and will remain here until it is killed")
+
+DEFSTRING(CARDTEXT_DESC_BOARD_ENCHANTRESS,	"Visit the Enchantress (Roll 1 die):\n\n1) Turned into a Toad.\n2) Lose 1 Strength.\n3) Lose 1 Craft.\n4) Gain 1 Craft.\n5) Gain 1 Strength.\n6) Gain 1 Spell.")
+DEFSTRING(CARDTEXT_DESC_BOARD_DOCTOR,		"Visit the Doctor:\n\nHeal up to two lives at the cost of one gold each.")
+DEFSTRING(CARDTEXT_DESC_BOARD_ALCHEMIST,	"Visit the Alchemist:\n\nDiscard any number of Objects you have and gain one gold for each.")
+DEFSTRING(CARDTEXT_DESC_BOARD_BLACKSMITH,	"Visit the Blacksmith (Purchase any if available):\n\nHelmet (2G)\nSword (2G)\nAxe (3G)\nShield (3G)\nArmour (4G)")
+DEFSTRING(CARDTEXT_DESC_BOARD_HEALER,		"Visit the Healer:\n\nHeal up to your life value at the cost of one gold each.")
+DEFSTRING(CARDTEXT_DESC_BOARD_MYSTIC,		"Visit the Mystic (Roll 1 die):\n\n1) Become evil.\n2-3) Ignored.\n4) Become good.\n5) Gain 1 Craft.\n6) Gain 1 Spell.")
+
+DEFSTRING(CROWNOFCOMMAND_MESSAGE,"If alone on this space, roll 1 die to cast the Command Spell.\n\n1-3) No effect.\n4-6) All other characters lose one life.\n\nIf another character is on this space, they must be encountered.")
+
+DEFSTRING(CHAPEL_MENU_HEAL,"Heal Lives")
+DEFSTRING(CHAPEL_MENU_PRAY,"Pray")
+
+DEFSTRING(CITY_LIVES_FOR_GOLD,"Choose up to %d gold to trade for life")
+
+DEFSTRING(GRAVEYARD_FATE_FOR_GOLD,"Choose up to %d gold to trade for fate")
+DEFSTRING(GRAVEYARD_CHOOSE_PRAY," ")
+
+DEFSTRING(GRAVEYARD_MENU_REPLENISH,"Replenish Fate")
+DEFSTRING(GRAVEYARD_MENU_PRAY,"Pray")
+
+DEFSTRING(VILLAGE_MESSAGE_BLACKSMITH_CHOOSE,"Choose items to purchase")
+
+DEFSTRING(ACQUISITION_CHOOSE_AN_OBJECT,"Choose an Object, Mule or gold")
+
+DEFSTRING(CHOOSE_A_SPACE_FOR_HEX,"Select a space to leave Hex on")
+DEFSTRING(CHOOSE_A_SPACE_FOR_BARRIER,"Select a space to leave Barrier on")
+
+
+DEFSTRING(USE_ARMOUR,"Roll greater than %d to save a life")
+
+
+	// MIDDLE REGION messages
+
+
+DEFSTRING(CHOOSE_FOLLOWER,"Select a Follower to discard")
+
+DEFSTRING(CASTLE_HEAL_LIVES,"Heal Lives")
+DEFSTRING(CASTLE_EXCHANGE_PRINCE_FOR_GOLD,"Exchange Prince for 3 gold")
+DEFSTRING(CASTLE_EXCHANGE_PRINCESS_FOR_GOLD,"Exchange Princess for 3 gold")
+
+DEFSTRING(BLACK_KNIGHT_FORFEIT_GOLD,"Give up 1 Gold")
+DEFSTRING(BLACK_KNIGHT_FORFEIT_LIFE,"Lose 1 Life")
+
+DEFSTRING(WARLOCKSCAVE_MESSAGE_3,"You have already completed the Warlock's Quest")
+
+DEFSTRING(WARLOCK_FOLLOWER_MESSAGE,"Deliver a Follower to the Warlock to complete his Quest")
