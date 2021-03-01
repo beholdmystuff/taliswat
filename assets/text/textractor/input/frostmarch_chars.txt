@@ -1,0 +1,28 @@
+DEFSTRING(CHARACTER_CARD_LEPRECHAUN,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with two Spells.\n\n\
+You need not roll the die in the Forest unless you wish to. If you choose to roll, you must accept the result.\n\n\
+Whenever you land on the Woods, you may gain 3 gold.\n\n\
+Whenever you roll a 6 for your move, you may teleport to any other space in the same Region instead of moving normally.\n\n\
+Start: Forest          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_NECROMANCER,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with two Spells.\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Spirits will not attack you, although you may choose to attack them.\n\n\
+If you do not attack a Spirit, you may enthral it if your Craft is higher than the Spirit's Craft. The Spirit joins you as a Follower and adds its Craft to yours in psychic combat, after which it departs to the discard pile. You may use any number of enthralled Spirits during a psychic combat.\n\n\
+Start: Graveyard          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_OGRE_CHIEFTAIN,\
+"SPECIAL ABILITIES\n\n\
+Monsters will not attack you, although you may choose to attack them.\n\n\
+Whenever you defeat a Monster in battle, you may dominate it and keep it as a Follower instead of a trophy. The Monster adds its Strength to yours in battle, after which it departs to the discard pile. You may use any number of dominated Monsters during a battle.\n\n\
+Start: Crags          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_WARLOCK,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with two Spells.\n\n\
+At the start of your turn, you may gain your full complement of Spells, according to your current Craft.\n\n\
+Whenever you complete a Warlock Quest, you may take one card of your choice from the purchase deck for free instead of gaining a Talisman as your reward.\n\n\
+Start: Warlock's Cave          Alignment: Neutral")

@@ -1,0 +1,28 @@
+DEFSTRING(CHARACTER_CARD_DOOMSAYER,\
+"SPECIAL ABILITIES\n\n\
+Whenever any character draws an Enemy, you may replenish 1 fate.\n\n\
+Whenever any character draws an Event, you may gain 1 Spell, if your Craft allows.\n\n\
+Whenever you draw an Adventure Card that is not an Enemy or an Event, you may draw 1 additional card. You may only do this once per turn.\n\n\
+Start: City          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_GRAVE_ROBBER,\
+"SPECIAL ABILITIES\n\n\
+Whenever you encounter a space with instructions to draw 1 or more Adventure Cards, you may draw the top card on the discard pile and then draw the remaining cards from the Adventure deck as normal. You may only do this once per turn.\n\n\
+Whenever you discard an Adventure Card, you must place it at the bottom of the discard pile.\n\n\
+Whenever you visit the Graveyard, you may draw the top 8 cards from the Adventure deck and take 1 Object of your choice. Then, discard the remaining cards.\n\n\
+Start: Graveyard          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_VAMPIRE_HUNTER,\
+"SPECIAL ABILITIES\n\n\
+After you encounter a space with instructions to draw 1 or more Adventure Cards and have drawn the required number of cards, you may investigate. To do so, discard 1 card on your space that is not an Enemy and draw one more card to replace it, which you must encounter.\n\n\
+Whenever you engage an Enemy in battle or psychic combat, add 1 to your attack roll.\n\n\
+Whenever you visit the Graveyard you may draw 1 Adventure Card instead of resolving the instructions on the space.\n\n\
+Start: Chapel          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_WEREWOLF_PLAYER,					"If a player rolls a 1 for their movement, at the end of their turn they must roll to move the Werewolf. If the Werewolf lands on a character they must roll 1 die.\n\
+^1)^ You become a Lycanthrope.\n\
+^2)^ Lose 1 life then immediately roll again on this chart.\n\
+^3)^ One of your Followers, determined at random, is killed. If you have no Followers, you lose 1 life instead.\n\
+^4)^ The Werewolf attacks you with a Strength of 8.\n\
+^5)^ The Werewolf teleports to another character of your choice, who must immediately roll 1 die on this chart.\n\
+^6+)^ You may either heal all of your lives, replenish all of your fate, discard any Adventure Card from the board, or teleport to any other space in this Region as your next move.")

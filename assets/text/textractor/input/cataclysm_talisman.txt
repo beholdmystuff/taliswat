@@ -1,0 +1,2 @@
+DEFSTRING(CARDTEXT_NAME_THE_ONE_TALISMAN_CARD, "The One Talisman")
+DEFSTRING(CARDTEXT_DESC_THE_ONE_TALISMAN_CARD, "Whenever a character would gain a Talisman, they take the One Talisman instead.\n\nAdd 2 to your Strength and Craft.\n\nIf discarded or otherwise removed from play, ditch this card instead.\n\nYou may only enter the Valley of Fire if you have this Talisman.")

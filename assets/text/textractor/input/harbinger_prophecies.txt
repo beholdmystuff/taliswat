@@ -1,0 +1,190 @@
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_PROPHECY, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_PROPHECY, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_PROPHECY,				"And I saw the gates of heaven open up before me and a being of righteous light descending. To him were granted the seven seals of divine judgment and the scales of cosmic balance. He raised the scales and I saw that evil weighed heavily upon them and knew that the time of judgment was at hand.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_PROPHECY, "And I saw the gates of heaven open up before me and a being of righteous light descending. To him were granted the seven seals of divine judgment and the scales of cosmic balance. He raised the scales and I saw that evil weighed heavily upon them and knew that the time of judgment was at hand.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_FIRST_OMEN,		"Whenever a character defeats another character, they may replenish 1 fate.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_FIRST_OMEN,	"Each character in the same Region as the Harbinger must lose 1 fate.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_FIRST_OMEN,				"The first seal was broken and the deafening sound of thunder drove hope away.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_FIRST_OMEN, "The first seal was broken and the deafening sound of thunder drove hope away.\n\nEach character in the same Region as the Harbinger must lose 1 fate.\n\nWhenever a character defeats another character, they may replenish 1 fate.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_SECOND_OMEN, "Whenever a character defeats another character, they may heal 1 life.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_SECOND_OMEN, "Each character in the same Region as the Harbinger must lose 1 life.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_SECOND_OMEN,				"The second seal was broken and a creature came forth riding on a white horse, and given to him were all of the pestilences of the world.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_SECOND_OMEN, "The second seal was broken and a creature came forth riding on a white horse, and given to him were all of the pestilences of the world.\n\nEach character in the same Region as the Harbinger must lose 1 life.\n\nWhenever a character defeats another character, they may heal 1 life.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_THIRD_OMEN, "Whenever a character is defeated by another character, they must lose 1 life.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_THIRD_OMEN, "Discard all faceup Adventure cards in the same Region as the Harbinger and draw a Harbinger card to replace each discarded card.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_THIRD_OMEN,				"The third seal was broken and from the depths came a creature on a red horse, who brought with him war and slaughter.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_THIRD_OMEN, "The third seal was broken and from the depths came a creature on a red horse, who brought with him war and slaughter.\n\nDiscard all faceup Adventure cards in the same Region as the Harbinger and draw a Harbinger card to replace each discarded card.\n\nWhenever a character is defeated by another character, they must lose 1 life.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_FOURTH_OMEN, "Whenever a character defeats another character, they may gain 1 Strength or 1 Craft.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_FOURTH_OMEN, "Each character in the same Region as the Harbinger must lose either 1 Strength or 1 Craft.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_FOURTH_OMEN,				"And behold, the fourth seal was broken and upon a black horse came a rider. She held a pair of balances in one hand and brought hunger to the world.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_FOURTH_OMEN, "And behold, the fourth seal was broken and upon a black horse came a rider. She held a pair of balances in one hand and brought hunger to the world.\n\nEach character in the same Region as the Harbinger must lose either 1 Strength or 1 Craft.\n\nWhenever a character defeats another character, they may gain 1 Strength or 1 Craft.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_FIFTH_OMEN, "Whenever a character is defeated by another character, they must kill 1 of their Followers.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_FIFTH_OMEN, "Each character in the same Region as the Harbinger must kill 1 Follower at random.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_FIFTH_OMEN,				"When the fifth seal was broken, a shrouded figure appeared on a pale horse and it brought death and suffering to the world.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_FIFTH_OMEN, "When the fifth seal was broken, a shrouded figure appeared on a pale horse and it brought death and suffering to the world.\n\nEach character in the same Region as the Harbinger must kill 1 Follower at random.\n\nWhenever a character is defeated by another character, they must kill 1 of their Followers.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_SIXTH_OMEN, "Whenever a character is defeated by another character, they must discard 1 of their Objects.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_SIXTH_OMEN, "Each character in the same Region as the Harbinger must discard 1 Object at random.")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_SIXTH_OMEN,				"When the sixth seal was broken, the riches of the world melted away and all that men held dear became like dust.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_SIXTH_OMEN, "When the sixth seal was broken, the riches of the world melted away and all that men held dear became like dust.\n\nEach character in the same Region as the Harbinger must discard 1 Object at random.\n\nWhenever a character is defeated by another character, they must discard 1 of their Objects.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_ARMAGEDDON_SEVENTH_OMEN, "Whenever a character is instructed to draw Adventure cards, they must draw Harbinger cards instead.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_ARMAGEDDON_SEVENTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_ARMAGEDDON_SEVENTH_OMEN,			"When the seventh seal was broken, the sky rolled up like a scroll and stars fell from the heavens. The end was now upon the world and none would escape.")
+DEFSTRING(CARDTEXT_DESC_ARMAGEDDON_SEVENTH_OMEN, "When the seventh seal was broken, the sky rolled up like a scroll and stars fell from the heavens. The end was now upon the world and none would escape.\n\nWhenever a character is instructed to draw Adventure cards, they must draw Harbinger cards instead.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_PROPHECY, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_PROPHECY, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_PROPHECY,			"I see darkness. Death is all around me. I see the light of life extinguished, one flickering flame at a time.\n\nI see the gates of oblivion open and release the tormented souls of the damned. The living will surrender unto death and only the dead will rule.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_PROPHECY, "I see darkness. Death is all around me. I see the light of life extinguished, one flickering flame at a time.\n\nI see the gates of oblivion open and release the tormented souls of the damned. The living will surrender unto death and only the dead will rule.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_FIRST_OMEN, "Spirits and Undead add 1 to their attack rolls.\n\nIncrease the value of each Spirit and Undead trophy by 1.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_FIRST_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_FIRST_OMEN,		"Dark spirits grow in strength and the walking dead cackle in the face of those who once vanquished them with ease.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_FIRST_OMEN, "Dark spirits grow in strength and the walking dead cackle in the face of those who once vanquished them with ease.\n\nSpirits and Undead add 1 to their attack rolls.\n\nIncrease the value of each Spirit and Undead trophy by 1.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_SECOND_OMEN, "Spirits and Undead add 1 to their attack rolls.\n\nWhenever a character defeats a Spirit or Undead, they may draw the top 5 cards of the Adventure deck and take 1 Object of their choice. Discard the remaining cards.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_SECOND_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_SECOND_OMEN,		"Graves spring up across the land as undead creatures plague the countryside.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_SECOND_OMEN, "Graves spring up across the land as undead creatures plague the countryside.\n\nSpirits and Undead add 1 to their attack rolls.\n\nWhenever a character defeats a Spirit or Undead, they may draw the top 5 cards of the Adventure deck and takes 1 Object of their choice. Discard the remaining cards.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_THIRD_OMEN, "Spirits and Undead add 1 to their attack rolls.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_THIRD_OMEN, "Discard the top 10 cards of each Adventure deck. Then, starting with the character taking the current turn and moving clockwise, each character may take 1 Follower or Object of their choice from any discard pile.")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_THIRD_OMEN,		"A dark force gathers at the edge of the world, calling the restless dead to rise from their graves.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_THIRD_OMEN, "A dark force gathers at the edge of the world, calling the restless dead to rise from their graves.\n\nDiscard the top 10 cards of each Adventure deck. Then, starting with the character taking the current turn and moving clockwise, each character may take 1 Follower or Object of their choice from any discard pile.\n\nSpirits and Undead add 1 to their attack rolls.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_FOURTH_OMEN, "Spirits and Undead add 1 to their attack rolls.\n\nWhenever a character defeats a Spirit or Undead in battle or psychic combat, they must discard it instead of taking it as a trophy.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_FOURTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_FOURTH_OMEN,		"The spirits of the dead grow angry and cruel.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_FOURTH_OMEN, "The spirits of the dead grow angry and cruel.\n\nSpirits and Undead add 1 to their attack rolls.\n\nWhenever a character defeats a Spirit or Undead in battle or psychic combat, they must discard it instead of taking it as a trophy.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_FIFTH_OMEN, "Spirits and Undead add 1 to their attack rolls.\n\nWhenever a character is instructed to draw Adventure cards, they must draw 1 additional card at random from the discard pile.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_FIFTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_FIFTH_OMEN,		"The ground cracks open and enemies long since dead rise again to take their revenge on those who slew them.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_FIFTH_OMEN, "The ground cracks open and enemies long since dead rise again to take their revenge on those who slew them.\n\nSpirits and Undead add 1 to their attack rolls.\n\nWhenever a character is instructed to draw Adventure cards, they must draw 1 additional card at random from the discard pile.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_SIXTH_OMEN, "Spirits and Undead add 2 to their attack rolls.\n\nAll text on Strangers and Followers is ignored and they are instead treated as \"Enemy-Undead\" with an encounter number of 2 and a Strength of 3.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_SIXTH_OMEN, "Each character must ditch all of their Followers.")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_SIXTH_OMEN,		"Whatever curse caused the dead to rise now seeks out the living. It is only a matter of days before the dead rule this world.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_SIXTH_OMEN, "Whatever curse caused the dead to rise now seeks out the living. It is only a matter of days before the dead rule this world.\n\nEach character must ditch all of their Followers.\n\nSpirits and Undead add 2 to their attack rolls.\n\nAll text on Strangers and Followers is ignored and they are instead treated as \"Enemy-Undead\" with an encounter number of 2 and a Strength of 3.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_RISE_OF_THE_DEAD_SEVENTH_OMEN, "Treat all Enemies as \"Enemy-Undead\". Undead add 2 to their attack rolls.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_RISE_OF_THE_DEAD_SEVENTH_OMEN, "Discard all faceup Strangers and Followers in all Regions. Then take all Enemies in all discard piles, shuffle them, and place them on top of their respective decks.")
+DEFSTRING(CARDTEXT_OMENFLUFF_RISE_OF_THE_DEAD_SEVENTH_OMEN,		"The living are few and scattered and the rampaging dead seek to devour every remaining spark of life.")
+DEFSTRING(CARDTEXT_DESC_RISE_OF_THE_DEAD_SEVENTH_OMEN, "The living are few and scattered and the rampaging dead seek to devour every remaining spark of life.\n\nDiscard all faceup Strangers and Followers in all Regions. Then take all Enemies in all discard piles, shuffle them, and place them on top of their respective decks.\n\nTreat all Enemies as \"Enemy-Undead\". Undead add 2 to their attack rolls.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_PROPHECY, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_PROPHECY, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_PROPHECY,			"There is a legend among the tribes of the Highland, in which the world is a glacier, moving slowly down the mountain of time towards the ocean of rebirth.\n\nAt first the world was cold and rigid, but as it descended it became fluid and quick, and life was exciting and wonderful. But like all glaciers, there will be a time where it will grow too warm.\n\nThe surface ice will crack and great fissures will split the world into many pieces. It is said that some fragments will survive, floating in an endless sea for all eternity.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_PROPHECY, "There is a legend among the tribes of the Highland, in which the world is a glacier, moving slowly down the mountain of time towards the ocean of rebirth.\n\nAt first the world was cold and rigid, but as it descended it became fluid and quick, and life was exciting and wonderful. But like all glaciers, there will be a time where it will grow too warm.\n\nThe surface ice will crack and great fissures will split the world into many pieces. It is said that some fragments will survive, floating in an endless sea for all eternity.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_FIRST_OMEN, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_FIRST_OMEN, "Each character must place a random Terrain card on their space.")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_FIRST_OMEN,			"The sky above you tears apart and you watch in horror as your homeland vanishes, replaced with strange and alien terrain.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_FIRST_OMEN, "The sky above you tears apart and you watch in horror as your homeland vanishes, replaced with strange and alien terrain.\n\nEach character must place a random Terrain card on their space.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_SECOND_OMEN, "When a character rolls a 1 for their move, they place 1 random Terrain card on their space. They must then stay on their space and encounter it instead of moving normally.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_SECOND_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_SECOND_OMEN,		"The rifts in the sky spread outward and without warning landscapes shift and reality wavers.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_SECOND_OMEN, "The rifts in the sky spread outward and without warning landscapes shift and reality wavers.\n\nWhen a character rolls a 1 for their move, they place 1 random Terrain card on their space. They must then stay on their space and encounter it instead of moving normally.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_THIRD_OMEN, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_THIRD_OMEN, "Discard all faceup Adventure cards in all Regions. If a character is on a space with a faceup Adventure card, they lose 1 life for each card in their space discarded in this way.")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_THIRD_OMEN,			"The strain of an ever-changing landscape causes a cataclysmic earthquake that spreads death and destruction through every region.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_THIRD_OMEN, "The strain of an ever-changing landscape causes a cataclysmic earthquake that spreads death and destruction through every region.\n\nDiscard all faceup Adventure cards in all Regions. If a character is on a space with a faceup Adventure card, they lose 1 life for each card in their space discarded in this way.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_FOURTH_OMEN, "Whenever a character lands on a space with a Terrain card, they place a random Terrain card in the closest space which does not have a Terrain card. If 2 spaces are equally close, that character chooses.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_FOURTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_FOURTH_OMEN,		"The cracks in reality expand, leaving the world a strange and broken place.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_FOURTH_OMEN, "The cracks in reality expand, leaving the world a strange and broken place.\n\nWhenever a character lands on a space with a Terrain card, they place a random Terrain card in the closest space which does not have a Terrain card. If 2 spaces are equally close, that character chooses.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_FIFTH_OMEN, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_FIFTH_OMEN, "Place a random Terrain card on the Tavern, the Village, the Graveyard, the Chapel, the City, the Temple, and the Castle.")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_FIFTH_OMEN,			"The bastions of civilization cannot survive the escalating destruction.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_FIFTH_OMEN, "The bastions of civilization cannot survive the escalating destruction.\n\nPlace a random Terrain card on the Tavern, the Village, the Graveyard, the Chapel, the City, the Temple, and the Castle.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_SIXTH_OMEN, "If a character ends their turn on a space with a Terrain card, they lose 1 life.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_SIXTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_SIXTH_OMEN,			"The strange new lands begin to tremble and crack. Few places are safe in this world.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_SIXTH_OMEN, "The strange new lands begin to tremble and crack. Few places are safe in this world.\n\nIf a character ends their turn on a space with a Terrain card, they lose 1 life.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_SHATTERED_WORLD_SEVENTH_OMEN, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_SHATTERED_WORLD_SEVENTH_OMEN, "Replace the text of each space not in the Inner Region or containing a Terrain card with:\nLose 1 Life Then Draw 1 Card\nDo not draw a card if there is already one in this space.")
+DEFSTRING(CARDTEXT_OMENFLUFF_SHATTERED_WORLD_SEVENTH_OMEN,		"Reality is lost to the chaos of an ever-shifting world. The occasional site of refuge is all that offers hope to the few scattered survivors.")
+DEFSTRING(CARDTEXT_DESC_SHATTERED_WORLD_SEVENTH_OMEN, "Reality is lost to the chaos of an ever-shifting world. The occasional site of refuge is all that offers hope to the few scattered survivors.\n\nReplace the text of each space not in the Inner Region or containing a Terrain card with:\nLose 1 Life Then Draw 1 Card\nDo not draw a card if there is already one in this space.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_PROPHECY, "")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_PROPHECY, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_PROPHECY,				"I. In the fourth age the Cerberus Star shall align with the constellation of the Crown and Sceptre. Magic will surge like a flood and even the simplest creature will be able to wield its power.\n\nII. The Cerberus Star will devour the constellation of the Crown and Sceptre. As the stars extinguish, so too shall magic fade from the world.\n\nIII. Without magic, the world will wither and die. Every animal, every plant, every man and woman. So shall end the fourth age.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_PROPHECY, "I. In the fourth age the Cerberus Star shall align with the constellation of the Crown and Sceptre. Magic will surge like a flood and even the simplest creature will be able to wield its power.\n\nII. The Cerberus Star will devour the constellation of the Crown and Sceptre. As the stars extinguish, so too shall magic fade from the world.\n\nIII. Without magic, the world will wither and die. Every animal, every plant, every man and woman. So shall end the fourth age.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_FIRST_OMEN, "The Spell limit of each character is increased by 1.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_FIRST_OMEN, "Each character gains 1 Spell, if their Craft allows.")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_FIRST_OMEN,				"A great conjunction of the stars causes magic to surge throughout the land.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_FIRST_OMEN, "A great conjunction of the stars causes magic to surge throughout the land.\n\nEach character gains 1 Spell, if their Craft allows.\n\nThe Spell limit of each character is increased by 1.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_SECOND_OMEN, "The Spell limit of each character is increased by 1.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_SECOND_OMEN, "Each character gains their full complement of Spells.")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_SECOND_OMEN,			"Arcane formulae appear fully formed in the minds of even the simplest folk. All the citizens of the land delight in the magic at their fingertips.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_SECOND_OMEN, "Arcane formulae appear fully formed in the minds of even the simplest folk. All the citizens of the land delight in the magic at their fingertips.\n\nEach character gains their full complement of Spells.\n\nThe Spell limit of each character is increased by 1.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_THIRD_OMEN, "The Spell limit of each character is increased by 2.\n\nAfter a character casts a Spell, they immediately gain 1 Spell, if their Craft allows.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_THIRD_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_THIRD_OMEN,				"The conjunction reaches its peak as magic permeates the land. Great marvels and even greater atrocities abound as the virtuous and the villainous make use of their newfound powers.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_THIRD_OMEN, "The conjunction reaches its peak as magic permeates the land. Great marvels and even greater atrocities abound as the virtuous and the villainous make use of their newfound powers.\n\nThe Spell limit of each character is increased by 2.\n\nAfter a character casts a Spell, they immediately gain 1 Spell, if their Craft allows.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_FOURTH_OMEN, "The Spell limit of each character is increased by 2.\n\nWhenever a character casts a Spell, they must lose either 1 life or 1 fate.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_FOURTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_FOURTH_OMEN,			"The tides of magic begin to ebb and flow, making even the simplest incantation erratic and dangerous.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_FOURTH_OMEN, "The tides of magic begin to ebb and flow, making even the simplest incantation erratic and dangerous.\n\nThe Spell limit of each character is increased by 2.\n\nWhenever a character casts a Spell, they must lose either 1 life or 1 fate.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_FIFTH_OMEN, "The Spell limit of each character is increased by 1.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_FIFTH_OMEN, "Each character must lose 1 life for each of their Spells and then discard all of their Spells.")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_FIFTH_OMEN,				"The conjunction ends and the latent magical energies it brought ignite in an eldritch conflagration, bringing death and woe to all who practiced the arcane arts.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_FIFTH_OMEN, "The conjunction ends and the latent magical energies it brought ignite in an eldritch conflagration, bringing death and woe to all who practiced the arcane arts.\n\nEach character must lose 1 life for each of their Spells and then discard all of their Spells.\n\nThe Spell limit of each character is increased by 1.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_SIXTH_OMEN, "The Spell limit of each character is reduced by 1.\n\nEach character may only have 1 Magic Object.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_SIXTH_OMEN, "")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_SIXTH_OMEN,				"Just as the prophets foretold, magic fades from the land. Few can command the arcane words and the relics of old lose much of their power.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_SIXTH_OMEN, "Just as the prophets foretold, magic fades from the land. Few can command the arcane words and the relics of old lose much of their power.\n\nThe Spell limit of each character is reduced by 1.\n\nEach character may only have 1 Magic Object.")
+
+
+DEFSTRING(CARDTEXT_ACTIVEDESC_STARS_ALIGN_SEVENTH_OMEN, "Characters cannot gain Spells or have Magic Objects. Treat all spaces in the Inner Region, except for the Plain of Peril and the Crown of Command, as blank.")
+DEFSTRING(CARDTEXT_BECOME_OMEN_DESC_STARS_ALIGN_SEVENTH_OMEN, "Each character discards all of their Spells and Magic Objects.")
+DEFSTRING(CARDTEXT_OMENFLUFF_STARS_ALIGN_SEVENTH_OMEN,			"Magic has faded completely from the world and now it is only a matter of time before every living thing withers and dies. Characters cannot gain Spells or have Magic Objects. Treat all spaces in the Inner Region, except for the Plain of Peril and the Crown of Command, as blank.")
+DEFSTRING(CARDTEXT_DESC_STARS_ALIGN_SEVENTH_OMEN, "Magic has faded completely from the world and now it is only a matter of time before every living thing withers and dies. Characters cannot gain Spells or have Magic Objects. Treat all spaces in the Inner Region, except for the Plain of Peril and the Crown of Command, as blank.\n\nEach character discards all of their Spells and Magic Objects.")

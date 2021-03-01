@@ -1,0 +1,26 @@
+DEFSTRING(CHARACTER_CARD_CHIVALRIC_KNIGHT,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Riding Horse from the Stables deck. If you lose the Riding Horse, you may take one from the Stables deck for free if you visit the Castle.\n\n\
+Whenever another character in your Region engages an Enemy in battle, you may aid them. Move to the character's space and add your Strength value to the character's attack score. If the Enemy is killed, you receive 1 Quest Reward but you must miss your next turn.\n\n\
+You may not attack other characters in battle if their Strength is less than yours, except on the Crown of Command space, where you must attack them as normal.\n\n\
+Start: Castle          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_CLERIC,\
+"SPECIAL ABILITIES\n\n\
+Whenever you are about to pray, you may replenish 1 fate.\n\n\
+You may choose to automatically destroy any Spirits without resorting to psychic combat. When you destroy a Spirit in this manner, you may not keep the Enemy as a trophy, but you may replenish 1 fate.\n\n\
+You may discard 1 fate to prevent your character from losing a life or one of your Followers from being killed. You may only do this once per turn.\n\n\
+Start: Chapel          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_DREAD_KNIGHT,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Warhorse from the Stables deck. If you lose the Warhorse, you may take one from the Stables deck for free if you visit the Graveyard.\n\n\
+Whenever you kill an Enemy you may gain 1 Spell, if your Craft allows.\n\n\
+Start: Graveyard          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_MAGUS,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 1 Spell.\n\n\
+If you do not have any Spells at the start of your turn, you may gain 1 Spell.\n\n\
+Whenever you acquire a Follower, they become indoctrinated to fight with you during psychic combat. You may use all, none, or some of your Followers to fight with you in any psychic combat of your choice. Each Follower used in this way adds 1 to your Craft during psychic combat. If a character defeats you in psychic combat, they may kill one of your Followers that fought with you, in addition to their normal reward.\n\n\
+Start: City          Alignment: Evil")

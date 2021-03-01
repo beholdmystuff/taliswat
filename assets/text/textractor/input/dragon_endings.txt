@@ -1,0 +1,8 @@
+DEFSTRING(CARDTEXT_DESC_DRAGON_KING_ENDING_ENEMY,	"")
+DEFSTRING(CARDTEXT_DESC_CHALLENGE_FOR_THE_CROWN_ENDING, "In order to win the game, characters must first journey to the centre of the game board.\n\nWhen a character enters the Crown of Command, they immediately move to the Plain of Peril on the Dragon Tower.\n\nOnly when a character enters the Crown of Command on the Dragon Tower can they confront the Dragon King and win the game by vanquishing him.")
+
+DEFSTRING(CARDTEXT_NAME_RACE_TO_THE_CROWN, "Race to the Crown")
+DEFSTRING(CARDTEXT_DESC_RACE_TO_THE_CROWN, "The first player to reach the Crown of Command wins!")
+
+DEFSTRING(CARDTEXT_NAME_CONFRONT_THE_DRAGON_KING, "Confront the Dragon King")
+DEFSTRING(CARDTEXT_DESC_CONFRONT_THE_DRAGON_KING, "When a character enters the Crown of Command, they immediately attack the Dragon King.\n\nThe character must choose whether to attack the Dragon King using Strength or Craft. Each time they defeat the Dragon King, they must remove one of the Dragon King's lives and immediately attack him again.\n\nThe character who removes the last life on the Dragon King wins the game!\n\nIf a character confronting the Dragon King has a stand-off or is defeated, their turn ends and they must attack the Dragon King at the start of their next turn. If the character is defeated, in addition to losing a life, they suffer the effects of the Dragon Rage listed on the Dragon King's card.\n\nIf the character is killed and there are no other characters on the Crown of Command, the Dragon King heals all his lives.")

@@ -1,7 +1,4 @@
-DEFSTRING(CARDTEXT_DESC_COMMAND,		"Every character except the one who possesses the Crown of Command must lose 1 life.")
-DEFSTRING(CARDTEXT_DESC_PURCHASE_SPELL, "Exchange this card for one random Spell from the Spell deck.")
-//untranslated ^
-DEFSTRING(CARDTEXT_DESC_FIRST_SPELL,	"") // FIRST_SPELL,
+
 DEFSTRING(CARDTEXT_DESC_ACQUISITION,	"Cast at the start of your turn, before you move. Take one Object of your choice or one gold from any character.")
 DEFSTRING(CARDTEXT_DESC_ALCHEMY,	"Cast at the start of your turn, before you move. Convert any number of Objects you have into gold. Discard the chosen Objects and gain 1 gold for each.")
 DEFSTRING(CARDTEXT_DESC_COUNTERSPELL,	"Cast as required. Negate the effects of any Spell just cast, including the Command Spell.")

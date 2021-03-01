@@ -1,0 +1,43 @@
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_ALERTNESS, "\"You can handle your ale!\"\n\nYou will never miss a turn when you roll a 1 at the Tavern.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_ALERTNESS, "\"The Temple keepers cannot slow you down!\"\n\nYou will never be stranded at the Temple.\n\nYou will never miss a turn when you roll a 1 at the Tavern.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_ALERTNESS, "\"You have the skills of a Ranger!\"\n\nNever again will you be lost in the Forest or Crags.\n\nYou will never be stranded at the Temple.\n\nYou will never miss a turn at the Tavern.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_BRAWN, "\"You are as strong as an ox!\"\n\nYou start with Strength 3.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_BRAWN, "\"You are as strong as an ox!\"\n\nYou start with Strength 4.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_BRAWN, "\"You are as strong as an ox!\"\n\nYou start with Strength 5.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_COMMAND,"\"Ultimate power springs from your fingertips!\"\n\nCommand Spell success on a roll of\n3, 4, 5 or 6.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_COMMAND,"\"Ultimate power springs from your fingertips!\"\n\nCommand Spell success on a roll of\n2, 3, 4, 5 or 6.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_COMMAND,"\"Ultimate power springs from your fingertips!\"\n\nAutomatic Command Spell success.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_HEALTH, "\"A long and prosperous life to you.\"\n\n+1 to your starting lives.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_HEALTH, "\"A long and prosperous life to you.\"\n\n+2 to your starting lives.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_HEALTH, "\"A long and prosperous life to you.\"\n\n+3 to your starting lives.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_INTELLECT, "\"You are a quick learner!\"\n\nTrade-in Craft trophies at 6.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_INTELLECT, "\"You are a quick learner!\"\n\nTrade-in Craft trophies at 5.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_INTELLECT, "\"You are a quick learner!\"\n\nTrade-in Craft trophies at 4.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_LUCK, "\"May the Gods watch over you.\"\n\n+1 to your starting fate.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_LUCK, "\"May the Gods watch over you.\"\n\n+2 to your starting fate.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_LUCK, "\"May the Gods watch over you.\"\n\n+3 to your starting fate.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_POWER, "\"You gain Strength quickly!\"\n\nTrade-in Strength trophies at 6.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_POWER, "\"You gain Strength quickly!\"\n\nTrade-in Strength trophies at 5.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_POWER, "\"You gain Strength quickly!\"\n\nTrade-in Strength trophies at 4.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_PROTECTION, "\"You are prepared for conflict!\"\n\nEnemies receive +1 to attack rolls instead of +2 on the Runes spaces.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_PROTECTION, "\"The tide is turning!\"\n\nNo bonus to Enemy rolls on the Runes spaces.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_PROTECTION, "\"The advantage is yours!\"\n\nNo bonus to Enemy rolls on the Runes spaces.\n\n+1 to your attack roll on the Runes spaces.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_RESISTANCE, "\"Your Toad resistance grows!\"\n\nYou're only a Toad for 2 turns.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_RESISTANCE, "\"Your Toad resistance grows!\"\n\nYou're only a Toad for 1 turn.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_RESISTANCE, "\"Your Toad resistance grows!\"\n\nYou're immune to being turned into a Toad.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_THOUGHT, "\"You are as cunning as a fox!\"\n\nYou start with Craft 3.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_THOUGHT, "\"You are as cunning as a fox!\"\n\nYou start with Craft 4.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_THOUGHT, "\"You are as cunning as a fox!\"\n\nYou start with Craft 5.")
+
+DEFSTRING(CARDTEXT_DESC_BRONZE_RUNE_WEALTH, "\"May your pockets never be empty!\"\n\n+1 to your starting gold.")
+DEFSTRING(CARDTEXT_DESC_SILVER_RUNE_WEALTH, "\"May your pockets never be empty.\"\n\n+2 to your starting gold.")
+DEFSTRING(CARDTEXT_DESC_GOLD_RUNE_WEALTH, "\"May your pockets never be empty.\"\n\n+3 to your starting gold.")

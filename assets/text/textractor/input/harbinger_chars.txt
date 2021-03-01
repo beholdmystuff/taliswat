@@ -1,0 +1,12 @@
+DEFSTRING(CHARACTER_CARD_ASCENDANT_DIVINE, \
+"SPECIAL ABILITIES\n\n\
+You begin the game with 4 Spells facedown on your character card. These Spells are your divine gifts. Your divine gifts do not count as Spells for the purpose of other effects and do not count against your Spell limit.\n\nWhenever you gain Strength or Craft and have 4 or fewer divine gifts on your character card, take the top card of the Spell deck and add it to the divine gifts on your character card.\n\nOnce per round, you may cast one of your divine gifts as if it were a Spell, though it does not count as a Spell for the purpose of other effects and does not count against the maximum number of Spells you may cast during a turn.\n\nAt the start of your turn, you may discard 1 of your divine gifts to draw 1 Spell.\n\n\
+Start: Temple           Alignment: Neutral")
+DEFSTRING(CHARACTER_CARD_CELESTIAL, \
+"SPECIAL ABILITIES\n\n\
+You are always good. If any effect would change your alignment to neutral, ignore it. If any effect would change your alignment to evil, ignore it and lose 1 life.\n\nYour Craft value is equal to your current fate.\n\nAfter you roll the die to pray, you may ignore the result and replenish 1 fate instead.\n\nWhenever you gain 1 or more lives, you may gain 1 fate. Whenever you heal 1 or more lives, you may replenish 1 fate.\n\nWhen you attack an evil or neutral character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character. If you win, you must take 1 fate from the loser, instead of the normal reward. \n\n\
+Start: Chapel           Alignment: Good")
+DEFSTRING(CHARACTER_CARD_POSSESSED, \
+"SPECIAL ABILITIES\n\n\
+You are always evil. If any effect would change your alignment to neutral, ignore it. If any effect would change your alignment to good, ignore it and lose 1 life.\n\nYour Strength value is equal to your current life.\n\nWhenever you defeat an Enemy in battle, you may heal 1 life.\n\nAt the start of your turn, you may discard 1 Stranger or Place in your space. If you do, you may heal 1 life.\n\n\
+Start: Graveyard           Alignment: Evil")

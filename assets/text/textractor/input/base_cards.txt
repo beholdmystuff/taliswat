@@ -150,3 +150,6 @@ DEFSTRING(CARDTEXT_DESC_MARSH_CHALLENGE,	"The Marsh will remain here for the res
 DEFSTRING(CARDTEXT_DESC_MAZE_CHALLENGE,	"The Maze will remain here for the rest of the game. Whenever you land here, if your Craft is less than 7 you must miss one turn.")
 DEFSTRING(CARDTEXT_DESC_POOL_OF_LIFE_CHALLENGE,	"2 Life points are found here. You may bathe in the Pool once per visit and take one life from the Pool to add to your own lives. When both have been taken away, the Pool of Life drains away.")
 DEFSTRING(CARDTEXT_DESC_SHRINE_CHALLENGE,		"The Shrine will remain here for the rest of the game. Roll 1 die to pray with the following results:\n 1-2) Ignored\n 3) Gain 1 fate\n 4) Gain 1 gold\n 5) Gain 1 Spell\n 6) Gain 1 life")
+
+DEFSTRING(CARDTEXT_DESC_COMMAND,		"Every character except the one who possesses the Crown of Command must lose 1 life.")
+DEFSTRING(CARDTEXT_DESC_PURCHASE_SPELL, "Exchange this card for one random Spell from the Spell deck.")
