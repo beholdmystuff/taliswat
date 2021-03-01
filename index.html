@@ -1,5 +1,7 @@
 <html>
 <head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body
 {
@@ -8,6 +10,144 @@ body
     width: 100vw;
     height: 100vh;
 }
+
+/* MAIN MENU */
+.mainMenu
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.logo
+{
+    width: 30vw;
+    height: 15vw;
+    left: 35vw;
+    position: absolute;
+    background-image: url(assets/ui/logo.png);
+    background-size: 100% 100%;
+    animation: logoSkew 15s infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes logoSkew
+{
+    0% { transform: skew(0deg); }
+    25% { transform: skew(5deg); }
+    75% { transform: skew(-5deg); }
+    100% { transform: skew(0deg); }
+}
+
+@font-face
+{
+  font-family: Caxton;
+  src: url(assets/fonts/CaxtonStd-Book.otf);
+}
+
+@font-face
+{
+  font-family: Windlass;
+  src: url(assets/fonts/Windlass.ttf);
+}
+
+.gameList
+{
+    width: 60vw;
+    left: 20vw;
+    position: absolute;
+    height: 25vw;
+    top: 17.5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.loadGame, .openGame
+{
+    display: inline-block;
+    font-family: Windlass;
+    border-radius: 1vw;
+    border: 0px;
+    margin: 0.5vw 0vw 0.5vw 0vw;
+    line-height: 2vw;
+    cursor: pointer;
+    width: 98%;
+    font-size: 1vw;
+}
+.loadGame:hover
+{
+    animation: openGameHover 3s infinite;
+}
+@keyframes openGameHover
+{
+    0% { background-color: #3ed33e99; }
+    50% { background-color: #3ed33ecc; }
+    100% { background-color: #3ed33e99; }
+}
+.openGame:hover
+{
+    animation: savedGameHover 3s infinite;
+}
+@keyframes savedGameHover
+{
+    0% { background-color: #64d5f299; }
+    50% { background-color: #64d5f2cc; }
+    100% { background-color: #64d5f299; }
+}
+.loadGame
+{
+    background-color: #3ed33e99;
+}
+.openGame
+{
+    background-color: #64d5f299;
+}
+.loadGame div, .openGame div
+{
+    display: inline-block;
+    text-align: center;
+    pointer-events: none;
+}
+.gameTypeIcon
+{
+    width: 5%;
+}
+.gameOwner
+{
+    width: 30%;
+}
+.gameSlots
+{
+    width: 35%;
+}
+.gameStatus
+{
+    width: 30%;
+}
+
+/* GAME LOBBY */
+.gameLobby
+{
+
+}
+.gameSlotsContainer
+{
+    width: 60vw;
+    left: 20vw;
+    position: absolute;
+    height: 25vw;
+    top: 17.5vw;
+}
+.gameSlot
+{
+    display: inline-block;
+    font-family: Windlass;
+    border-radius: 1vw;
+    border: 0px;
+    margin: 0.5vw 0vw 0.5vw 0vw;
+    line-height: 2vw;
+    cursor: pointer;
+    width: 98%;
+    font-size: 1vw;
+}
+
 /* CONTAINERS */
 #gameMap
 {
@@ -355,6 +495,16 @@ body
 </style>
 </head>
 <body>
+<!-- OPEN MAIN MENU AFTER LOGIN -->
+<!-- <div class="mainMenu">
+    <div class="logo"></div>
+    <div class="gameList"></div>
+</div> -->
+
+<!-- OPEN GAME LOBBY AFTER SUCCESSFULLY JOINING A GAME -->
+<div class="gameLobby">
+    <div class="gameSlotsContainer"></div>
+</div>
 <div id="gameMap"><div id="gameMapInner">
     <div class="boardBase">
         <!-- CHARACTER CARD -->
@@ -861,8 +1011,204 @@ document.querySelectorAll(".space").forEach(function(space)
         }, 300, event.target);
     });
 });
-ass();
+// ass();
 
+let savedGames = [];
+let openGames = [];
+let gameDetails =
+{
+    "asdfghjkl123456789":
+    {
+        id: "asdfghjkl123456789",
+        owner: {name: "testboi", id:"123456789"},
+        playerCount: 5,
+        slots: 6,
+        status: "load",
+        turn: 25,
+        players: [{name: "testboi", id:"123456789", char: ""},
+                {name: "putin", id: "6661", char: "assassin"},
+                {name: "trump", id: "6662", char: "troll"},
+                {name: "xijingping", id: "6663", char: "dark_cultist"},
+                {name: "kimjongun", id: "6664", char: "barbarian"}],
+        rules:
+        {
+            expansions: ["The Ancient Beasts", "The Blood Moon", "The City",
+                        "The Deep Realm", "The Sacred Pool"],
+            characters: ["The Ancient Beasts", "The Blood Moon", "The Cataclysm",
+                        "The City", "The Clockwork Kingdom", "The Deep Realm",
+                        "The Dragon", "The Dungeon", "The Firelands", "The Forstmarch",
+                        "The Harbinger", "The Highland", "The Nether Realm", "The Realm of Souls",
+                        "The Reaper", "The Sacred Pool", "The Woodland"]
+        }
+    },
+    "987654321lkjhgfdsa":
+    {
+        id: "987654321lkjhgfdsa",
+        owner: {name: "testboi", id:"123456789"},
+        playerCount: 4,
+        slots: 6,
+        status: "fresh",
+        turn: 0,
+        players: [{name: "putin", id: "6661"},
+                {name: "trump", id: "6662"},
+                {name: "kimjongun", id: "6664"}],
+        chars: [{name: "", pic: "b", playerid: "123456789"},
+                {name: "assassin", pic: "b", playerid: "6661"},
+                {name: "troll", pic: "b", playerid: "6662"},
+                {name: "barbarian", pic: "b", playerid: "6664"}],
+        rules : {expansions : [], characters : []}
+    }
+}
+
+function fetchSavedGames()
+{
+    let game =
+    {
+        id: "asdfghjkl123456789",
+        owner: {name: "testboi", id:"123456789"},
+        playerCount: 5,
+        slots: 6,
+        status: "load",
+        turn: 25
+    }
+
+    console.log(game);
+    savedGames.push(game);
+    console.log(savedGames);
+}
+
+function fetchOpenGames()
+{
+    let game =
+    {
+        id: "987654321lkjhgfdsa",
+        owner: {name: "testboi", id:"123456789"},
+        playerCount: 4,
+        slots: 6,
+        status: "fresh",
+        turn: 0
+    };
+    openGames.push(game);
+}
+
+function openGame(event)
+{
+    console.log("Game ID:", event);
+    console.log("Game ID:", event.target.getAttribute("gameid"));
+
+    //close game list
+    //open game lobby
+
+}
+
+function parseGame(game, type)
+{
+    let element = document.createElement("div");
+    element.className = type + "Game";
+    element.setAttribute("gameid", game.id);
+
+    let gameTypeElement = document.createElement("div");
+    gameTypeElement.className = "gameTypeIcon";
+    gameTypeElement.textContent = (game.status == "fresh") ? "✿" : "♻";
+
+    let ownerElement = document.createElement("div");
+    ownerElement.className = "gameOwner";
+    ownerElement.textContent = game.owner.name + "'s game";
+
+    let slotsElement = document.createElement("div");
+    slotsElement.className = "gameSlots";
+    slotsElement.textContent = game.playerCount + " / " + game.slots + " players";
+
+    let statusElement = document.createElement("div");
+    statusElement.className = "gameStatus";
+    statusElement.textContent = (game.status == "fresh") ? "Not started yet" : (game.turn + " turn load");
+
+    element.addEventListener("click", openGame);
+
+    element.appendChild(gameTypeElement);
+    element.appendChild(ownerElement);
+    element.appendChild(slotsElement);
+    element.appendChild(statusElement);
+
+    return element;
+}
+
+async function fetchGames()
+{
+    fetchSavedGames();
+    fetchOpenGames();
+
+    let gameListElement = document.querySelector(".gameList");
+
+    //draw saved games
+    savedGames.forEach(function(game)
+    {
+        gameListElement.appendChild(parseGame(game, "load"));
+    });
+
+    //draw open games
+    openGames.forEach(function(game)
+    {
+        gameListElement.appendChild(parseGame(game, "open"));
+    });
+}
+
+function setLobbySlot(game, slotID)
+{
+    let gameSlot = document.createElement("div");
+    gameSlot.className = "gameSlot";
+
+    let playerName = document.createElement("div");
+    playerName.className = "lobbyPlayerName";
+    let player = game.players[slotID]
+    playerName.textContent = player ? player.name : "";
+
+    let charPic = document.createElement("div");
+    charPic.className = "lobbyCharPic";
+
+    let charName = document.createElement("div");
+    charName.className = "lobbyCharName";
+
+    charName.textContent = player.char ? player.char : "Random";
+    //slot remove element
+    //player name element
+    //character mini element
+    //character name element
+    //separator bar
+
+    gameSlot.appendChild(playerName);
+    gameSlot.appendChild(charPic);
+    gameSlot.appendChild(charName);
+
+    return gameSlot;
+}
+
+function loadLobby()
+{
+    //get game details
+
+    //game expansions
+    //game characters
+
+    let game = gameDetails["asdfghjkl123456789"];
+    console.log(game);
+    let gameSlotsContainer = document.querySelector(".gameSlotsContainer");
+
+
+    for (var i = 0; i < game.slots - 1; i++)
+    {
+        gameSlotsContainer.appendChild(setLobbySlot(game, i));
+    }
+}
+
+async function mainMenu()
+{
+    // fetchGames();
+    loadLobby();
+
+}
+
+mainMenu();
 /*
 login
 display open games
