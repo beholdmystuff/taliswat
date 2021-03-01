@@ -4,13 +4,16 @@
 body
 {
     margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 /* CONTAINERS */
 #gameMap
 {
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: url(bg.jpg);
     background-size: 100% 100%;
 }
@@ -69,7 +72,6 @@ body
 .space
 {
     position: absolute;
-    mix-blend-mode: screen;
     opacity: 0.0;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
@@ -272,7 +274,7 @@ body
 /* SPACE HIHGLIGHT */
 .topLeftHighlight
 {
-    background-image: url(assets/board/glow/tl_alpha.png);
+    background-image: url(assets/board/glow/tl.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -282,7 +284,7 @@ body
 }
 .topHighlight
 {
-    background-image: url(assets/board/glow/t_alpha.png);
+    background-image: url(assets/board/glow/t.png);
     background-position: center;
     background-size: 100% 100%;
     width: 50%;
@@ -292,7 +294,7 @@ body
 }
 .topRightHighlight
 {
-    background-image: url(assets/board/glow/tr_alpha.png);
+    background-image: url(assets/board/glow/tr.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -302,7 +304,7 @@ body
 }
 .rightHighlight
 {
-    background-image: url(assets/board/glow/r_alpha.png);
+    background-image: url(assets/board/glow/r.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -312,7 +314,7 @@ body
 }
 .bottomRightHighlight
 {
-    background-image: url(assets/board/glow/br_alpha.png);
+    background-image: url(assets/board/glow/br.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -322,7 +324,7 @@ body
 }
 .bottomHighlight
 {
-    background-image: url(assets/board/glow/b_alpha.png);
+    background-image: url(assets/board/glow/b.png);
     background-position: center;
     background-size: 100% 100%;
     width: 50%;
@@ -332,7 +334,7 @@ body
 }
 .bottomLeftHighlight
 {
-    background-image: url(assets/board/glow/bl_alpha.png);
+    background-image: url(assets/board/glow/bl.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -342,7 +344,7 @@ body
 }
 .LeftHighlight
 {
-    background-image: url(assets/board/glow/l_alpha.png);
+    background-image: url(assets/board/glow/l.png);
     background-position: center;
     background-size: 100% 100%;
     width: 25%;
@@ -902,10 +904,11 @@ game
     draw card from top
     select particular hard
     browse x
-        take from browse
-        discard from browse
+        take from browsed group
+        discard from browsed group
         place on top
         place on bottom
+    show cards on space
     select inner board alternatives
         dragon realm
         dragon tower
