@@ -1,7 +1,7 @@
 const fs = require('fs');
 const sharp = require('sharp');
 
-const sourceDir = "./board/";
+const sourceDir = "./minis/";
 
 function sleep(ms) {
   return new Promise((resolve) => {
@@ -16,14 +16,14 @@ function parsse(file)
         try
         {
             let rgb = await sharp(sourceDir + "rgb/" + file);
-            // let meta = await rgb.metadata(); // for resize
+            let meta = await rgb.metadata(); // for resize
 
-            // let alpha = await sharp(sourceDir + "alpha/" + file.replace(".png", "_alpha.png")); //alpha merging
+            let alpha = await sharp(sourceDir + "alpha/" + file); //alpha merging
             // alpha = await alpha.resize(meta.width, meta.height).rotate(180); //city boards
-            // alpha = await alpha.resize(meta.width, meta.height); //minis
+            alpha = await alpha.resize(meta.width, meta.height); //minis
 
-            // let buffer = await alpha.toBuffer(); //for alpha merging
-            // await rgb.joinChannel(buffer); // for alpha merging
+            let buffer = await alpha.toBuffer(); //for alpha merging
+            await rgb.joinChannel(buffer); // for alpha merging
             // await rgb.rotate(180).toFile(sourceDir + "rgba/" + file); //city boards
             await rgb.toFile(sourceDir + "rgba/" + file);
 
@@ -43,6 +43,6 @@ let fileNumber = 1;
 dir.forEach(async file =>
 {
     await parsse(file);
-    console.log(Math.round((fileNumber / dir.length) * 100) + "%");
+    console.log(Math.floor((fileNumber / dir.length) * 100) + "%");
     fileNumber += 1;
 });
