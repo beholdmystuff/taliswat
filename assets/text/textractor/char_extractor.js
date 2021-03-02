@@ -31,26 +31,30 @@ module.exports = function()
 
         charString.replace(classRegex, function(m, g1, g2, g3, g4)
         {
-            let charName = g1.replace("CHAR", "");
+            let charName = g1.replace("CHARACTER", "").replace("CHAR", "");
             let charNameSplit = charName.split("_");
+            console.log(charNameSplit);
             charName = "";
             let fileName = "";
             for (let i = 0, l = charNameSplit.length; i < l; i++)
             {
+                let segment = charNameSplit[i];
+                if (segment.length == 0)
+                    continue;
+
                 if (i > 0)
                 {
                     charName += " ";
                     fileName += "_";
                 }
 
-                let segment = charNameSplit[i];
                 charName += segment.charAt(0) + segment.slice(1).toLowerCase();
-
                 fileName += segment.toLowerCase();
             }
 
-            // console.log(charName);
-            let classObj = {description: g2, start: g3, alignment: g4, filePrefix: fileName,
+            let description = g2.replace(/\\n\\n/g, "</br>").replace(/\r\n/g, "</br>").replace(/\\/g, "").replace(/<\/br>/g, "<\/br><\/br>").replace(/<\/br><\/br><\/br><\/br>/g, "<\/br><\/br>");
+
+            let classObj = {description: description, start: g3, alignment: g4, filePrefix: fileName,
                             strength: 0, craft: 0, gold: 0, life: 0, fate: 0};
             expansionObj[charName] = classObj
         });

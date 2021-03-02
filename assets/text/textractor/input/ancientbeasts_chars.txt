@@ -10,10 +10,3 @@ After turning in trophies to gain Strength, roll 1 die to receive a bonus reward
 5) Gain 1 life\n\
 6) Gain 1 Strength\n\n\
 Start: Castle          Alignment: Evil")
-DEFSTRING(CHARACTER_CARD_MECHANICAL_MONSTER, \
-"SPECIAL ABILITIES\n\n\
-You may not cast, have or gain any Spells, nor are you affected by them.\n\n\
-Players cannot equip Weapons when engaging you in battle or psychic combat.\n\n\
-You cannot heal, carry any Objects, nor hold any Followers.\n\n\
-The Mechanical Monster wishes for nothing more than to destroy the Dwarf and the Mine. If the Mechanical Monster reaches the Mines in the Inner Region, all other players lose.\n\n\
-Start: City          Alignment: Evil")

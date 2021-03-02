@@ -1,0 +1,15 @@
+DEFSTRING(CHARACTER_CARD_REAPER, "If a player rolls a 1 for their movement, at the end of their turn they must roll to move the Reaper. If the Reaper lands on a character they must roll 1 die.\n\
+^1)^ Lose all lives, you are killed.\n\
+^2)^ Discard a random Follower or lose a life if you have no Followers.\n\
+^3)^ A dice battle with the Grim Reaper, if the Grim Reaper wins you lose a life.\n\
+^4)^ Miss your next turn.\n\
+^5)^ Choose another character for the Grim Reaper to visit instead.\n\
+^6)^ Gain 1 Strength, Craft, life, gold, Spell or fate, or teleport in this Region on your next turn.")
+
+DEFSTRING(CHARACTER_CARD_TOAD,\
+"You are a Toad for 3 turns.\n\n\
+All Objects, gold and Followers are left on the space where you turned into a Toad.\nYou cannot pick up any Objects, Followers or gold whilst a Toad.\n\n\
+Move: One space per turn (no die roll)\n\
+Life: Retain your character's lives\n\
+Fate: Retain your character's fate\n\
+You cannot cast or gain Spells but may keep the ones you had. When returning to normal, you will be as before, minus Objects, Followers, gold, fate and lives lost whilst a Toad.")

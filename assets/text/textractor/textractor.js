@@ -1,6 +1,6 @@
 /* CHARS */
-// let convertChars = require("./char_extractor.js");
-// convertChars();
+let convertChars = require("./char_extractor.js");
+convertChars();
 
 
 /* CARDS */
