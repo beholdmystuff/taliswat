@@ -1,7 +1,7 @@
 const fs = require('fs');
 const sharp = require('sharp');
 
-const sourceDir = "./minis/";
+const sourceDir = "./something/";
 
 function sleep(ms) {
   return new Promise((resolve) => {
@@ -18,7 +18,8 @@ function parsse(file)
             let rgb = await sharp(sourceDir + "rgb/" + file);
             let meta = await rgb.metadata(); // for resize
 
-            let alpha = await sharp(sourceDir + "alpha/" + file); //alpha merging
+            let alpha = await sharp(sourceDir + "alpha/minicard.png"); //alpha merging single alpha
+            // let alpha = await sharp(sourceDir + "alpha/" + file); //alpha merging
             // alpha = await alpha.resize(meta.width, meta.height).rotate(180); //city boards
             alpha = await alpha.resize(meta.width, meta.height); //minis
 
