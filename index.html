@@ -10,6 +10,14 @@ body
     width: 100vw;
     height: 100vh;
 }
+#gameContainer
+{
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
 .hidden
 {
     display: none;
@@ -19,7 +27,6 @@ body
 {
     width: 100%;
     height: 100%;
-    background-color: black;
 }
 .logo
 {
@@ -191,7 +198,23 @@ body
     position: absolute;
     left: 65%;
     pointer-events: none;
-    width: 35%;
+    width: 25%;
+}
+.readyButton
+{
+    min-width: 5%;
+    min-height: 3vw;
+    background-size: 100% 100%;
+    width: 5%;
+    left: 92.5%;
+    position: absolute;
+    cursor: pointer;
+}
+.readyIcon
+{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /* CHARACTER SELECTOR */
@@ -242,6 +265,7 @@ body
     font-family: Windlass;
     font-size: 1.2vw;
     line-height: 2vw;
+    user-select: none;
 }
 
 .charSelectorCharContainer
@@ -256,6 +280,7 @@ body
     cursor: pointer;
     background-size: 100% 100%;
     opacity: 1;
+    user-select: none;
 }
 .charSelectorCharContainer:hover
 {
@@ -298,8 +323,36 @@ body
     line-height: 1vw;
     white-space: pre-wrap;
     padding: 1vw 2vw 0vw 2vw;
+    user-select: none;
 }
-
+.letMeOutButton
+{
+    position: absolute;
+    top: -4vw;
+    left: 48vw;
+    width: 9vw;
+    font-family: Windlass;
+    font-size: 1vw;
+    line-height: 2vw;
+    border-radius: 3vw;
+    background-color: #c0c0c099;
+    padding: 0.5vw 0.5vw 0.5vw 1vw;
+    cursor: pointer;
+}
+.letMeOutButton:before
+{
+    position: absolute;
+    top: 0vw;
+    right: 0vw;
+    display: block;
+    content: " ";
+    width: 3vw;
+    height: 3vw;
+    background-image: url(assets/ui/let_me_out_button.png);
+    background-size: 100% 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
 /* CONTAINERS */
 #gameMap
 {
@@ -647,13 +700,7 @@ body
 </style>
 </head>
 <body>
-<!-- OPEN MAIN MENU AFTER LOGIN -->
-<!-- <div class="mainMenu">
-    <div class="logo"></div>
-    <div class="gameList"></div>
-</div> -->
-
-
+<div id="gameContainer"></div>
 <div id="gameMap"><div id="gameMapInner">
     <div class="boardBase">
         <!-- CHARACTER CARD -->
@@ -720,14 +767,10 @@ body
     <div class="boardExpansion boardHighlands">
     </div>
 </div></div>
-<!-- OPEN GAME LOBBY AFTER SUCCESSFULLY JOINING A GAME -->
-<div class="gameLobby">
-    <div class="gameSlotsContainer"></div>
-</div>
 </body>
 <!-- TODO merge game data into single json -->
 <script src="assets/text/expansions.js"></script>
-<script src="assets/text/spaces.js"></script>
+<script src="assets/text/base_spaces.js"></script>
 <script src="assets/text/chars.js"></script>
 <script>
 function fetch(url, type)
@@ -1176,7 +1219,6 @@ let gameDetails =
         id: "asdfghjkl123456789",
         owner: {name: "testboi", id:"123456789"},
         playerCount: 5,
-        slots: 6,
         status: "load",
         turn: 25,
         players: [{name: "testboi", id:"123456789", char: ""},
@@ -1200,17 +1242,12 @@ let gameDetails =
         id: "987654321lkjhgfdsa",
         owner: {name: "testboi", id:"123456789"},
         playerCount: 4,
-        slots: 6,
         status: "fresh",
         turn: 0,
         players: [{name: "testboi", id:"123456789", char: ""},
-                {name: "putin", id: "6661"},
-                {name: "trump", id: "6662"},
-                {name: "kimjongun", id: "6664"}],
-        chars: [{name: "", pic: "b", playerid: "123456789"},
-                {name: "Assassin", pic: "b", playerid: "6661"},
-                {name: "Troll", pic: "b", playerid: "6662"},
-                {name: "Barbarian", pic: "b", playerid: "6664"}],
+                {name: "putin", id: "6661", char: "Conman"},
+                {name: "trump", id: "6662", char: "Leprechaun"},
+                {name: "kimjongun", id: "6664", char: "Grave Robber"}],
         rules : {expansions : [], characters : []}
     }
 }
@@ -1227,9 +1264,7 @@ function fetchSavedGames()
         turn: 25
     }
 
-    console.log(game);
     savedGames.push(game);
-    console.log(savedGames);
 }
 
 function fetchOpenGames()
@@ -1246,15 +1281,6 @@ function fetchOpenGames()
     openGames.push(game);
 }
 
-function openGame(event)
-{
-    console.log("Game ID:", event);
-    console.log("Game ID:", event.target.getAttribute("gameid"));
-
-    //close game list
-    //open game lobby
-
-}
 // PARSE GAME OBJECT TO ELEMENT
 function parseGame(game, type)
 {
@@ -1278,7 +1304,7 @@ function parseGame(game, type)
     statusElement.className = "gameStatus";
     statusElement.textContent = (game.status == "fresh") ? "Not started yet" : (game.turn + " turn load");
 
-    element.addEventListener("click", openGame);
+    element.addEventListener("click", loadLobby);
 
     element.appendChild(gameTypeElement);
     element.appendChild(ownerElement);
@@ -1327,6 +1353,7 @@ function selectCharacter(name)
 
     console.log(slotID);
     let slot = document.querySelector(".gameSlot:nth-child(" + slotID + 1  + ")");
+    console.log(slot);
     slot.querySelector(".slotCharPic").style.setProperty("background-image", "url(assets/chars/" + ((name != "Random") ? charsSorted[name].filePrefix : "random") + "_p.png)");
     slot.querySelector(".slotCharName").textContent = name;
 
@@ -1483,6 +1510,26 @@ function openCharacterSelector()
     document.body.appendChild(characterSelector);
 }
 
+let readyPlayers = [];
+function togglePlayerReady(event)
+{
+    let playerName = event.target.parentNode.querySelector(".slotPlayerName").textContent;
+
+    if (player.name != playerName)
+        return;
+
+    if (!readyPlayers.includes(playerName))
+    {
+        readyPlayers.push(playerName);
+        event.target.style.setProperty("background-image", "url(assets/ui/ready_icon.png)");
+    }
+    else
+    {
+        readyPlayers = readyPlayers.filter(function(e) { return e !== playerName });
+        event.target.style.setProperty("background-image", "url(assets/ui/ready_button.png)");
+    }
+}
+
 // set lobby slot display
 function setLobbySlot(game, slotID)
 {
@@ -1491,7 +1538,9 @@ function setLobbySlot(game, slotID)
 
     let playerName = document.createElement("div");
     playerName.className = "slotPlayerName";
-    let slotPlayer = game.players[slotID]
+
+    let slotPlayer = game.players[slotID];
+
     playerName.textContent = slotPlayer ? slotPlayer.name : "";
 
     let charPic = document.createElement("div");
@@ -1505,47 +1554,97 @@ function setLobbySlot(game, slotID)
 
     let charName = document.createElement("div");
     charName.className = "slotCharName";
-
     charName.textContent = (slotPlayer.char.length > 0) ? slotPlayer.char : "Random";
+
+    let readyButton = document.createElement("div");
+    readyButton.className = "readyButton";
+    readyButton.style.setProperty("background-image", "url(assets/ui/ready_button.png)");
+    readyButton.addEventListener("click", togglePlayerReady);
+
+
     //slot remove element
-    //player name element
-    //character mini element
-    //character name element
-    //separator bar
 
     gameSlot.appendChild(playerName);
     gameSlot.appendChild(charPic);
     gameSlot.appendChild(charName);
+    gameSlot.appendChild(readyButton);
 
     return gameSlot;
 }
 
-function loadLobby()
+function leaveLobby()
 {
+    currentGameLobby = {};
+    readyPlayers = [];
+    let lobby = document.querySelector(".gameLobby");
+    lobby.parentNode.removeChild(lobby);
+    console.log(1);
+    loadGameList();
+}
+
+function loadLobby(event)
+{
+    //empty game list containers
+    savedGames = [];
+    openGames = [];
+
     sortCharacters();
     //TODO
-    //get game details
-
     //game expansions
-    //game characters
 
-    currentGameLobby = gameDetails["asdfghjkl123456789"];
+    let gameLobby = document.createElement("div");
+    gameLobby.className = "gameLobby";
 
-    console.log(currentGameLobby);
-    let gameSlotsContainer = document.querySelector(".gameSlotsContainer");
+    let gameSlotsContainer = document.createElement("div");
+    gameSlotsContainer.className = "gameSlotsContainer";
 
+    //get selected game details
 
-    for (var i = 0; i < currentGameLobby.slots - 1; i++)
+    currentGameLobby = gameDetails[event.target.getAttribute("gameid")];
+
+    for (var i = 0; i < currentGameLobby.playerCount; i++)
     {
         gameSlotsContainer.appendChild(setLobbySlot(currentGameLobby, i));
     }
+
+    let meOut = document.createElement("div");
+    meOut.className = "letMeOutButton";
+    meOut.textContent = "Let me out!";
+    meOut.addEventListener("click", leaveLobby);
+
+    gameSlotsContainer.appendChild(meOut);
+    gameLobby.appendChild(gameSlotsContainer);
+    document.querySelector("#gameContainer").appendChild(gameLobby);
+
+    let gameList = document.querySelector(".gameList");
+    gameList.parentNode.removeChild(gameList);
+
+    //sync host state
+}
+
+function loadGameList()
+{
+    let gameList = document.createElement("div");
+    gameList.className = "gameList";
+
+    document.querySelector(".mainMenu").appendChild(gameList);
+    console.log(2);
+    fetchGames();
 }
 
 async function mainMenu()
 {
-    // fetchGames();
-    loadLobby();
+    let mainMenu = document.createElement("div");
+    mainMenu.className = "mainMenu";
 
+    let logo = document.createElement("div");
+    logo.className = "logo";
+
+    mainMenu.appendChild(logo);
+
+    document.querySelector("#gameContainer").appendChild(mainMenu);
+
+    loadGameList();
 }
 
 mainMenu();
