@@ -10,7 +10,10 @@ body
     width: 100vw;
     height: 100vh;
 }
-
+.hidden
+{
+    display: none;
+}
 /* MAIN MENU */
 .mainMenu
 {
@@ -58,6 +61,7 @@ body
     top: 17.5vw;
     overflow-x: hidden;
     overflow-y: auto;
+    user-select: none;
 }
 .loadGame, .openGame
 {
@@ -104,6 +108,7 @@ body
     display: inline-block;
     text-align: center;
     pointer-events: none;
+    user-select: none;
 }
 .gameTypeIcon
 {
@@ -129,6 +134,7 @@ body
 }
 .gameSlotsContainer
 {
+    user-select: none;
     width: 60vw;
     left: 20vw;
     position: absolute;
@@ -141,11 +147,157 @@ body
     font-family: Windlass;
     border-radius: 1vw;
     border: 0px;
-    margin: 0.5vw 0vw 0.5vw 0vw;
-    line-height: 2vw;
-    cursor: pointer;
+    margin: 0.25vw 0vw 0.25vw 0vw;
+    line-height: 3vw;
     width: 98%;
     font-size: 1vw;
+    background: #c0c0c099;
+    z-index: 5;
+    transition: background-color 0.25s linear;
+    height: 3vw;
+}
+.gameSlot:hover
+{
+    background-color: #c0c0c0cc;
+}
+.gameSlot div, .gameSlot div
+{
+    display: block;
+    text-align: center;
+}
+.slotPlayerName
+{
+    position: absolute;
+    left: 0%;
+    pointer-events: none;
+    width: 40%;
+}
+.slotCharPic
+{
+    position: absolute;
+    left: 40%;
+    background-size: 22.5% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25%;
+    min-height: 3vw;
+}
+.clickable
+{
+    cursor: pointer;
+}
+.slotCharName
+{
+    position: absolute;
+    left: 65%;
+    pointer-events: none;
+    width: 35%;
+}
+
+/* CHARACTER SELECTOR */
+.characterSelector
+{
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    background-color: black;
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+
+.characterPicker
+{
+    width: 100vw;
+    height: 17vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    top:  8vw;
+    position: absolute;
+}
+.nameSearchInput
+{
+    position: absolute;
+    left: 42.5vw;
+    top: 3vw;
+    width: 15vw;
+    font-family: Windlass;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    background-image: url(assets/ui/paper_title.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+.nameSearchLabel
+{
+    position: absolute;
+    left: 26.5vw;
+    top: 3.2vw;
+    width: 16vw;
+    color: white;
+    font-family: Windlass;
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.charSelectorCharContainer
+{
+    display: inline-block;
+    width: 10vw;
+    height: 15vw;
+    margin: 0vw 1vw 0vw 1vw;
+    padding: 0.5vw 1vw 1vw 1vw;
+    transition: background-color 0.3s ease-out, opacity 0.2s linear;
+    border-radius: 2vw;
+    cursor: pointer;
+    background-size: 100% 100%;
+    opacity: 1;
+}
+.charSelectorCharContainer:hover
+{
+    background-color: #64d5f299;
+}
+.characterSelectorMini
+{
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+.characterSelectorName
+{
+    width: 13vw;
+    height: 2vw;
+    position: relative;
+    left: -1.5vw;
+    font-family: Windlass;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    background-image: url(assets/ui/paper_title.png);
+    background-size: 100% 100%;
+    text-align: center;
+    pointer-events: none;
+}
+.characterSelectorDescription
+{
+    top: 25.5vw;
+    left: 30vw;
+    width: 40vw;
+    height: 20vw;
+    text-align: center;
+    pointer-events: none;
+    background-image: url(assets/ui/paper.png);
+    background-size: 100% 100%;
+    z-index: 5;
+    position: absolute;
+    font-family: Caxton;
+    font-size: 0.8vw;
+    line-height: 1vw;
+    white-space: pre-wrap;
+    padding: 1vw 2vw 0vw 2vw;
 }
 
 /* CONTAINERS */
@@ -501,10 +653,7 @@ body
     <div class="gameList"></div>
 </div> -->
 
-<!-- OPEN GAME LOBBY AFTER SUCCESSFULLY JOINING A GAME -->
-<div class="gameLobby">
-    <div class="gameSlotsContainer"></div>
-</div>
+
 <div id="gameMap"><div id="gameMapInner">
     <div class="boardBase">
         <!-- CHARACTER CARD -->
@@ -571,11 +720,15 @@ body
     <div class="boardExpansion boardHighlands">
     </div>
 </div></div>
-
+<!-- OPEN GAME LOBBY AFTER SUCCESSFULLY JOINING A GAME -->
+<div class="gameLobby">
+    <div class="gameSlotsContainer"></div>
+</div>
 </body>
 <!-- TODO merge game data into single json -->
 <script src="assets/text/expansions.js"></script>
 <script src="assets/text/spaces.js"></script>
+<script src="assets/text/chars.js"></script>
 <script>
 function fetch(url, type)
 {
@@ -1012,7 +1165,8 @@ document.querySelectorAll(".space").forEach(function(space)
     });
 });
 // ass();
-
+let player = {name: "testboi", id:"123456789"};
+let currentGameLobby;
 let savedGames = [];
 let openGames = [];
 let gameDetails =
@@ -1026,10 +1180,10 @@ let gameDetails =
         status: "load",
         turn: 25,
         players: [{name: "testboi", id:"123456789", char: ""},
-                {name: "putin", id: "6661", char: "assassin"},
-                {name: "trump", id: "6662", char: "troll"},
-                {name: "xijingping", id: "6663", char: "dark_cultist"},
-                {name: "kimjongun", id: "6664", char: "barbarian"}],
+                {name: "putin", id: "6661", char: "Assassin"},
+                {name: "trump", id: "6662", char: "Troll"},
+                {name: "xijingping", id: "6663", char: "Dark Cultist"},
+                {name: "kimjongun", id: "6664", char: "Barbarian"}],
         rules:
         {
             expansions: ["The Ancient Beasts", "The Blood Moon", "The City",
@@ -1049,13 +1203,14 @@ let gameDetails =
         slots: 6,
         status: "fresh",
         turn: 0,
-        players: [{name: "putin", id: "6661"},
+        players: [{name: "testboi", id:"123456789", char: ""},
+                {name: "putin", id: "6661"},
                 {name: "trump", id: "6662"},
                 {name: "kimjongun", id: "6664"}],
         chars: [{name: "", pic: "b", playerid: "123456789"},
-                {name: "assassin", pic: "b", playerid: "6661"},
-                {name: "troll", pic: "b", playerid: "6662"},
-                {name: "barbarian", pic: "b", playerid: "6664"}],
+                {name: "Assassin", pic: "b", playerid: "6661"},
+                {name: "Troll", pic: "b", playerid: "6662"},
+                {name: "Barbarian", pic: "b", playerid: "6664"}],
         rules : {expansions : [], characters : []}
     }
 }
@@ -1100,7 +1255,7 @@ function openGame(event)
     //open game lobby
 
 }
-
+// PARSE GAME OBJECT TO ELEMENT
 function parseGame(game, type)
 {
     let element = document.createElement("div");
@@ -1133,6 +1288,7 @@ function parseGame(game, type)
     return element;
 }
 
+// FETCH AVAILABLE GAMES
 async function fetchGames()
 {
     fetchSavedGames();
@@ -1153,23 +1309,204 @@ async function fetchGames()
     });
 }
 
+function selectCharacter(name)
+{
+    console.log(name);
+    //select char
+    console.log(currentGameLobby);
+    let slotID;
+    for (var i = 0, l = currentGameLobby.players.length; i < l; i++)
+    {
+        let lobbyPlayer = currentGameLobby.players[i];
+        if (lobbyPlayer.name == player.name)
+        {
+            lobbyPlayer.char = name;
+            slotID = i;
+        }
+    }
+
+    console.log(slotID);
+    let slot = document.querySelector(".gameSlot:nth-child(" + slotID + 1  + ")");
+    slot.querySelector(".slotCharPic").style.setProperty("background-image", "url(assets/chars/" + ((name != "Random") ? charsSorted[name].filePrefix : "random") + "_p.png)");
+    slot.querySelector(".slotCharName").textContent = name;
+
+
+    let selector = document.querySelector(".characterSelector");
+    selector.parentNode.removeChild(selector);
+    //close character selector
+}
+
+function selectCharacterEvent(event)
+{
+    selectCharacter(event.target.getAttribute("name"));
+}
+
+function searchCharacterName(event)
+{
+    if (event.keyCode === 13)
+    {
+        let chars = document.querySelectorAll(".charSelectorCharContainer");
+
+        chars.forEach(function(char)
+        {
+            if (char.style.getPropertyValue("display") == "inline-block")
+                selectCharacter(char.getAttribute("name"));
+
+        });
+
+        event.preventDefault();
+        return;
+    }
+
+    document.querySelectorAll(".charSelectorCharContainer").forEach(function(mini)
+    {
+        if (mini.getAttribute("name").toLowerCase().search(event.target.value.toLowerCase()) > -1)
+        {
+            mini.style.setProperty("opacity", "1");
+            mini.style.setProperty("display", "inline-block");
+        }
+        else
+        {
+            mini.style.setProperty("opacity", 0);
+            setTimeout(function(mini){ mini.style.setProperty("display", "none"); }, 200, mini);
+        }
+    });
+}
+
+let charsSorted = {};
+//sort chars
+function sortCharacters()
+{
+    let charsTemp = {};
+    for (let expansionName in chars)
+    {
+        let expansion = chars[expansionName];
+
+        for (let charName in expansion)
+        {
+            charsTemp[charName] = expansion[charName];
+        }
+    }
+    charsSorted = {};
+    Object.keys(charsTemp).sort().forEach(function(key) { charsSorted[key] = charsTemp[key]; });
+}
+
+function displayCharacterDescription(event)
+{
+    let description = document.querySelector(".characterSelectorDescription");
+    description.style.setProperty("display", "block");
+    description.innerHTML = charsSorted[event.target.getAttribute("name")].description;
+}
+
+function removeCharacterDescription(event)
+{
+    let description = document.querySelector(".characterSelectorDescription");
+    description.style.setProperty("display", "none");
+}
+
+function openCharacterSelector()
+{
+    let characterSelector = document.createElement("div");
+    characterSelector.className = "characterSelector";
+
+    //character name search input field
+    let nameSearchLabel = document.createElement("div");
+    nameSearchLabel.className = "nameSearchLabel";
+    nameSearchLabel.textContent = "Search character name:";
+
+    let nameSearchInput = document.createElement("input");
+    nameSearchInput.className = "nameSearchInput";
+    nameSearchInput.type = "text";
+    nameSearchInput.addEventListener("keyup", searchCharacterName);
+
+    let characterPicker = document.createElement("div");
+    characterPicker.className = "characterPicker";
+
+    //character picker scroll
+    characterPicker.addEventListener("mousewheel", function(event)
+    {
+        characterPicker.scrollLeft += event.deltaY;
+        event.preventDefault();
+    });
+
+    //create random icon
+    let randomContainer = document.createElement("div");
+    randomContainer.className = "charSelectorCharContainer";
+
+    let randomName = document.createElement("div");
+    randomName.className = "characterSelectorName";
+    randomName.textContent = "Random";
+
+    randomContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/random_c.png)";
+    randomContainer.setAttribute("name", "Random");
+
+    randomContainer.addEventListener("click", selectCharacterEvent);
+
+    randomContainer.appendChild(randomName);
+    characterPicker.appendChild(randomContainer);
+
+    //create character icons
+    for (let charName in charsSorted)
+    {
+        let character = charsSorted[charName];
+        let charContainer = document.createElement("div");
+        charContainer.className = "charSelectorCharContainer";
+
+        let characterName = document.createElement("div");
+        characterName.className = "characterSelectorName";
+        characterName.textContent = charName;
+
+        charContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/" + character.filePrefix + "_m.png)";
+        charContainer.setAttribute("name", charName);
+
+        charContainer.addEventListener("click", selectCharacterEvent);
+        charContainer.addEventListener("mouseover", displayCharacterDescription);
+        charContainer.addEventListener("mouseout", removeCharacterDescription);
+
+        charContainer.appendChild(characterName);
+        characterPicker.appendChild(charContainer);
+    }
+
+    let charDescription = document.createElement("div");
+    charDescription.className = "characterSelectorDescription";
+
+    //character description
+    //character stats filter
+    //character browser
+    //character sort options
+
+    characterSelector.appendChild(nameSearchLabel);
+    characterSelector.appendChild(nameSearchInput);
+    characterSelector.appendChild(characterPicker);
+    characterSelector.appendChild(charDescription);
+
+    document.body.appendChild(characterSelector);
+}
+
+// set lobby slot display
 function setLobbySlot(game, slotID)
 {
     let gameSlot = document.createElement("div");
     gameSlot.className = "gameSlot";
 
     let playerName = document.createElement("div");
-    playerName.className = "lobbyPlayerName";
-    let player = game.players[slotID]
-    playerName.textContent = player ? player.name : "";
+    playerName.className = "slotPlayerName";
+    let slotPlayer = game.players[slotID]
+    playerName.textContent = slotPlayer ? slotPlayer.name : "";
 
     let charPic = document.createElement("div");
-    charPic.className = "lobbyCharPic";
+    charPic.className = "slotCharPic";
+    charPic.style.setProperty("background-image", "url(" + ((slotPlayer.char.length > 0) ? "assets/chars/" + charsSorted[slotPlayer.char].filePrefix : "assets/chars/random") + "_p.png)");
+    if (player.id == slotPlayer.id)
+    {
+        charPic.classList.add("clickable");
+        charPic.addEventListener("click", openCharacterSelector);
+    }
 
     let charName = document.createElement("div");
-    charName.className = "lobbyCharName";
+    charName.className = "slotCharName";
 
-    charName.textContent = player.char ? player.char : "Random";
+    charName.textContent = (slotPlayer.char.length > 0) ? slotPlayer.char : "Random";
     //slot remove element
     //player name element
     //character mini element
@@ -1185,19 +1522,22 @@ function setLobbySlot(game, slotID)
 
 function loadLobby()
 {
+    sortCharacters();
+    //TODO
     //get game details
 
     //game expansions
     //game characters
 
-    let game = gameDetails["asdfghjkl123456789"];
-    console.log(game);
+    currentGameLobby = gameDetails["asdfghjkl123456789"];
+
+    console.log(currentGameLobby);
     let gameSlotsContainer = document.querySelector(".gameSlotsContainer");
 
 
-    for (var i = 0; i < game.slots - 1; i++)
+    for (var i = 0; i < currentGameLobby.slots - 1; i++)
     {
-        gameSlotsContainer.appendChild(setLobbySlot(game, i));
+        gameSlotsContainer.appendChild(setLobbySlot(currentGameLobby, i));
     }
 }
 
