@@ -734,6 +734,9 @@ body
     top: 650px;
     left: 445px;
 }
+
+/* INNER RING */
+
 .valleyOfFireSpace
 {
     width: 765px;
@@ -798,6 +801,20 @@ body
     left: 1240px;
 }
 
+/* CITY BOARD */
+.highlandEntranceSpace
+{
+    width: 300px;
+    height: 300px;
+    top: 1150px;
+    left: -300px;
+}
+
+/* DUNGEON BOARD */
+
+/* WOODLAND BOARD */
+
+/* HIGHLAND BOARD */
 
 
 /* SPACE HIHGLIGHT */
@@ -806,8 +823,8 @@ body
     background-image: url(assets/board/glow/tl.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     top: 0px;
     left: 0px;
 }
@@ -816,18 +833,18 @@ body
     background-image: url(assets/board/glow/t.png);
     background-position: center;
     background-size: 100% 100%;
-    width: calc(100% - 150px);
-    height: 75px;
+    width: calc(100% - 200px);
+    height: 100px;
     top: 0px;
-    left: 75px;
+    left: 100px;
 }
 .topRightHighlight
 {
     background-image: url(assets/board/glow/tr.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     top: 0px;
     right: 0px;
 }
@@ -836,9 +853,9 @@ body
     background-image: url(assets/board/glow/r.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: calc(100% - 150px);
-    top: 75px;
+    width: 100px;
+    height: calc(100% - 200px);
+    top: 100px;
     right: 0px;
 }
 .bottomRightHighlight
@@ -846,8 +863,8 @@ body
     background-image: url(assets/board/glow/br.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     bottom: 0px;
     right: 0px;
 }
@@ -856,18 +873,18 @@ body
     background-image: url(assets/board/glow/b.png);
     background-position: center;
     background-size: 100% 100%;
-    width: calc(100% - 150px);
-    height: 75px;
+    width: calc(100% - 200px);
+    height: 100px;
     bottom: 0px;
-    right: 75px;
+    right: 100px;
 }
 .bottomLeftHighlight
 {
     background-image: url(assets/board/glow/bl.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     bottom: 0px;
     left: 0px;
 }
@@ -876,9 +893,9 @@ body
     background-image: url(assets/board/glow/l.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 75px;
-    height: calc(100% - 150px);
-    bottom: 75px;
+    width: 100px;
+    height: calc(100% - 200px);
+    bottom: 100px;
     left: 0px;
 }
 </style>
@@ -1246,6 +1263,34 @@ function createBoard()
     boardBase.appendChild(createSpace("vampiresTowerSpace"));
     boardBase.appendChild(createSpace("pitsSpace"));
     boardBase.appendChild(createSpace("crownOfCommandSpace"));
+
+    // highland board
+    boardBase.appendChild(createSpace("highlandEntranceSpace"));
+    boardBase.appendChild(createSpace("highlandHills1Space"));
+    boardBase.appendChild(createSpace("highlandCliff2Space"));
+    boardBase.appendChild(createSpace("highlandRidgewaySpace"));
+    boardBase.appendChild(createSpace("highlandRavine1Space"));
+    boardBase.appendChild(createSpace("highlandHills2Space"));
+    boardBase.appendChild(createSpace("highlandRuinedMineSpace"));
+    boardBase.appendChild(createSpace("highlandCliff2Space"));
+    boardBase.appendChild(createSpace("highlandRavine2Space"));
+    boardBase.appendChild(createSpace("highlandHills3Space"));
+    boardBase.appendChild(createSpace("highlandGlacierSpace"));
+    boardBase.appendChild(createSpace("highlandCliff3Space"));
+    boardBase.appendChild(createSpace("highlandCanyon1Space"));
+    boardBase.appendChild(createSpace("highlandMountainPassSpace"));
+    boardBase.appendChild(createSpace("highlandCliff4Space"));
+    boardBase.appendChild(createSpace("highlandHills4Space"));
+    boardBase.appendChild(createSpace("highlandPrecipice1Space"));
+    boardBase.appendChild(createSpace("highlandRavine3Space"));
+    boardBase.appendChild(createSpace("highlandHills5Space"));
+    boardBase.appendChild(createSpace("highlandCanyon2Space"));
+    boardBase.appendChild(createSpace("highlandCliff5Space"));
+    boardBase.appendChild(createSpace("highlandLostCitySpace"));
+    boardBase.appendChild(createSpace("highlandPrecipice2Space"));
+    boardBase.appendChild(createSpace("highlandIceBridgeSpace"));
+    boardBase.appendChild(createSpace("highlandCanyon3Space"));
+    boardBase.appendChild(createSpace("highlandEyrieSpace"));
 
     //append spaces
     gameMapInner.appendChild(boardBase);
