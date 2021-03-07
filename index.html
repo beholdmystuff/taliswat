@@ -208,7 +208,6 @@ body
     width: 5%;
     left: 92.5%;
     position: absolute;
-    cursor: pointer;
 }
 .readyIcon
 {
@@ -325,6 +324,10 @@ body
     padding: 1vw 2vw 0vw 2vw;
     user-select: none;
 }
+.characterStatFilter
+{
+
+}
 .letMeOutButton
 {
     position: absolute;
@@ -392,8 +395,9 @@ body
     height: 1792px;
     z-index: 1;
     background-size: 100% 100%;
+    position: absolute;
 }
-.boardWoodlands
+.boardWoodland
 {
     top: 1990px;
     left: 3790px;
@@ -448,6 +452,7 @@ body
     background-size: 100% 100%;
 }
 
+/* OUTER RING */
 .citySpace
 {
     width: 555px;
@@ -616,14 +621,193 @@ body
     top: 380px;
     left: 45px;
 }
+/* MIDDLE RING */
+.warlocksCaveSpace
+{
+    width: 618px;
+    height: 291px;
+    top: 356px;
+    left: 448px;
+}
+.desert1Space
+{
+    width: 645px;
+    height: 291px;
+    top: 356px;
+    left: 1066px;
+}
+.oasisSpace
+{
+    width: 675px;
+    height: 291px;
+    top: 356px;
+    left: 1710px;
+}
+.desert2Space
+{
+    width: 645px;
+    height: 291px;
+    top: 356px;
+    left: 2380px;
+}
+.templeSpace
+{
+    width: 580px;
+    height: 291px;
+    top: 356px;
+    left: 3022px;
+}
+.woodsSpace
+{
+    width: 410px;
+    height: 250px;
+    top: 650px;
+    left: 3205px;
+}
+.runesSpace
+{
+    width: 410px;
+    height: 280px;
+    top: 900px;
+    left: 3205px;
+}
+.castleSpace
+{
+    width: 410px;
+    height: 270px;
+    top: 1180px;
+    left: 3205px;
+}
+.portalOfPowerSpace
+{
+    width: 590px;
+    height: 270px;
+    top: 1445px;
+    left: 3025px;
+}
+.blackKnightSpace
+{
+    width: 640px;
+    height: 270px;
+    top: 1445px;
+    left: 2385px;
+}
+.hiddenValleySpace
+{
+    width: 675px;
+    height: 270px;
+    top: 1445px;
+    left: 1710px;
+}
+.hillsSpace
+{
+    width: 645px;
+    height: 270px;
+    top: 1445px;
+    left: 1065px;
+}
+.cursedGladeSpace
+{
+    width: 625px;
+    height: 270px;
+    top: 1445px;
+    left: 445px;
+}
+.runes2Space
+{
+    width: 425px;
+    height: 270px;
+    top: 1180px;
+    left: 445px;
+}
+.chasmSpace
+{
+    width: 425px;
+    height: 270px;
+    top: 910px;
+    left: 445px;
+}
+.runes3Space
+{
+    width: 425px;
+    height: 270px;
+    top: 650px;
+    left: 445px;
+}
+.valleyOfFireSpace
+{
+    width: 765px;
+    height: 250px;
+    top: 650px;
+    left: 895px;
+}
+.werewolfDenSpace
+{
+    width: 785px;
+    height: 250px;
+    top: 650px;
+    left: 1660px;
+}
+.deathSpace
+{
+    width: 755px;
+    height: 250px;
+    top: 650px;
+    left: 2445px;
+}
+.cryptSpace
+{
+    width: 410px;
+    height: 280px;
+    top: 900px;
+    left: 2790px;
+}
+.plainOfPerilSpace
+{
+    width: 760px;
+    height: 245px;
+    top: 1180px;
+    left: 2440px;
+}
+.minesSpace
+{
+    width: 785px;
+    height: 245px;
+    top: 1180px;
+    left: 1660px;
+}
+.vampiresTowerSpace
+{
+    width: 765px;
+    height: 245px;
+    top: 1180px;
+    left: 895px;
+}
+.pitsSpace
+{
+    width: 350px;
+    height: 280px;
+    top: 900px;
+    left: 895px;
+}
+.crownOfCommandSpace
+{
+    width: 1550px;
+    height: 280px;
+    top: 900px;
+    left: 1240px;
+}
+
+
+
 /* SPACE HIHGLIGHT */
 .topLeftHighlight
 {
     background-image: url(assets/board/glow/tl.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 25%;
+    width: 75px;
+    height: 75px;
     top: 0px;
     left: 0px;
 }
@@ -632,18 +816,18 @@ body
     background-image: url(assets/board/glow/t.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 50%;
-    height: 25%;
+    width: calc(100% - 150px);
+    height: 75px;
     top: 0px;
-    left: 25%;
+    left: 75px;
 }
 .topRightHighlight
 {
     background-image: url(assets/board/glow/tr.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 25%;
+    width: 75px;
+    height: 75px;
     top: 0px;
     right: 0px;
 }
@@ -652,9 +836,9 @@ body
     background-image: url(assets/board/glow/r.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 50%;
-    top: 25%;
+    width: 75px;
+    height: calc(100% - 150px);
+    top: 75px;
     right: 0px;
 }
 .bottomRightHighlight
@@ -662,8 +846,8 @@ body
     background-image: url(assets/board/glow/br.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 25%;
+    width: 75px;
+    height: 75px;
     bottom: 0px;
     right: 0px;
 }
@@ -672,19 +856,19 @@ body
     background-image: url(assets/board/glow/b.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 50%;
-    height: 25%;
+    width: calc(100% - 150px);
+    height: 75px;
     bottom: 0px;
-    right: 25%;
+    right: 75px;
 }
 .bottomLeftHighlight
 {
     background-image: url(assets/board/glow/bl.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 25%;
-    top: 75%;
+    width: 75px;
+    height: 75px;
+    bottom: 0px;
     left: 0px;
 }
 .LeftHighlight
@@ -692,86 +876,21 @@ body
     background-image: url(assets/board/glow/l.png);
     background-position: center;
     background-size: 100% 100%;
-    width: 25%;
-    height: 50%;
-    bottom: 25%;
+    width: 75px;
+    height: calc(100% - 150px);
+    bottom: 75px;
     left: 0px;
 }
 </style>
 </head>
 <body>
 <div id="gameContainer"></div>
-<div id="gameMap"><div id="gameMapInner">
-    <div class="boardBase">
-        <!-- CHARACTER CARD -->
-        <div class="charCard"></div>
-        <!-- OUTER RING -->
-        <div class="space citySpace"></div>
-        <div class="space fields1Space"></div>
-        <div class="space hillsSpace"></div>
-        <div class="space plains1Space"></div>
-        <div class="space woodsSpace"></div>
-        <div class="space plains2Space"></div>
-        <div class="space tavernSpace"></div>
-        <div class="space fields2Space"></div>
-        <div class="space ruinsSpace"></div>
-        <div class="space plains3Space"></div>
-        <div class="space forest3Space"></div>
-        <div class="space fields3Space"></div>
-        <div class="space villageSpace"></div>
-        <div class="space fields4Space"></div>
-        <div class="space graveyardSpace"></div>
-        <div class="space woods2Space"></div>
-        <div class="space sentinelSpace"></div>
-        <div class="space hills2Space"></div>
-        <div class="space chapelSpace"></div>
-        <div class="space fields5Space"></div>
-        <div class="space cragsSpace"></div>
-        <div class="space plains4Space"></div>
-        <div class="space woods3Space"></div>
-        <div class="space fields6Space"></div>
-        <!-- MIDDLE RING -->
-        <div class="space warlocksCaveSpace"></div>
-        <div class="space desert1Space"></div>
-        <div class="space oasisSpace"></div>
-        <div class="space desert2Space"></div>
-        <div class="space templeSpace"></div>
-        <div class="space woodsSpace"></div>
-        <div class="space runesSpace"></div>
-        <div class="space castleSpace"></div>
-        <div class="space portalOfPowerSpace"></div>
-        <div class="space blackKnightSpace"></div>
-        <div class="space hiddenValleySpace"></div>
-        <div class="space hillsSpace"></div>
-        <div class="space cursedGladeSpace"></div>
-        <div class="space runes2Space"></div>
-        <div class="space chasmSpace"></div>
-        <div class="space runes3Space"></div>
-        <!-- INNER RING -->
-        <div class="space valleyOfFireSpace"></div>
-        <div class="space werewolfDenSpace"></div>
-        <div class="space deathSpace"></div>
-        <div class="space cryptSpace"></div>
-        <div class="space plainOfPerilSpace"></div>
-        <div class="space minesSpace"></div>
-        <div class="space vampiresTowerSpace"></div>
-        <div class="space pitsSpace"></div>
-        <div class="space crownOfCommandSpace"></div>
-    </div>
-    <div class="boardExpansion boardWoodlands">
-    </div>
-    <div class="boardExpansion boardCity">
-    </div>
-    <div class="boardExpansion boardDungeon">
-    </div>
-    <div class="boardExpansion boardHighlands">
-    </div>
-</div></div>
 </body>
 <!-- TODO merge game data into single json -->
 <script src="assets/text/expansions.js"></script>
 <script src="assets/text/base_spaces.js"></script>
 <script src="assets/text/chars.js"></script>
+<script src="assets/text/chars_unsorted.js"></script>
 <script>
 function fetch(url, type)
 {
@@ -953,21 +1072,18 @@ function storagePut(cmd)
 }
 
 /* GAME MAP */
-let dragging = false;
-let rotating = false;
-let gameMap = document.querySelector("#gameMap");
-let gameMapInner = gameMap.querySelector("#gameMapInner");
-let computedStyle = window.getComputedStyle(gameMapInner);
-let innerWidth = parseInt(window.getComputedStyle(gameMapInner).width.replace("px", ""));
-let innerHeight = parseInt(window.getComputedStyle(gameMapInner).height.replace("px", ""));
-let transform = {translate: [innerWidth*-0.35, innerHeight*-0.37], scale: 0.4, rotate: 0}
+let dragging;
+let rotating;
+let gameMap;
+let gameMapInner;
+let computedStyle;
+let innerWidth;
+let innerHeight;
+let transform;
 function setTransform()
 {
     gameMapInner.style.setProperty("transform", "translate3d(" + transform.translate[0] + "px," + transform.translate[1] + "px, 0px) scale(" + transform.scale + ") rotate(" + Math.round(transform.rotate/5)*5 + "deg)");
 }
-// gameMapInner.style.setProperty("transform-origin", "center");
-setTransform();
-// gameMapInner.style.setProperty("transform-origin", "100% 50%");
 
 function capMovement()
 {
@@ -1020,18 +1136,7 @@ function translateMap(event)
         moveMap(event);
     capMovement();
 }
-gameMap.addEventListener("mousedown", function(event)
-{
-    dragging = true;
-    gameMapInner.style.setProperty("cursor", "grabbing");
-    gameMap.addEventListener("mousemove", translateMap);
-});
 
-gameMap.addEventListener("mouseup", function(event)
-{
-    dragging = false;
-    gameMapInner.style.setProperty("cursor", "grab");
-});
 function wheelZoom(event)
 {
     let scaleMin = 0.2;
@@ -1067,18 +1172,197 @@ function wheelZoom(event)
 }
 document.addEventListener("wheel", wheelZoom); //set da event
 
+function createSpace(className)
+{
+    var element = document.createElement("div");
+    element.className = "space " + className;
+
+    return element;
+}
+
+function createBoard()
+{
+    gameMap = document.createElement("div");
+    gameMap.setAttribute("id", "gameMap");
+
+    gameMapInner = document.createElement("div");
+    gameMapInner.setAttribute("id", "gameMapInner");
+
+    let boardBase = document.createElement("div");
+    boardBase.setAttribute("class", "boardBase");
+
+    // create spaces
+    //main board outer ring
+    boardBase.appendChild(createSpace("citySpace"));
+    boardBase.appendChild(createSpace("fields1Space"));
+    boardBase.appendChild(createSpace("hillsSpace"));
+    boardBase.appendChild(createSpace("plains1Space"));
+    boardBase.appendChild(createSpace("woodsSpace"));
+    boardBase.appendChild(createSpace("plains2Space"));
+    boardBase.appendChild(createSpace("tavernSpace"));
+    boardBase.appendChild(createSpace("fields2Space"));
+    boardBase.appendChild(createSpace("ruinsSpace"));
+    boardBase.appendChild(createSpace("plains3Space"));
+    boardBase.appendChild(createSpace("forest3Space"));
+    boardBase.appendChild(createSpace("fields3Space"));
+    boardBase.appendChild(createSpace("villageSpace"));
+    boardBase.appendChild(createSpace("fields4Space"));
+    boardBase.appendChild(createSpace("graveyardSpace"));
+    boardBase.appendChild(createSpace("woods2Space"));
+    boardBase.appendChild(createSpace("sentinelSpace"));
+    boardBase.appendChild(createSpace("hills2Space"));
+    boardBase.appendChild(createSpace("chapelSpace"));
+    boardBase.appendChild(createSpace("fields5Space"));
+    boardBase.appendChild(createSpace("cragsSpace"));
+    boardBase.appendChild(createSpace("plains4Space"));
+    boardBase.appendChild(createSpace("woods3Space"));
+    boardBase.appendChild(createSpace("fields6Space"));
+
+    // main board middle ring
+    boardBase.appendChild(createSpace("warlocksCaveSpace"));
+    boardBase.appendChild(createSpace("desert1Space"));
+    boardBase.appendChild(createSpace("oasisSpace"));
+    boardBase.appendChild(createSpace("desert2Space"));
+    boardBase.appendChild(createSpace("templeSpace"));
+    boardBase.appendChild(createSpace("woodsSpace"));
+    boardBase.appendChild(createSpace("runesSpace"));
+    boardBase.appendChild(createSpace("castleSpace"));
+    boardBase.appendChild(createSpace("portalOfPowerSpace"));
+    boardBase.appendChild(createSpace("blackKnightSpace"));
+    boardBase.appendChild(createSpace("hiddenValleySpace"));
+    boardBase.appendChild(createSpace("hillsSpace"));
+    boardBase.appendChild(createSpace("cursedGladeSpace"));
+    boardBase.appendChild(createSpace("runes2Space"));
+    boardBase.appendChild(createSpace("chasmSpace"));
+    boardBase.appendChild(createSpace("runes3Space"));
+
+    //main board inner ring
+    boardBase.appendChild(createSpace("valleyOfFireSpace"));
+    boardBase.appendChild(createSpace("werewolfDenSpace"));
+    boardBase.appendChild(createSpace("deathSpace"));
+    boardBase.appendChild(createSpace("cryptSpace"));
+    boardBase.appendChild(createSpace("plainOfPerilSpace"));
+    boardBase.appendChild(createSpace("minesSpace"));
+    boardBase.appendChild(createSpace("vampiresTowerSpace"));
+    boardBase.appendChild(createSpace("pitsSpace"));
+    boardBase.appendChild(createSpace("crownOfCommandSpace"));
+
+    //append spaces
+    gameMapInner.appendChild(boardBase);
+    gameMap.appendChild(gameMapInner);
+
+    // append game map events
+    gameMap.addEventListener("mousedown", function(event)
+    {
+        dragging = true;
+        gameMapInner.style.setProperty("cursor", "grabbing");
+        gameMap.addEventListener("mousemove", translateMap);
+    });
+
+    gameMap.addEventListener("mouseup", function(event)
+    {
+        dragging = false;
+        gameMapInner.style.setProperty("cursor", "grab");
+    });
+
+    //append map to game container
+    let gameContainer = document.querySelector("#gameContainer");
+    gameContainer.appendChild(gameMap);
+
+    let woodlandBoard = document.createElement("div");
+    woodlandBoard.className = "boardExpansion boardWoodland";
+    gameMapInner.appendChild(woodlandBoard);
+
+    let cityBoard = document.createElement("div");
+    cityBoard.className = "boardExpansion boardCity";
+    gameMapInner.appendChild(cityBoard);
+
+    let dungeonBoard = document.createElement("div");
+    dungeonBoard.className = "boardExpansion boardDungeon";
+    gameMapInner.appendChild(dungeonBoard);
+
+    let highlandsBoard = document.createElement("div");
+    highlandsBoard.className = "boardExpansion boardHighlands";
+    gameMapInner.appendChild(highlandsBoard);
+
+    //space highlight event
+    document.querySelectorAll(".space").forEach(function(space)
+    {
+        space.addEventListener("mouseenter", function(event)
+        {
+            let tl = document.createElement("div");
+            tl.className = "highlight topLeftHighlight";
+
+            let t = document.createElement("div");
+            t.className = "highlight topHighlight";
+
+            let tr = document.createElement("div");
+            tr.className = "highlight topRightHighlight";
+
+            let r = document.createElement("div");
+            r.className = "highlight rightHighlight";
+
+            let br = document.createElement("div");
+            br.className = "highlight bottomRightHighlight";
+
+            let b = document.createElement("div");
+            b.className = "highlight bottomHighlight";
+
+            let bl = document.createElement("div");
+            bl.className = "highlight bottomLeftHighlight";
+
+            let l = document.createElement("div");
+            l.className = "highlight leftHighlight";
+
+            event.target.appendChild(tl);
+            event.target.appendChild(t);
+            event.target.appendChild(tr);
+            event.target.appendChild(t);
+            event.target.appendChild(br);
+            event.target.appendChild(r);
+            event.target.appendChild(b);
+            event.target.appendChild(bl);
+            event.target.appendChild(l);
+        });
+
+        space.addEventListener("mouseleave", function(event)
+        {
+            setTimeout(function(target)
+            {
+                target.querySelectorAll(".highlight").forEach(function(highlight)
+                {
+                    highlight.parentNode.removeChild(highlight);
+                });
+            }, 300, event.target);
+        });
+    });
+
+
+
+    //COMPUTE
+    computedStyle = window.getComputedStyle(gameMapInner);
+    innerWidth = parseInt(window.getComputedStyle(gameMapInner).width.replace("px", ""));
+    innerHeight = parseInt(window.getComputedStyle(gameMapInner).height.replace("px", ""));
+    transform = {translate: [innerWidth*-0.35, innerHeight*-0.37], scale: 0.4, rotate: 0}
+
+    setTransform();
+
+
+}
+
 async function ass()
 {
     //connect db
-    await storageInit("Talisman", ["boardAssets", "minisAssets", "buttonsAssets", "tokensAssets"]);
+    await storageInit("Talisman", ["boardAssets", "minisAssets", "uiAssets", "tokensAssets"]);
     await storageConnect("Talisman");
+
+    createBoard();
 
     //main board
     let bbReq = {store: "boardAssets", name: "boardBase", dbName: "Talisman"};
     if (!await storageExists(bbReq)) //cache
     {
-        let boardBase = await fetch(window.location.origin + "/assets/board/base.png", "blob");
-        bbReq.data = boardBase;
+        bbReq.data = await fetch(window.location.origin + "/assets/board/base.png", "blob");
         let bbRes = await storagePut(bbReq);
     }
 
@@ -1089,53 +1373,63 @@ async function ass()
     var bbElement = document.querySelector(".boardBase");
     bbElement.style.setProperty("background-image", "url(" + bbIMGURL + ")");
 
+    //highlands
+    let bhReq = {store: "boardAssets", name: "boardHighlands", dbName: "Talisman"};
+    if (!await storageExists(bhReq)) //cache
+    {
+        bhReq.data = await fetch(window.location.origin + "/assets/board/highlands.png", "blob");
+        let bhRes = await storagePut(bhReq);
+    }
 
-    //
-    //
-    // //highlands
-    // let bhReq = {store: "boardAssets", name: "boardHighlands", database: storage};
-    // if (!await storageExists(bhReq)) //cache
-    // {
-    //     let boardHighlands = await fetch(window.location.origin + "/assets/board/highlands.png", "blob");
-    //     bhReq.data = boardHighlands;
-    //     let bhRes = await storagePut(bhReq);
-    // }
-    // let bhRes = await storageGet(bhReq);
-    //
-    // var bhIMGURL = URL.createObjectURL(bhRes);
-    // var bhElement = document.querySelector(".boardExpansion.boardHighlands");
-    // bhElement.style.setProperty("background-image", "url(" + bhIMGURL + ")");
+    //load
+    let bhRes = await storageGet(bhReq);
+    var bhIMGURL = URL.createObjectURL(bhRes);
+    var bhElement = document.querySelector(".boardExpansion.boardHighlands");
+    bhElement.style.setProperty("background-image", "url(" + bhIMGURL + ")");
 
-    // //city
-    // let boardCity = await fetch(window.location.origin + "/assets/board/city.png", "blob");
-    // let bcReq = {db: "Talisman", store: "boardAssets", data: boardCity, name: "boardCity"};
-    // let bcRes = await storagePut(bcReq);
-    // bcRes = await storageGet(bcReq);
-    //
-    // var bcIMGURL = URL.createObjectURL(bcRes);
-    // var bcElement = document.querySelector(".boardExpansion.boardCity");
-    // bcElement.style.setProperty("background-image", "url(" + bcIMGURL + ")");
-    //
-    // //dungeon
-    // let boardWoodlands = await fetch(window.location.origin + "/assets/board/woodlands.png", "blob");
-    // let bwReq = {db: "Talisman", store: "boardAssets", data: boardWoodlands, name: "boardWoodlands"};
-    // let bwRes = await storagePut(bwReq);
-    // bwRes = await storageGet(bwReq);
-    //
-    // var bwIMGURL = URL.createObjectURL(bwRes);
-    // var bwElement = document.querySelector(".boardExpansion.boardWoodlands");
-    // bwElement.style.setProperty("background-image", "url(" + bwIMGURL + ")");
-    //
-    // //dungeon
-    // let boardDungeon = await fetch(window.location.origin + "/assets/board/dungeon.png", "blob");
-    // let bdReq = {db: "Talisman", store: "boardAssets", data: boardDungeon, name: "boardDungeon"};
-    // let bdRes = await storagePut(bdReq);
-    // bdRes = await storageGet(bdReq);
-    //
-    // var bdIMGURL = URL.createObjectURL(bdRes);
-    // var bdElement = document.querySelector(".boardExpansion.boardDungeon");
-    // bdElement.style.setProperty("background-image", "url(" + bdIMGURL + ")");
-    //
+
+    //city
+    let bcReq = {dbName: "Talisman", store: "boardAssets", name: "boardCity"};
+    if (!await storageExists(bcReq))
+    {
+        bcReq.data = await fetch(window.location.origin + "/assets/board/city.png", "blob");
+        let bcRes = await storagePut(bcReq);
+    }
+
+    //load
+    bcRes = await storageGet(bcReq);
+    var bcIMGURL = URL.createObjectURL(bcRes);
+    var bcElement = document.querySelector(".boardExpansion.boardCity");
+    bcElement.style.setProperty("background-image", "url(" + bcIMGURL + ")");
+
+    //woodlands
+    let bwReq = {dbName: "Talisman", store: "boardAssets", name: "boardWoodlands"};
+    if (!await storageExists(bwReq))
+    {
+        bwReq.data = await fetch(window.location.origin + "/assets/board/woodland.png", "blob");
+        let bwRes = await storagePut(bwReq);
+    }
+
+    //load
+    bwRes = await storageGet(bwReq);
+    var bwIMGURL = URL.createObjectURL(bwRes);
+    var bwElement = document.querySelector(".boardExpansion.boardWoodland");
+    bwElement.style.setProperty("background-image", "url(" + bwIMGURL + ")");
+
+    //dungeon
+    let bdReq = {dbName: "Talisman", store: "boardAssets", name: "boardDungeon"};
+    if (!await storageExists(bdReq))
+    {
+        bdReq.data = await fetch(window.location.origin + "/assets/board/dungeon.png", "blob");
+        let bdRes = await storagePut(bdReq);
+    }
+
+    //load
+    let bdRes = await storageGet(bdReq);
+    var bdIMGURL = URL.createObjectURL(bdRes);
+    var bdElement = document.querySelector(".boardExpansion.boardDungeon");
+    bdElement.style.setProperty("background-image", "url(" + bdIMGURL + ")");
+
     // //TODO: precache highlight alphas
     //
     // let charCard = await fetch(window.location.origin + "/assets/chars/char_card.png", "blob");
@@ -1157,56 +1451,6 @@ async function ass()
 
 }
 
-document.querySelectorAll(".space").forEach(function(space)
-{
-    space.addEventListener("mouseenter", function(event)
-    {
-        let tl = document.createElement("div");
-        tl.className = "highlight topLeftHighlight";
-
-        let t = document.createElement("div");
-        t.className = "highlight topHighlight";
-
-        let tr = document.createElement("div");
-        tr.className = "highlight topRightHighlight";
-
-        let r = document.createElement("div");
-        r.className = "highlight rightHighlight";
-
-        let br = document.createElement("div");
-        br.className = "highlight bottomRightHighlight";
-
-        let b = document.createElement("div");
-        b.className = "highlight bottomHighlight";
-
-        let bl = document.createElement("div");
-        bl.className = "highlight bottomLeftHighlight";
-
-        let l = document.createElement("div");
-        l.className = "highlight leftHighlight";
-
-        event.target.appendChild(tl);
-        event.target.appendChild(t);
-        event.target.appendChild(tr);
-        event.target.appendChild(t);
-        event.target.appendChild(br);
-        event.target.appendChild(r);
-        event.target.appendChild(b);
-        event.target.appendChild(bl);
-        event.target.appendChild(l);
-    });
-
-    space.addEventListener("mouseleave", function(event)
-    {
-        setTimeout(function(target)
-        {
-            target.querySelectorAll(".highlight").forEach(function(highlight)
-            {
-                highlight.parentNode.removeChild(highlight);
-            });
-        }, 300, event.target);
-    });
-});
 // ass();
 let player = {name: "testboi", id:"123456789"};
 let currentGameLobby;
@@ -1337,9 +1581,7 @@ async function fetchGames()
 
 function selectCharacter(name)
 {
-    console.log(name);
     //select char
-    console.log(currentGameLobby);
     let slotID;
     for (var i = 0, l = currentGameLobby.players.length; i < l; i++)
     {
@@ -1351,10 +1593,8 @@ function selectCharacter(name)
         }
     }
 
-    console.log(slotID);
     let slot = document.querySelector(".gameSlot:nth-child(" + slotID + 1  + ")");
-    console.log(slot);
-    slot.querySelector(".slotCharPic").style.setProperty("background-image", "url(assets/chars/" + ((name != "Random") ? charsSorted[name].filePrefix : "random") + "_p.png)");
+    slot.querySelector(".slotCharPic").style.setProperty("background-image", "url(assets/chars/" + ((name != "Random") ? charsSorted[name].filePrefix : "random") + "_picture.png)");
     slot.querySelector(".slotCharName").textContent = name;
 
 
@@ -1431,6 +1671,7 @@ function removeCharacterDescription(event)
     description.style.setProperty("display", "none");
 }
 
+let charStatLookupTable = {strength: {}, craft: {}, fate: {}, life: {}};
 function openCharacterSelector()
 {
     let characterSelector = document.createElement("div");
@@ -1456,7 +1697,7 @@ function openCharacterSelector()
         event.preventDefault();
     });
 
-    //create random icon
+    //create random character icon
     let randomContainer = document.createElement("div");
     randomContainer.className = "charSelectorCharContainer";
 
@@ -1464,7 +1705,7 @@ function openCharacterSelector()
     randomName.className = "characterSelectorName";
     randomName.textContent = "Random";
 
-    randomContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/random_c.png)";
+    randomContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/random_card.png)";
     randomContainer.setAttribute("name", "Random");
 
     randomContainer.addEventListener("click", selectCharacterEvent);
@@ -1483,7 +1724,7 @@ function openCharacterSelector()
         characterName.className = "characterSelectorName";
         characterName.textContent = charName;
 
-        charContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/" + character.filePrefix + "_m.png)";
+        charContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/" + character.filePrefix + "_miniature.png)";
         charContainer.setAttribute("name", charName);
 
         charContainer.addEventListener("click", selectCharacterEvent);
@@ -1494,14 +1735,34 @@ function openCharacterSelector()
         characterPicker.appendChild(charContainer);
     }
 
+    //character description
     let charDescription = document.createElement("div");
     charDescription.className = "characterSelectorDescription";
 
-    //character description
     //character stats filter
-    //character browser
-    //character sort options
+    //prepare lookup table
+    for (let charName in charsSorted)
+    {
+        let char = charsSorted[charName];
 
+        if (!charStatLookupTable.strength[char.strength])
+            charStatLookupTable.strength[char.strength] = [];
+        if (!charStatLookupTable.craft[char.craft])
+            charStatLookupTable.craft[char.craft] = [];
+        if (!charStatLookupTable.fate[char.fate])
+            charStatLookupTable.fate[char.fate] = [];
+        if (!charStatLookupTable.life[char.life])
+            charStatLookupTable.life[char.life] = [];
+
+
+        charStatLookupTable.strength[char.strength].push(char);
+        charStatLookupTable.craft[char.craft].push(char);
+        charStatLookupTable.fate[char.fate].push(char);
+        charStatLookupTable.life[char.life].push(char);
+    };
+    console.log(charStatLookupTable);
+
+    //append all that shit
     characterSelector.appendChild(nameSearchLabel);
     characterSelector.appendChild(nameSearchInput);
     characterSelector.appendChild(characterPicker);
@@ -1545,12 +1806,7 @@ function setLobbySlot(game, slotID)
 
     let charPic = document.createElement("div");
     charPic.className = "slotCharPic";
-    charPic.style.setProperty("background-image", "url(" + ((slotPlayer.char.length > 0) ? "assets/chars/" + charsSorted[slotPlayer.char].filePrefix : "assets/chars/random") + "_p.png)");
-    if (player.id == slotPlayer.id)
-    {
-        charPic.classList.add("clickable");
-        charPic.addEventListener("click", openCharacterSelector);
-    }
+    charPic.style.setProperty("background-image", "url(" + ((slotPlayer.char.length > 0) ? "assets/chars/" + charsSorted[slotPlayer.char].filePrefix : "assets/chars/random") + "_picture.png)");
 
     let charName = document.createElement("div");
     charName.className = "slotCharName";
@@ -1559,8 +1815,15 @@ function setLobbySlot(game, slotID)
     let readyButton = document.createElement("div");
     readyButton.className = "readyButton";
     readyButton.style.setProperty("background-image", "url(assets/ui/ready_button.png)");
+
     readyButton.addEventListener("click", togglePlayerReady);
 
+    if (player.id == slotPlayer.id)
+    {
+        charPic.classList.add("clickable");
+        charPic.addEventListener("click", openCharacterSelector);
+        readyButton.style.setProperty("cursor", "pointer");
+    }
 
     //slot remove element
 
@@ -1578,7 +1841,6 @@ function leaveLobby()
     readyPlayers = [];
     let lobby = document.querySelector(".gameLobby");
     lobby.parentNode.removeChild(lobby);
-    console.log(1);
     loadGameList();
 }
 
@@ -1628,7 +1890,6 @@ function loadGameList()
     gameList.className = "gameList";
 
     document.querySelector(".mainMenu").appendChild(gameList);
-    console.log(2);
     fetchGames();
 }
 
@@ -1647,7 +1908,9 @@ async function mainMenu()
     loadGameList();
 }
 
-mainMenu();
+ass();
+
+// mainMenu();
 /*
 login
 display open games
