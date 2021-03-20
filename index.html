@@ -442,7 +442,6 @@ body
 .space
 {
     position: absolute;
-    cursor: pointer;
 }
 .space:hover .highlight
 {
@@ -1984,6 +1983,7 @@ body
     background-image: url(assets/ui/card-template.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: absolute;
 }
 .characterSheetContainer div span
 {
@@ -1999,6 +1999,7 @@ body
     width: 453px;
     text-align: center;
     line-height: 56px;
+    position: absolute;
 }
 .characterSheetStrength
 {
@@ -2012,6 +2013,7 @@ body
     text-align: center;
     line-height: 32px;
     cursor: pointer;
+    position: absolute;
 }
 .characterSheetCraft
 {
@@ -2025,6 +2027,7 @@ body
     text-align: center;
     line-height: 32px;
     cursor: pointer;
+    position: absolute;
 }
 .characterSheetFate
 {
@@ -2042,6 +2045,7 @@ body
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: transparent;
+    position: absolute;
 }
 .characterSheetFate .light
 {
@@ -2052,6 +2056,7 @@ body
     line-height: 48px;
     text-align: center;
     text-shadow: 0 0 0.1vw #dcd5be;
+    position: absolute;
 }
 .characterSheetFate .dark
 {
@@ -2062,6 +2067,7 @@ body
     line-height: 48px;
     text-align: center;
     text-shadow: 0 0 0.1vw #1d0042;
+    position: absolute;
 }
 .characterSheetLife
 {
@@ -2080,6 +2086,7 @@ body
     background-repeat: no-repeat;
     color: transparent;
     text-shadow: 0 0 0.1vw #7ed87a;
+    position: absolute;
 }
 .characterSheetCoin
 {
@@ -2098,6 +2105,7 @@ body
     background-repeat: no-repeat;
     color: transparent;
     text-shadow: 0 0 0.1vw #392c02;
+    position: absolute;
 }
 .charsheetMini
 {
@@ -2109,6 +2117,7 @@ body
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: inline-block;
+    position: absolute;
 }
 .charsheetDescription
 {
@@ -2118,6 +2127,7 @@ body
     width: 450px;
     font-family: Caxton;
     font-size: 24px;
+    position: absolute;
 }
 
 /* SPACE DESCRIPTION */
@@ -2184,6 +2194,7 @@ body
     height: 100%;
     z-index: 6;
     background-color: #00000037;
+    cursor: pointer;
 }
 .spaceMenu
 {
@@ -2193,6 +2204,7 @@ body
     border: 1px solid red;
     z-index: 7;
     user-select: none;
+    cursor: pointer;
 }
 .spaceMenuDraw
 {
@@ -2478,6 +2490,7 @@ function storageRemove(cmd)
 /* GAME MAP */
 let dragging;
 let spaceClickDisabled;
+let zoomDisabled;
 let rotating;
 let gameMap;
 let gameMapInner;
@@ -2541,6 +2554,7 @@ function translateMap(event)
 
     spaceClickDisabled = true;
 
+    gameMapInner.style.setProperty("cursor", "grabbing");
     gameMapInner.style.setProperty("transition", "transform 0.0s linear");
     if (event.ctrlKey)
         rotateMap(event);
@@ -2553,6 +2567,9 @@ function translateMap(event)
 
 function wheelZoom(event)
 {
+    if (zoomDisabled)
+        return;
+
     let scaleMin = 0.2;
     let scaleMax = 1;
     transform.scale += (event.deltaY * -0.0005);
@@ -2594,13 +2611,16 @@ function closeContextMenu()
 
     let spaceMenu = document.querySelector(".spaceMenu");
     spaceMenu.parentNode.removeChild(spaceMenu);
+
+    zoomDisabled = false;
 }
 
 function spaceClick(event)
 {
-    console.log(spaceClickDisabled);
     if (spaceClickDisabled)
         return;
+
+    zoomDisabled = true;
 
     let board = event.target.parentNode.getAttribute("Board");
     let space = event.target.getAttribute("space");
@@ -2612,7 +2632,7 @@ function spaceClick(event)
 
     let spaceMenu = document.createElement("spaceMenu");
     spaceMenu.setAttribute("class", "spaceMenu")
-    console.log(event.clientX);
+
     spaceMenu.style.setProperty("left", event.clientX + 16);
     spaceMenu.style.setProperty("top", event.clientY + 16);
     spaceMenu.textContent = JSON.stringify(spaces[board][space]);
