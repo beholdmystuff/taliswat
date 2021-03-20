@@ -1715,7 +1715,7 @@ body
        top: 35px;
       left: 345px;
 }
-.deeprealmWraithLordSpace
+.deeprealmThroneRoom
 {
     width: 270px;
    height: 315px;
@@ -2201,10 +2201,11 @@ body
     position: absolute;
     width: 400px;
     height: 400px;
-    border: 1px solid red;
     z-index: 7;
     user-select: none;
     cursor: pointer;
+    background-color: #2d2e32;
+    box-shadow: 3px 3px 5px 6px #000;
 }
 .spaceMenuDraw
 {
@@ -2635,13 +2636,20 @@ function spaceClick(event)
 
     spaceMenu.style.setProperty("left", event.clientX + 16);
     spaceMenu.style.setProperty("top", event.clientY + 16);
-    spaceMenu.textContent = JSON.stringify(spaces[board][space]);
-    document.body.appendChild(spaceMenu);
+
 
     //create context menu
-    //if draw on space
-    //if roll on space
-    // console.log(space);
+    //move character here
+    //view cards
+    spaces[board][space].forEach(function(line)
+    {
+        if ("roll" in line) //if roll on space
+            spaceMenu.textContent += JSON.stringify(line);
+        if ("draw" in line) //if draw on space
+            spaceMenu.textContent += JSON.stringify(line);
+    });
+    document.body.appendChild(spaceMenu);
+
 }
 
 function createSpace(className, spaceName)
@@ -2670,9 +2678,9 @@ function removeMouseHoverElements(target)
     });
 }
 
-function createSpaceDescription(target, spaceName)
+function createSpaceDescription(target, spaceBoard, spaceName)
 {
-    let space = spaces.Base[spaceName]
+    let space = spaces[spaceBoard][spaceName];
     for(let key in space)
     {
         let line = space[key];
@@ -2774,152 +2782,152 @@ async function createBoard()
     highlandBoard.setAttribute("board", "Highland");
 
     highlandBoard.appendChild(createSpace("highlandEntranceSpace", "Highland Entrance"));
-    highlandBoard.appendChild(createSpace("highlandHills1Space"));
-    highlandBoard.appendChild(createSpace("highlandCliff1Space"));
-    highlandBoard.appendChild(createSpace("highlandRidgewaySpace"));
-    highlandBoard.appendChild(createSpace("highlandRavine1Space"));
-    highlandBoard.appendChild(createSpace("highlandHills2Space"));
-    highlandBoard.appendChild(createSpace("highlandRuinedMineSpace"));
-    highlandBoard.appendChild(createSpace("highlandCliff2Space"));
-    highlandBoard.appendChild(createSpace("highlandRavine2Space"));
-    highlandBoard.appendChild(createSpace("highlandHills3Space"));
-    highlandBoard.appendChild(createSpace("highlandGlacierSpace"));
-    highlandBoard.appendChild(createSpace("highlandCliff3Space"));
-    highlandBoard.appendChild(createSpace("highlandCanyon1Space"));
-    highlandBoard.appendChild(createSpace("highlandMountainPassSpace"));
-    highlandBoard.appendChild(createSpace("highlandCliff4Space"));
-    highlandBoard.appendChild(createSpace("highlandHills4Space"));
-    highlandBoard.appendChild(createSpace("highlandPrecipice1Space"));
-    highlandBoard.appendChild(createSpace("highlandRavine3Space"));
-    highlandBoard.appendChild(createSpace("highlandHills5Space"));
-    highlandBoard.appendChild(createSpace("highlandCliff5Space"));
-    highlandBoard.appendChild(createSpace("highlandWaterfallSpace"));
-    highlandBoard.appendChild(createSpace("highlandCanyon2Space"));
-    highlandBoard.appendChild(createSpace("highlandCliff6Space"));
-    highlandBoard.appendChild(createSpace("highlandLostCitySpace"));
-    highlandBoard.appendChild(createSpace("highlandPrecipice2Space"));
-    highlandBoard.appendChild(createSpace("highlandRavine4Space"));
-    highlandBoard.appendChild(createSpace("highlandIceBridgeSpace"));
-    highlandBoard.appendChild(createSpace("highlandCanyon3Space"));
-    highlandBoard.appendChild(createSpace("highlandEyrieSpace"));
+    highlandBoard.appendChild(createSpace("highlandHills1Space", "Hills"));
+    highlandBoard.appendChild(createSpace("highlandCliff1Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandRidgewaySpace", "Ridgeway"));
+    highlandBoard.appendChild(createSpace("highlandRavine1Space", "Ravine"));
+    highlandBoard.appendChild(createSpace("highlandHills2Space", "Hills"));
+    highlandBoard.appendChild(createSpace("highlandRuinedMineSpace", "Ruined Mine"));
+    highlandBoard.appendChild(createSpace("highlandCliff2Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandRavine2Space", "Ravine"));
+    highlandBoard.appendChild(createSpace("highlandHills3Space", "Hills"));
+    highlandBoard.appendChild(createSpace("highlandGlacierSpace", "Glacier"));
+    highlandBoard.appendChild(createSpace("highlandCliff3Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandCanyon1Space", "Canyon"));
+    highlandBoard.appendChild(createSpace("highlandMountainPassSpace", "Mountain Pass"));
+    highlandBoard.appendChild(createSpace("highlandCliff4Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandHills4Space", "Hills"));
+    highlandBoard.appendChild(createSpace("highlandPrecipice1Space", "Precipice"));
+    highlandBoard.appendChild(createSpace("highlandRavine3Space", "Ravine"));
+    highlandBoard.appendChild(createSpace("highlandHills5Space", "Hills"));
+    highlandBoard.appendChild(createSpace("highlandCliff5Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandWaterfallSpace", "Waterfall"));
+    highlandBoard.appendChild(createSpace("highlandCanyon2Space", "Canyon"));
+    highlandBoard.appendChild(createSpace("highlandCliff6Space", "Cliff"));
+    highlandBoard.appendChild(createSpace("highlandLostCitySpace", "Lost City"));
+    highlandBoard.appendChild(createSpace("highlandPrecipice2Space", "Precipice"));
+    highlandBoard.appendChild(createSpace("highlandRavine4Space", "Ravine"));
+    highlandBoard.appendChild(createSpace("highlandIceBridgeSpace", "Ice Bridge"));
+    highlandBoard.appendChild(createSpace("highlandCanyon3Space", "Canyon"));
+    highlandBoard.appendChild(createSpace("highlandEyrieSpace", "Eyrie"));
 
     //city board
     let cityBoard = document.createElement("div");
     cityBoard.setAttribute("class", "boardExpansion boardCity expansionOverlay");
     cityBoard.setAttribute("board", "City");
 
-    cityBoard.appendChild(createSpace("cityGateSpace"));
-    cityBoard.appendChild(createSpace("citySquareOfKingsSpace"));
-    cityBoard.appendChild(createSpace("cityRoyalLaneSpace"));
-    cityBoard.appendChild(createSpace("citySouthSideAlleySpace"));
-    cityBoard.appendChild(createSpace("citySanctuarySquareSpace"));
-    cityBoard.appendChild(createSpace("cityHighTempleSpace"));
-    cityBoard.appendChild(createSpace("cityNobleStreetSpace"));
-    cityBoard.appendChild(createSpace("cityAcademySpace"));
-    cityBoard.appendChild(createSpace("cityFlaskStreetSpace"));
-    cityBoard.appendChild(createSpace("cityApothecarySpace"));
-    cityBoard.appendChild(createSpace("cityElementalAvenueSpace"));
-    cityBoard.appendChild(createSpace("citySorcererSquareSpace"));
-    cityBoard.appendChild(createSpace("cityTownSquareSpace"));
-    cityBoard.appendChild(createSpace("cityMagicEmporiumSpace"));
-    cityBoard.appendChild(createSpace("cityJailSpace"));
-    cityBoard.appendChild(createSpace("citySoothsayerSpace"));
-    cityBoard.appendChild(createSpace("cityGuildStreetSpace"));
-    cityBoard.appendChild(createSpace("cityArmourySpace"));
-    cityBoard.appendChild(createSpace("cityRatsRoadSpace"));
-    cityBoard.appendChild(createSpace("cityMenagerieSpace"));
-    cityBoard.appendChild(createSpace("cityDroppingsLaneSpace"));
-    cityBoard.appendChild(createSpace("cityStablesSpace"));
-    cityBoard.appendChild(createSpace("cityBeggarsRowSpace"));
-    cityBoard.appendChild(createSpace("cityWharfSpace"));
-    cityBoard.appendChild(createSpace("cityThievesAlleySpace"));
-    cityBoard.appendChild(createSpace("cityRoguesGuildSpace"));
-    cityBoard.appendChild(createSpace("cityNorthSideAlleySpace"));
-    cityBoard.appendChild(createSpace("cityCobbleLaneSpace"));
-    cityBoard.appendChild(createSpace("cityGoldStreetSpace"));
-    cityBoard.appendChild(createSpace("citySpeakersCornerSpace"));
+    cityBoard.appendChild(createSpace("cityGateSpace", "City Gate"));
+    cityBoard.appendChild(createSpace("citySquareOfKingsSpace", "Square of Kings"));
+    cityBoard.appendChild(createSpace("cityRoyalLaneSpace", "Royal Lane"));
+    cityBoard.appendChild(createSpace("citySouthSideAlleySpace", "South Side Alley"));
+    cityBoard.appendChild(createSpace("citySanctuarySquareSpace", "Sanctuary Square"));
+    cityBoard.appendChild(createSpace("cityHighTempleSpace", "High Temple"));
+    cityBoard.appendChild(createSpace("cityNobleStreetSpace", "Noble Street"));
+    cityBoard.appendChild(createSpace("cityAcademySpace", "Academy"));
+    cityBoard.appendChild(createSpace("cityFlaskStreetSpace", "Flask Street"));
+    cityBoard.appendChild(createSpace("cityApothecarySpace", "Apothecary"));
+    cityBoard.appendChild(createSpace("cityElementalAvenueSpace", "Elemental Avenue"));
+    cityBoard.appendChild(createSpace("citySorcererSquareSpace", "Sorcerer Square"));
+    cityBoard.appendChild(createSpace("cityTownSquareSpace", "Town Square"));
+    cityBoard.appendChild(createSpace("cityMagicEmporiumSpace", "Magic Emporium"));
+    cityBoard.appendChild(createSpace("cityJailSpace", "Jail"));
+    cityBoard.appendChild(createSpace("citySoothsayerSpace", "Soothsayer"));
+    cityBoard.appendChild(createSpace("cityGuildStreetSpace", "Guild Street"));
+    cityBoard.appendChild(createSpace("cityArmourySpace", "Armoury"));
+    cityBoard.appendChild(createSpace("cityRatsRoadSpace", "Rat's Road"));
+    cityBoard.appendChild(createSpace("cityMenagerieSpace", "Menagerie"));
+    cityBoard.appendChild(createSpace("cityDroppingsLaneSpace", "Droppings Lane"));
+    cityBoard.appendChild(createSpace("cityStablesSpace", "Stables"));
+    cityBoard.appendChild(createSpace("cityBeggarsRowSpace", "Beggar's Row"));
+    cityBoard.appendChild(createSpace("cityWharfSpace", "Wharf"));
+    cityBoard.appendChild(createSpace("cityThievesAlleySpace", "Thieves' Alley"));
+    cityBoard.appendChild(createSpace("cityRoguesGuildSpace", "Rogues' Guild"));
+    cityBoard.appendChild(createSpace("cityNorthSideAlleySpace", "North Side Alley"));
+    cityBoard.appendChild(createSpace("cityCobbleLaneSpace", "Cobble Lane"));
+    cityBoard.appendChild(createSpace("cityGoldStreetSpace", "Gold Street"));
+    cityBoard.appendChild(createSpace("citySpeakersCornerSpace", "Speakers Corner"));
 
     //dungeon board
     let dungeonBoard = document.createElement("div");
     dungeonBoard.setAttribute("class", "boardExpansion boardDungeon expansionOverlay");
     dungeonBoard.setAttribute("board", "Dungeon");
 
-    dungeonBoard.appendChild(createSpace("dungeonEntranceSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor1Space"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel1Space"));
-    dungeonBoard.appendChild(createSpace("dungeonLibrarySpace"));
-    dungeonBoard.appendChild(createSpace("dungeonCavern1Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor2Space"));
-    dungeonBoard.appendChild(createSpace("dungeonGuardRoomSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel2Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCavern2Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor3Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCellSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel3Space"));
-    dungeonBoard.appendChild(createSpace("dungeonVault1Space"));
-    dungeonBoard.appendChild(createSpace("dungeonHallOfDarknessSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel4Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor4Space"));
-    dungeonBoard.appendChild(createSpace("dungeonKitchenSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonCavern3Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor5Space"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel5Space"));
-    dungeonBoard.appendChild(createSpace("dungeonTortureChamberSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonVault2Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCorridor6Space"));
-    dungeonBoard.appendChild(createSpace("dungeonMonsterPitSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonTunnel6Space"));
-    dungeonBoard.appendChild(createSpace("dungeonCavern4Space"));
-    dungeonBoard.appendChild(createSpace("dungeonSummoningCircleSpace"));
-    dungeonBoard.appendChild(createSpace("dungeonVault3Space"));
-    dungeonBoard.appendChild(createSpace("dungeonTresureChamberSpace"));
+    dungeonBoard.appendChild(createSpace("dungeonEntranceSpace", "Dungeon Entrance"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor1Space", "Corridor"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel1Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonLibrarySpace", "Library"));
+    dungeonBoard.appendChild(createSpace("dungeonCavern1Space", "Cavern"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor2Space", "Corridor"));
+    dungeonBoard.appendChild(createSpace("dungeonGuardRoomSpace", "Guard Room"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel2Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonCavern2Space", "Cavern"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor3Space", "Corridor"));
+    dungeonBoard.appendChild(createSpace("dungeonCellSpace", "Cell"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel3Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonVault1Space", "Vault"));
+    dungeonBoard.appendChild(createSpace("dungeonHallOfDarknessSpace", "Hall of Darkness"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel4Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor4Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonKitchenSpace", "Kitchen"));
+    dungeonBoard.appendChild(createSpace("dungeonCavern3Space", "Cavern"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor5Space", "Corridor"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel5Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonTortureChamberSpace", "Torture Chamber"));
+    dungeonBoard.appendChild(createSpace("dungeonVault2Space", "Vault"));
+    dungeonBoard.appendChild(createSpace("dungeonCorridor6Space", "Corridor"));
+    dungeonBoard.appendChild(createSpace("dungeonMonsterPitSpace", "Monster Pit"));
+    dungeonBoard.appendChild(createSpace("dungeonTunnel6Space", "Tunnel"));
+    dungeonBoard.appendChild(createSpace("dungeonCavern4Space", "Cavern"));
+    dungeonBoard.appendChild(createSpace("dungeonSummoningCircleSpace", "Summoning Circle"));
+    dungeonBoard.appendChild(createSpace("dungeonVault3Space", "Vault"));
+    dungeonBoard.appendChild(createSpace("dungeonTresureChamberSpace", "Treasure Chamber"));
 
     //woodland board
     let woodlandBoard = document.createElement("div");
     woodlandBoard.setAttribute("class", "boardExpansion boardWoodland expansionOverlay");
     woodlandBoard.setAttribute("board", "Woodland");
 
-    woodlandBoard.appendChild(createSpace("woodlandEntranceSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandWoods1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandGlade1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandFaerieRingSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandThicket1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandWoods2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandWitchTreeSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandGlade2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandThicket2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandWoods3Space"));
-    woodlandBoard.appendChild(createSpace("woodlandCrossroadsSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandGlade3Space"));
-    woodlandBoard.appendChild(createSpace("woodlandDenseForestSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandSwamplandSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandGlade4Space"));
-    woodlandBoard.appendChild(createSpace("woodlandWoods4Space"));
-    woodlandBoard.appendChild(createSpace("woodlandBog1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandThicket3Space"));
-    woodlandBoard.appendChild(createSpace("woodlandFaerieVillage1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandGlade5Space"));
-    woodlandBoard.appendChild(createSpace("woodlandBlastedHeathSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandDenseForest1Space"));
-    woodlandBoard.appendChild(createSpace("woodlandFaerieVillage2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandMysticGlenSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandBog2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandThicket4Space"));
-    woodlandBoard.appendChild(createSpace("woodlandMabsLairSpace"));
-    woodlandBoard.appendChild(createSpace("woodlandDenseForest2Space"));
-    woodlandBoard.appendChild(createSpace("woodlandMeetingWithDestinySpace"));
+    woodlandBoard.appendChild(createSpace("woodlandEntranceSpace", "Woodland Entrance"));
+    woodlandBoard.appendChild(createSpace("woodlandWoods1Space", "Woods"));
+    woodlandBoard.appendChild(createSpace("woodlandGlade1Space", "Glade"));
+    woodlandBoard.appendChild(createSpace("woodlandFaerieRingSpace", "Faerie Ring"));
+    woodlandBoard.appendChild(createSpace("woodlandThicket1Space", "Thicket"));
+    woodlandBoard.appendChild(createSpace("woodlandWoods2Space", "Woods"));
+    woodlandBoard.appendChild(createSpace("woodlandWitchTreeSpace", "Witch Tree"));
+    woodlandBoard.appendChild(createSpace("woodlandGlade2Space", "Glade"));
+    woodlandBoard.appendChild(createSpace("woodlandThicket2Space", "Thicket"));
+    woodlandBoard.appendChild(createSpace("woodlandWoods3Space", "Woods"));
+    woodlandBoard.appendChild(createSpace("woodlandCrossroadsSpace", "Crossroads"));
+    woodlandBoard.appendChild(createSpace("woodlandGlade3Space", "Glade"));
+    woodlandBoard.appendChild(createSpace("woodlandDenseForestSpace", "Dense Forest"));
+    woodlandBoard.appendChild(createSpace("woodlandSwamplandSpace", "Swampland"));
+    woodlandBoard.appendChild(createSpace("woodlandGlade4Space", "Glade"));
+    woodlandBoard.appendChild(createSpace("woodlandWoods4Space", "Woods"));
+    woodlandBoard.appendChild(createSpace("woodlandBog1Space", "Bog"));
+    woodlandBoard.appendChild(createSpace("woodlandThicket3Space", "Thicket"));
+    woodlandBoard.appendChild(createSpace("woodlandFaerieVillage1Space", "Faerie Village"));
+    woodlandBoard.appendChild(createSpace("woodlandGlade5Space", "Glade"));
+    woodlandBoard.appendChild(createSpace("woodlandBlastedHeathSpace", "Blasted Heath"));
+    woodlandBoard.appendChild(createSpace("woodlandDenseForest1Space", "Dense Forest"));
+    woodlandBoard.appendChild(createSpace("woodlandFaerieVillage2Space", "Faerie Village"));
+    woodlandBoard.appendChild(createSpace("woodlandMysticGlenSpace", "Mystic Glen"));
+    woodlandBoard.appendChild(createSpace("woodlandBog2Space", "Bog"));
+    woodlandBoard.appendChild(createSpace("woodlandThicket4Space", "Thicket"));
+    woodlandBoard.appendChild(createSpace("woodlandMabsLairSpace", "Mab's Lair"));
+    woodlandBoard.appendChild(createSpace("woodlandDenseForest2Space", "Dense Forest"));
+    woodlandBoard.appendChild(createSpace("woodlandMeetingWithDestinySpace", "Meeting with Destiny"));
 
     //woodland board
     let boardDeeprealm = document.createElement("div");
     boardDeeprealm.setAttribute("class", "boardDeeprealm expansionOverlay");
     boardDeeprealm.setAttribute("board", "Deeprealm");
 
-    boardDeeprealm.appendChild(createSpace("deeprealmOldSewerSpace"));
-    boardDeeprealm.appendChild(createSpace("deeprealmRatsNestSpace"));
-    boardDeeprealm.appendChild(createSpace("deeprealmWraithLordSpace"));
-    boardDeeprealm.appendChild(createSpace("deeprealmCatacombsSpace"));
-    boardDeeprealm.appendChild(createSpace("deeprealmRatRunSpace"));
-    boardDeeprealm.appendChild(createSpace("deeprealmSkullPassageSpace"));
+    boardDeeprealm.appendChild(createSpace("deeprealmOldSewerSpace", "Old Sewers"));
+    boardDeeprealm.appendChild(createSpace("deeprealmRatsNestSpace", "Rat's Nest"));
+    boardDeeprealm.appendChild(createSpace("deeprealmThroneRoom", "Throne Room"));
+    boardDeeprealm.appendChild(createSpace("deeprealmCatacombsSpace", "Catacombs"));
+    boardDeeprealm.appendChild(createSpace("deeprealmRatRunSpace", "Rat Run"));
+    boardDeeprealm.appendChild(createSpace("deeprealmSkullPassageSpace", "Skull Passage"));
 
     //board backgrounds
     let centerBackground = document.createElement("div");
@@ -3138,7 +3146,10 @@ async function createBoard()
             let nameContainerWidth;
 
             //set description size
-            descriptionContainer.style.setProperty("top", computed.height);
+            if(transform.rotate > 135 && transform.rotate < 225)
+                descriptionContainer.style.setProperty("top", "0px");
+            else
+                descriptionContainer.style.setProperty("top", computed.height);
             if (spaceWidth > maxContainerWidth)
             {
                 descriptionContainer.style.setProperty("left", ((spaceWidth - maxContainerWidth) * 0.5) + "px");
@@ -3156,6 +3167,7 @@ async function createBoard()
             }
 
             descriptionContainer.style.setProperty("width", (spaceWidth * 0.8) + "px");
+            descriptionContainer.style.setProperty("transform", "rotate(" + (transform.rotate * - 1) + "deg)");
 
             //space name
             let spaceNameElement = document.createElement("div")
@@ -3169,11 +3181,12 @@ async function createBoard()
 
             let spaceName = target.getAttribute("space")
             spaceNameElement.textContent = spaceName;
+            let spaceBoard = target.parentNode.getAttribute("Board");
 
             //space description
             let spaceDescription = document.createElement("div");
             spaceDescription.className = "spaceDescription";
-            createSpaceDescription(spaceDescription, spaceName);
+            createSpaceDescription(spaceDescription, spaceBoard, spaceName);
 
             descriptionContainer.appendChild(spaceNameElement);
             descriptionContainer.appendChild(spaceDescription);
