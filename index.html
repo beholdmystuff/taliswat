@@ -2003,30 +2003,40 @@ body
 }
 .characterSheetStrength
 {
-    transform: rotate(90deg);
     font-family: Caxton;
-    top: 276px;
-    left: -39px;
-    font-size: 18px;
-    height: 32px;
-    width: 140px;
+    font-weight: 800;
+    top: 240px;
+    left: -18px;
+    font-size: 32px;
+    height: 96px;
+    width: 96px;
     text-align: center;
-    line-height: 32px;
+    line-height: 120px;
     cursor: pointer;
+    background-image: url(assets/ui/strength_token.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    text-shadow: 0 0 0.1vw #f1abab;
     position: absolute;
 }
 .characterSheetCraft
 {
-    transform: rotate(90deg);
     font-family: Caxton;
-    top: 492px;
-    left: -39px;
-    font-size: 18px;
-    height: 32px;
-    width: 140px;
+    font-weight: 800;
+    top: 460px;
+    left: -18px;
+    font-size: 32px;
+    height: 96px;
+    width: 96px;
     text-align: center;
-    line-height: 32px;
+    line-height: 120px;
     cursor: pointer;
+    background-image: url(assets/ui/craft_token.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    text-shadow: 0 0 0.1vw #a2e2f5;
     position: absolute;
 }
 .characterSheetFate
@@ -2085,7 +2095,7 @@ body
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: transparent;
-    text-shadow: 0 0 0.1vw #7ed87a;
+    text-shadow: 0 0 0.1vw #a2f39e;
     position: absolute;
 }
 .characterSheetCoin
@@ -2196,16 +2206,37 @@ body
     background-color: #00000037;
     cursor: pointer;
 }
+/* CONTEXT MENU */
 .spaceMenu
 {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: auto;
+    height: auto;
     z-index: 7;
     user-select: none;
     cursor: pointer;
     background-color: #2d2e32;
     box-shadow: 3px 3px 5px 6px #000;
+    padding: 4px 0px 4px 0px;
+}
+.spaceMenuRow
+{
+    font-family: Caxton;
+    color: #ffffff80;
+    font-size: 18px;
+    line-height: 1.5;
+    border-radius: 2px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 0px 16px 0px 16px;
+}
+.spaceMenuDivide
+{
+    height: 9px;
+}
+.spaceMenuRow:hover
+{
+    color: #2d2e32;
+    background-color: #ffffff80;
 }
 .spaceMenuDraw
 {
@@ -2289,6 +2320,7 @@ body
 let chars;
 let cards;
 let spaces;
+let cardPool = {};
 
 function fetch(url, type)
 {
@@ -2621,10 +2653,13 @@ function spaceClick(event)
     if (spaceClickDisabled)
         return;
 
-    zoomDisabled = true;
-
     let board = event.target.parentNode.getAttribute("Board");
     let space = event.target.getAttribute("space");
+
+    if (!board || !space)
+        return;
+
+    zoomDisabled = true;
 
     let overlay = document.createElement("overlay");
     overlay.setAttribute("class", "overlay")
@@ -2632,7 +2667,9 @@ function spaceClick(event)
     document.body.appendChild(overlay);
 
     let spaceMenu = document.createElement("spaceMenu");
-    spaceMenu.setAttribute("class", "spaceMenu")
+    spaceMenu.setAttribute("class", "spaceMenu");
+    spaceMenu.setAttribute("space", event.target.classList[1]);
+
 
     spaceMenu.style.setProperty("left", event.clientX + 16);
     spaceMenu.style.setProperty("top", event.clientY + 16);
@@ -2640,14 +2677,67 @@ function spaceClick(event)
 
     //create context menu
     //move character here
+    let moveChar = document.createElement("div");
+    moveChar.className = "spaceMenuRow";
+    moveChar.textContent = "Move your character here"
+    spaceMenu.appendChild(moveChar);
+
+    let dynamicOptions = document.createElement("div");
     //view cards
+
     spaces[board][space].forEach(function(line)
     {
+        let menuRow = document.createElement("div");
+        menuRow.className = "spaceMenuRow";
+
         if ("roll" in line) //if roll on space
-            spaceMenu.textContent += JSON.stringify(line);
-        if ("draw" in line) //if draw on space
-            spaceMenu.textContent += JSON.stringify(line);
+        {
+            console.log(line);
+            menuRow.textContent = line.option;
+            //roll die
+            line.roll;
+            //for each line.roll
+            //for each line.roll[i].values
+            //if int, if equal to roll, display message, append to log
+            //if string, split +, parse to int, if greater than number, display message, append to log
+            //
+            dynamicOptions.appendChild(menuRow);
+        }
+        else if ("draw" in line) //if draw on space
+        {
+            console.log(line.draw.count);
+            menuRow.textContent = "Draw " + line.draw.deck + " card";
+            // if (line.draw.count > [cards on space])
+
+            //set click event to draw cards
+            line.count;
+            line.limit;
+            line.deck;
+
+            dynamicOptions.appendChild(menuRow);
+        }
+        else if ("browse" in line) //if select/buy on space
+        {
+            console.log(line.browse);
+            menuRow.textContent = "Browse " + line.browse.charAt(0).toUpperCase()
+                                + line.browse.slice(1) + " deck";
+
+            dynamicOptions.appendChild(menuRow);
+        }
+
     });
+
+    //add divide bar
+    console.log(dynamicOptions);
+    console.log(dynamicOptions.children.length);
+    if (dynamicOptions.children.length > 0)
+    {
+        let divideBar = document.createElement("div");
+        divideBar.className = "spaceMenuDivide";
+        spaceMenu.appendChild(divideBar);
+    }
+    spaceMenu.appendChild(dynamicOptions);
+
     document.body.appendChild(spaceMenu);
 
 }
@@ -2705,6 +2795,19 @@ function createSpaceDescription(target, spaceBoard, spaceName)
             });
             target.appendChild(roll);
         }
+    }
+}
+
+function shuffleCardPool(cardPool)
+{
+    var m = cardPool.deck.length, t, i;
+
+    while (m)
+    {
+        i = Math.floor(Math.random() * m--);
+        t = cardPool.deck[m];
+        cardPool.deck[m] = cardPool.deck[i];
+        cardPool.deck[i] = t;
     }
 }
 
@@ -3016,11 +3119,11 @@ async function createBoard()
 
     let characterSheetStrength = document.createElement("div");
     characterSheetStrength.className = "characterSheetStrength";
-    characterSheetStrength.innerHTML = "Strength: <span>25</span>";
+    characterSheetStrength.textContent = "25";
 
     let characterSheetCraft = document.createElement("div");
     characterSheetCraft.className = "characterSheetCraft";
-    characterSheetCraft.innerHTML = "Craft: <span>25</span>";
+    characterSheetCraft.textContent = "25";
 
     let characterSheetFate = document.createElement("div");
     characterSheetFate.className = "characterSheetFate";
@@ -3057,17 +3160,17 @@ async function createBoard()
         dragging = true;
         gameMapInner.style.setProperty("cursor", "grabbing");
         gameMap.addEventListener("mousemove", translateMap);
+
+        let roundedAngle = Math.round(transform.rotate/30)*30;
+        if ((roundedAngle == 0 || roundedAngle == 90 || roundedAngle == 180
+            || roundedAngle == 270  || roundedAngle == 360))
+            transform.rotate = roundedAngle;
     });
 
     gameMap.addEventListener("mouseup", function(event)
     {
         dragging = false;
         gameMapInner.style.setProperty("cursor", "grab");
-
-        let roundedAngle = Math.round(transform.rotate/30)*30;
-        if ((roundedAngle == 0 || roundedAngle == 90 || roundedAngle == 180
-            || roundedAngle == 270  || roundedAngle == 360))
-            transform.rotate = roundedAngle;
 
         if (spaceClickDisabled)
             setTimeout(function(){ spaceClickDisabled = false; }, 100);
@@ -3201,6 +3304,8 @@ async function createBoard()
 
     });
 
+
+
     chars = await fetch(window.location.origin + "/assets/text/chars.json", "json");
     console.log(chars);
 
@@ -3213,6 +3318,66 @@ async function createBoard()
     charsheetDescription.innerHTML = chars["The Highland"].Alchemist.description;
 
     //TODO cache json files
+
+
+    //TODO include/exclude expansions
+    //prepare decks
+    Object.keys(cards).forEach(function(expansion)
+    {
+        let expansionObj = cards[expansion];
+
+        Object.keys(expansionObj).forEach(function(deckType)
+        {
+            let lowercaseDeckType = deckType.toLowerCase();
+            if (!(lowercaseDeckType in cardPool))
+                cardPool[lowercaseDeckType] = {"deck": [], "discard":[]};
+
+            let cardList = expansionObj[deckType];
+            Object.keys(cardList).forEach(function(cardName)
+            {
+                let cardObj = cardList[cardName];
+
+                for (let i = 0; i < cardObj.count; i++)
+                {
+                    let card = {"expansion": expansion, "name": cardObj.name};
+                    cardPool[lowercaseDeckType].deck.push(card);
+                }
+            });
+        });
+    });
+
+    //shuffle decks
+    Object.keys(cardPool).forEach(function(deck)
+    {
+        shuffleCardPool(cardPool[deck]);
+    });
+
+    //TODO
+    //create deck ui
+    //put decks in drawers
+
+    //space context menu
+        //draws card from proper deck
+        //move character to space
+        //display space card pool
+        //
+    //card context menu
+        //discard
+        //put on top
+        //put on bottom
+        //give to
+        //take trophy
+        //take object
+        //take follower
+        //take spell
+        //place card on space
+    //card pool context menu
+        //draw card
+        //browse cards
+        //find card
+        //shuffle
+
+
 
     //COMPUTE
     computedStyle = window.getComputedStyle(gameMapInner);
