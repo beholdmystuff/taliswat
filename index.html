@@ -1846,14 +1846,6 @@ body
 }
 
 /* UI */
-.topDrawer:hover
-{
-    top: -1020px;
-}
-.bottomDrawer:hover
-{
-    bottom: -1010px;
-}
 .cityDrawer
 {
     position: absolute;
@@ -1920,12 +1912,14 @@ body
 {
     position: absolute;
     width: 1024px;
-    height: 1024px;
+    height: 384px;
     bottom: 16px;
     right: 768px;
+    padding-top: 64px;
     transition: bottom 0.5s ease-out;
     background-image: url(assets/ui/paper02.png);
-    background-size: 100% 100%;
+    background-size: 100% 267%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     pointer-events: all;
 }
@@ -1973,6 +1967,57 @@ body
     background-repeat: no-repeat;
 }
 
+/* DRAWER DECKS */
+.deckIcon
+{
+    margin: 8px;
+    position: relative;
+    width: 240px;
+    height: 320px;
+    background-size: 100% 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    font-family: Windlass;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 10px;
+}
+.deckIcon:hover { background-color: #fff3; }
+.upperDeck { transform: rotate(180deg); }
+
+.cityDrawer.upperDrawer:hover { top: -708px; }
+.cityDeck { background-image: url(assets/cards/city_card_button.png); }
+.wantedDeck { background-image: url(assets/cards/wanted_card_button.png); }
+.petsDeck { background-image: url(assets/cards/pet_card_button.png); }
+.armouryDeck { background-image: url(assets/cards/armoury_card_button.png); }
+.potionsDeck { background-image: url(assets/cards/potion_card_button.png); }
+.emporiumDeck { background-image: url(assets/cards/emporium_card_button.png); }
+.stablesDeck { background-image: url(assets/cards/stables_card_button.png); }
+.spellsDeck { background-image: url(assets/cards/spells_card_button.png); }
+
+.dungeonDrawer.upperDrawer:hover { top: -384px; }
+.dungeonDeck { background-image: url(assets/cards/dungeon_card_button.png); }
+.treasureDeck { background-image: url(assets/cards/treasure_card_button.png); }
+
+.lowerDeck { margin-top: 32px; }
+.woodlandDrawer.bottomDrawer:hover { bottom: -368px; }
+.woodlandDeck { background-image: url(assets/cards/woodland_card_button.png); }
+.pathDeck { background-image: url(assets/cards/path_card_button.png); }
+.destinyDeck { background-image: url(assets/cards/destiny_card_button.png); }
+
+
+/* .bottomDrawer:hover
+{
+    bottom: -1010px;
+} */
+
+/* CHARACTER SHEET CONTAINER */
+
 .characterSheetContainer
 {
     position: absolute;
@@ -1980,7 +2025,7 @@ body
     left: 2560px;
     width: 1236px;
     height: 800px;
-    background-image: url(assets/ui/card-template.png);
+    background-image: url(assets/ui/card_template.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
@@ -2000,12 +2045,13 @@ body
     text-align: center;
     line-height: 56px;
     position: absolute;
+    letter-spacing: 2px;
 }
 .characterSheetStrength
 {
     font-family: Caxton;
     font-weight: 800;
-    top: 240px;
+    top: 196px;
     left: -18px;
     font-size: 32px;
     height: 96px;
@@ -2024,7 +2070,7 @@ body
 {
     font-family: Caxton;
     font-weight: 800;
-    top: 460px;
+    top: 340px;
     left: -18px;
     font-size: 32px;
     height: 96px;
@@ -2039,7 +2085,27 @@ body
     text-shadow: 0 0 0.1vw #a2e2f5;
     position: absolute;
 }
-.characterSheetFate
+.characterSheetFateLight
+{
+    font-family: Caxton;
+    font-weight: 800;
+    top: 196px;
+    left: 1108px;
+    font-size: 32px;
+    height: 128px;
+    width: 128px;
+    text-align: center;
+    line-height: 128px;
+    cursor: pointer;
+    background-image: url(assets/ui/fate_light_token.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    position: absolute;
+    text-shadow: 0 0 0.1vw #d9cfc4;
+
+}
+.characterSheetFateDark
 {
     font-family: Caxton;
     font-weight: 800;
@@ -2049,42 +2115,21 @@ body
     height: 128px;
     width: 128px;
     text-align: center;
-    line-height: 64px;
+    line-height: 128px;
     cursor: pointer;
-    background-image: url(assets/ui/fate_token.png);
+    background-image: url(assets/ui/fate_dark_token.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: transparent;
     position: absolute;
-}
-.characterSheetFate .light
-{
-    top: 24px;
-    right: 58px;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-    text-shadow: 0 0 0.1vw #dcd5be;
-    position: absolute;
-}
-.characterSheetFate .dark
-{
-    bottom: 24px;
-    right: 24px;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-    text-shadow: 0 0 0.1vw #1d0042;
-    position: absolute;
+    text-shadow: 0 0 0.1vw #938995;
 }
 .characterSheetLife
 {
     font-family: Caxton;
     font-weight: 800;
-    top: 226px;
-    left: 1134px;
+    top: 490px;
+    left: -18px;
     font-size: 32px;
     height: 96px;
     width: 96px;
@@ -2139,10 +2184,37 @@ body
     font-size: 24px;
     position: absolute;
 }
+.charsheetObjects
+{
+    font-family: Windlass;
+    top: 729px;
+    left: 226px;
+    font-size: 24px;
+    height: 32px;
+    width: 225px;
+    text-align: center;
+    line-height: 36px;
+    position: absolute;
+    letter-spacing: 2px;
+}
+.charsheetFollowers
+{
+    font-family: Windlass;
+    top: 729px;
+    left: 770px;
+    font-size: 24px;
+    height: 32px;
+    width: 225px;
+    text-align: center;
+    line-height: 36px;
+    position: absolute;
+    letter-spacing: 2px;
+}
 
 /* SPACE DESCRIPTION */
 .spaceDescriptionContainer
 {
+    pointer-events: none;
     position: absolute;
     max-width: 800px;
     min-width: 800px;
@@ -2157,7 +2229,7 @@ body
     font-size: 48px;
     height: 96px;
     width: 100%;
-    max-width: 480px;
+    max-width: 540px;
     text-align: center;
     line-height: 2;
     background-image: url(assets/ui/nameframe.png);
@@ -2216,7 +2288,7 @@ body
     user-select: none;
     cursor: pointer;
     background-color: #2d2e32;
-    box-shadow: 3px 3px 5px 6px #000;
+    box-shadow: 3px 3px 5px 5px #0009;
     padding: 4px 0px 4px 0px;
 }
 .spaceMenuRow
@@ -2321,6 +2393,7 @@ let chars;
 let cards;
 let spaces;
 let cardPool = {};
+let spaceCards = {};
 
 function fetch(url, type)
 {
@@ -2539,20 +2612,20 @@ function setTransform()
 
 function capMovement()
 {
-    if (transform.translate[0] > 250)
-        transform.translate[0] = 250;
+    if (transform.translate[0] > 256)
+        transform.translate[0] = 256;
     if (transform.translate[0] < -5242)
         transform.translate[0] = -5242;
-    if (transform.translate[1] > 250)
-        transform.translate[1] = 250;
+    if (transform.translate[1] > 1024)
+        transform.translate[1] = 1024;
     if (transform.translate[1] < -3706)
         transform.translate[1] = -3706;
 }
 
 function moveMap(event)
 {
-    transform.translate[0] += event.movementX * (2.5 * transform.scale);
-    transform.translate[1] += event.movementY * (2.5 * transform.scale);
+    transform.translate[0] += event.movementX * (1 + (transform.scale - 0.4));
+    transform.translate[1] += event.movementY * (1 + (transform.scale - 0.4));
 }
 function rotateMap(event)
 {
@@ -2670,16 +2743,11 @@ function spaceClick(event)
     spaceMenu.setAttribute("class", "spaceMenu");
     spaceMenu.setAttribute("space", event.target.classList[1]);
 
-
-    spaceMenu.style.setProperty("left", event.clientX + 16);
-    spaceMenu.style.setProperty("top", event.clientY + 16);
-
-
     //create context menu
     //move character here
     let moveChar = document.createElement("div");
     moveChar.className = "spaceMenuRow";
-    moveChar.textContent = "Move your character here"
+    moveChar.textContent = "Move here"
     spaceMenu.appendChild(moveChar);
 
     let dynamicOptions = document.createElement("div");
@@ -2692,7 +2760,6 @@ function spaceClick(event)
 
         if ("roll" in line) //if roll on space
         {
-            console.log(line);
             menuRow.textContent = line.option;
             //roll die
             line.roll;
@@ -2705,11 +2772,10 @@ function spaceClick(event)
         }
         else if ("draw" in line) //if draw on space
         {
-            console.log(line.draw.count);
             menuRow.textContent = "Draw " + line.draw.deck + " card";
-            // if (line.draw.count > [cards on space])
+            //TODO if (line.draw.count > [cards on space])
 
-            //set click event to draw cards
+            //TODO add draw cards event listener
             line.count;
             line.limit;
             line.deck;
@@ -2718,9 +2784,9 @@ function spaceClick(event)
         }
         else if ("browse" in line) //if select/buy on space
         {
-            console.log(line.browse);
             menuRow.textContent = "Browse " + line.browse.charAt(0).toUpperCase()
                                 + line.browse.slice(1) + " deck";
+            //TODO add view cards event listener
 
             dynamicOptions.appendChild(menuRow);
         }
@@ -2728,8 +2794,6 @@ function spaceClick(event)
     });
 
     //add divide bar
-    console.log(dynamicOptions);
-    console.log(dynamicOptions.children.length);
     if (dynamicOptions.children.length > 0)
     {
         let divideBar = document.createElement("div");
@@ -2738,8 +2802,30 @@ function spaceClick(event)
     }
     spaceMenu.appendChild(dynamicOptions);
 
+    if (event.target.classList[1] in spaceCards)
+    {
+        let displayCards = document.createElement("div");
+        displayCards.className("spaceMenuRow");
+        displayCards.textContent = "View cards";
+
+        //TODO add view cards event listener
+
+        spaceMenu.appendChild(displayCards);
+    }
+
+    //set menu position once all is appended
     document.body.appendChild(spaceMenu);
 
+    let box = spaceMenu.getBoundingClientRect();
+    if ((event.clientX + box.width) > window.innerWidth)
+        spaceMenu.style.setProperty("left", event.clientX - box.width - 16);
+    else
+        spaceMenu.style.setProperty("left", event.clientX + 16);
+
+    if ((event.clientY + box.height) > window.innerHeight)
+        spaceMenu.style.setProperty("top", event.clientY - box.height - 16);
+    else
+        spaceMenu.style.setProperty("top", event.clientY + 16);
 }
 
 function createSpace(className, spaceName)
@@ -3071,7 +3157,48 @@ async function createBoard()
     // deck drawers
     //city deck drawer
     let cityDrawer = document.createElement("div");
-    cityDrawer.className = "cityDrawer topDrawer";
+    cityDrawer.className = "cityDrawer upperDrawer";
+
+    let cityDeckDrawer = document.createElement("div");
+    cityDeckDrawer.className = "deckIcon upperDeck cityDeck";
+    cityDeckDrawer.textContent = "City";
+
+    let wantedDeckDrawer = document.createElement("div");
+    wantedDeckDrawer.className = "deckIcon upperDeck wantedDeck";
+    wantedDeckDrawer.textContent = "Wanted";
+
+    let petsDeckDrawer = document.createElement("div");
+    petsDeckDrawer.className = "deckIcon upperDeck petsDeck";
+    petsDeckDrawer.textContent = "Pets";
+
+    let armouryDeckDrawer = document.createElement("div");
+    armouryDeckDrawer.className = "deckIcon upperDeck armouryDeck";
+    armouryDeckDrawer.textContent = "Armoury";
+
+    let potionsDeckDrawer = document.createElement("div");
+    potionsDeckDrawer.className = "deckIcon upperDeck potionsDeck";
+    potionsDeckDrawer.textContent = "Potions";
+
+    let emporiumDeckDrawer = document.createElement("div");
+    emporiumDeckDrawer.className = "deckIcon upperDeck emporiumDeck";
+    emporiumDeckDrawer.textContent = "Emporium";
+
+    let stablesDeckDrawer = document.createElement("div");
+    stablesDeckDrawer.className = "deckIcon upperDeck stablesDeck";
+    stablesDeckDrawer.textContent = "Stables";
+
+    let spellsUpperDeckDrawer = document.createElement("div");
+    spellsUpperDeckDrawer.className = "deckIcon upperDeck spellsDeck";
+    spellsUpperDeckDrawer.textContent = "Spells";
+
+    cityDrawer.appendChild(cityDeckDrawer);
+    cityDrawer.appendChild(wantedDeckDrawer);
+    cityDrawer.appendChild(petsDeckDrawer);
+    cityDrawer.appendChild(armouryDeckDrawer);
+    cityDrawer.appendChild(potionsDeckDrawer);
+    cityDrawer.appendChild(emporiumDeckDrawer);
+    cityDrawer.appendChild(stablesDeckDrawer);
+    cityDrawer.appendChild(spellsUpperDeckDrawer);
 
     let cityDrawerArrow = document.createElement("div");
     cityDrawerArrow.className = "cityDrawerArrow";
@@ -3081,7 +3208,19 @@ async function createBoard()
 
     //dungeon deck drawer
     let dungeonDrawer = document.createElement("div");
-    dungeonDrawer.className = "dungeonDrawer topDrawer";
+    dungeonDrawer.className = "dungeonDrawer upperDrawer";
+
+    let dungeonDeckDrawer = document.createElement("div");
+    dungeonDeckDrawer.className = "deckIcon upperDeck dungeonDeck";
+    dungeonDeckDrawer.textContent = "Dungeon";
+
+    let treasureDeckDrawer = document.createElement("div");
+    treasureDeckDrawer.className = "deckIcon upperDeck treasureDeck";
+    treasureDeckDrawer.textContent = "Treasure";
+
+    dungeonDrawer.appendChild(dungeonDeckDrawer);
+    dungeonDrawer.appendChild(treasureDeckDrawer);
+    dungeonDrawer.appendChild(spellsUpperDeckDrawer);
 
     let dungeonDrawerArrow = document.createElement("div");
     dungeonDrawerArrow.className = "dungeonDrawerArrow";
@@ -3092,6 +3231,28 @@ async function createBoard()
     //woodland deck drawer
     let woodlandDrawer = document.createElement("div");
     woodlandDrawer.className = "woodlandDrawer bottomDrawer";
+
+    let woodlandDeckDrawer = document.createElement("div");
+    woodlandDeckDrawer.className = "deckIcon lowerDeck woodlandDeck";
+    woodlandDeckDrawer.textContent = "Woodland";
+
+    let pathDeckDrawer = document.createElement("div");
+    pathDeckDrawer.className = "deckIcon lowerDeck pathDeck";
+    pathDeckDrawer.textContent = "Path";
+
+    let destinyDeckDrawer = document.createElement("div");
+    destinyDeckDrawer.className = "deckIcon lowerDeck destinyDeck";
+    destinyDeckDrawer.textContent = "Destiny";
+
+    let spellsLowerDeckDrawer = document.createElement("div");
+    spellsLowerDeckDrawer.className = "deckIcon lowerDeck spellsDeck";
+    spellsLowerDeckDrawer.textContent = "Spells";
+
+    woodlandDrawer.appendChild(woodlandDeckDrawer);
+    woodlandDrawer.appendChild(pathDeckDrawer);
+    woodlandDrawer.appendChild(destinyDeckDrawer);
+    woodlandDrawer.appendChild(spellsLowerDeckDrawer);
+
 
     let woodlandDrawerArrow = document.createElement("div");
     woodlandDrawerArrow.className = "woodlandDrawerArrow";
@@ -3125,9 +3286,13 @@ async function createBoard()
     characterSheetCraft.className = "characterSheetCraft";
     characterSheetCraft.textContent = "25";
 
-    let characterSheetFate = document.createElement("div");
-    characterSheetFate.className = "characterSheetFate";
-    characterSheetFate.innerHTML = "<div class='light'>15</div><div class='dark'>15</div>"
+    let characterSheetFateLight = document.createElement("div");
+    characterSheetFateLight.className = "characterSheetFateLight";
+    characterSheetFateLight.textContent = "15"
+
+    let characterSheetFateDark = document.createElement("div");
+    characterSheetFateDark.className = "characterSheetFateDark";
+    characterSheetFateDark.textContent = "15"
 
     let characterSheetLife = document.createElement("div");
     characterSheetLife.className = "characterSheetLife";
@@ -3143,14 +3308,25 @@ async function createBoard()
     let charsheetDescription = document.createElement("div");
     charsheetDescription.className = "charsheetDescription";
 
+    let charsheetObjects = document.createElement("div");
+    charsheetObjects.className = "charsheetObjects";
+    charsheetObjects.textContent = "Objects";
+
+    let charsheetFollowers = document.createElement("div");
+    charsheetFollowers.className = "charsheetFollowers";
+    charsheetFollowers.textContent = "Followers";
+
     characterSheetContainer.appendChild(characterSheetName);
     characterSheetContainer.appendChild(characterSheetStrength);
     characterSheetContainer.appendChild(characterSheetCraft);
-    characterSheetContainer.appendChild(characterSheetFate);
     characterSheetContainer.appendChild(characterSheetLife);
+    characterSheetContainer.appendChild(characterSheetFateLight);
+    characterSheetContainer.appendChild(characterSheetFateDark);
     characterSheetContainer.appendChild(characterSheetCoin);
     characterSheetContainer.appendChild(charsheetMini);
     characterSheetContainer.appendChild(charsheetDescription);
+    characterSheetContainer.appendChild(charsheetObjects);
+    characterSheetContainer.appendChild(charsheetFollowers);
     gameMapInner.appendChild(characterSheetContainer);
 
 
@@ -3276,7 +3452,7 @@ async function createBoard()
             let spaceNameElement = document.createElement("div")
             spaceNameElement.className = "spaceName";
 
-            let maxNameWidth = 480;
+            let maxNameWidth = 540;
             if (nameContainerWidth > maxNameWidth)
                 spaceNameElement.style.setProperty("left", ((nameContainerWidth - maxNameWidth) * 0.5) + "px");
             else
@@ -3303,8 +3479,6 @@ async function createBoard()
         });
 
     });
-
-
 
     chars = await fetch(window.location.origin + "/assets/text/chars.json", "json");
     console.log(chars);
@@ -3965,6 +4139,30 @@ async function mainMenu()
 }
 
 ass();
+
+/*
+TODO
+base cards
+adventure, spells, purchase, talisman
+
+city cards
+city, wanted, pets, armoury, potions, emporium, stables
+
+dungeon cards
+dungeon, treasure, spells
+
+highland
+highland, relic, spells
+
+woodland
+woodland, path, destiny, spells
+
+deeprealm
+bridge, tunnel
+
+cataclysm
+adventure, denizen, purchase, remnant, spells, talisman, terrain, warlock
+*/
 
 // mainMenu();
 /*
