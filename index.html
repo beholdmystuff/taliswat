@@ -3480,13 +3480,13 @@ async function createBoard()
 
     });
 
-    chars = await fetch(window.location.origin + "/assets/text/chars.json", "json");
+    chars = await fetch("assets/text/chars.json", "json");
     console.log(chars);
 
-    cards = await fetch(window.location.origin + "/assets/text/cards.json", "json");
+    cards = await fetch("assets/text/cards.json", "json");
     console.log(cards);
 
-    spaces = await fetch(window.location.origin + "/assets/text/base_spaces.json", "json");
+    spaces = await fetch("assets/text/base_spaces.json", "json");
     console.log(spaces);
 
     charsheetDescription.innerHTML = chars["The Highland"].Alchemist.description;
@@ -3576,7 +3576,7 @@ async function ass()
     let bbReq = {store: "boardAssets", name: "boardBase", dbName: "Talisman"};
     if (!await storageExists(bbReq)) //cache
     {
-        bbReq.data = await fetch(window.location.origin + "/assets/board/base.png", "blob");
+        bbReq.data = await fetch("assets/board/base.png", "blob");
         let bbRes = await storagePut(bbReq);
     }
 
@@ -3591,7 +3591,7 @@ async function ass()
     let bhReq = {store: "boardAssets", name: "boardHighland", dbName: "Talisman"};
     if (!await storageExists(bhReq)) //cache
     {
-        bhReq.data = await fetch(window.location.origin + "/assets/board/highland.png", "blob");
+        bhReq.data = await fetch("assets/board/highland.png", "blob");
         let bhRes = await storagePut(bhReq);
     }
 
@@ -3606,7 +3606,7 @@ async function ass()
     let bcReq = {dbName: "Talisman", store: "boardAssets", name: "boardCity"};
     if (!await storageExists(bcReq))
     {
-        bcReq.data = await fetch(window.location.origin + "/assets/board/city.png", "blob");
+        bcReq.data = await fetch("assets/board/city.png", "blob");
         let bcRes = await storagePut(bcReq);
     }
 
@@ -3620,7 +3620,7 @@ async function ass()
     let bwReq = {dbName: "Talisman", store: "boardAssets", name: "boardWoodlands"};
     if (!await storageExists(bwReq))
     {
-        bwReq.data = await fetch(window.location.origin + "/assets/board/woodland.png", "blob");
+        bwReq.data = await fetch("assets/board/woodland.png", "blob");
         let bwRes = await storagePut(bwReq);
     }
 
@@ -3634,7 +3634,7 @@ async function ass()
     let bdReq = {dbName: "Talisman", store: "boardAssets", name: "boardDungeon"};
     if (!await storageExists(bdReq))
     {
-        bdReq.data = await fetch(window.location.origin + "/assets/board/dungeon.png", "blob");
+        bdReq.data = await fetch("assets/board/dungeon.png", "blob");
         let bdRes = await storagePut(bdReq);
     }
 
@@ -3649,7 +3649,7 @@ async function ass()
     let bdrReq = {dbName: "Talisman", store: "boardAssets", name: "boardDeeprealm"};
     if (!await storageExists(bdrReq))
     {
-        bdrReq.data = await fetch(window.location.origin + "/assets/board/deeprealm.png", "blob");
+        bdrReq.data = await fetch("assets/board/deeprealm.png", "blob");
         let bdrRes = await storagePut(bdrReq);
     }
 
@@ -3935,7 +3935,7 @@ function openCharacterSelector()
     randomName.className = "characterSelectorName";
     randomName.textContent = "Random";
 
-    randomContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/random_card.png)";
+    randomContainer.style.backgroundImage = "url(assets/chars/random_card.png)";
     randomContainer.setAttribute("name", "Random");
 
     randomContainer.addEventListener("click", selectCharacterEvent);
@@ -3954,7 +3954,7 @@ function openCharacterSelector()
         characterName.className = "characterSelectorName";
         characterName.textContent = charName;
 
-        charContainer.style.backgroundImage = "url(" + window.location.origin + "/assets/chars/" + character.filePrefix + "_miniature.png)";
+        charContainer.style.backgroundImage = "url(assets/chars/" + character.filePrefix + "_miniature.png)";
         charContainer.setAttribute("name", charName);
 
         charContainer.addEventListener("click", selectCharacterEvent);
