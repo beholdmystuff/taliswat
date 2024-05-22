@@ -1,0 +1,9 @@
+DEFSTRING(CARDTEXT_NAME_HARBINGERCHAR,	"Harbinger")
+DEFSTRING(CARDTEXT_DESC_HARBINGERCHAR,	 "")
+DEFSTRING(CHARACTER_CARD_HARBINGERCHAR,	 "If a character lands on the same space as the Harbinger, they ^must^ encounter the Harbinger. They must first move the Harbinger elsewhere, then roll 1 die.\n\
+1) ^The end is nigh!^ Discard the top Omen.\n\
+2) ^Doom will find you!^ Draw 3 Harbinger cards and add them to your space. Then encounter your space.\n\
+3) ^There is no escape!^ Place 1 Harbinger card on top of each Adventure deck.\n\
+4) ^You are the destined ones!^ Each character gains 1 fate.\n\
+5) ^Time is running out!^ You may take another turn after this one.\n\
+6) ^There is still hope!^ Choose 1 Omen in the discard pile and place it on top of the Omen stack.")

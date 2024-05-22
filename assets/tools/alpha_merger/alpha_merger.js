@@ -18,8 +18,8 @@ function parsse(file)
             let rgb = await sharp(sourceDir + "rgb/" + file);
             let meta = await rgb.metadata(); // for resize
 
-            let alpha = await sharp(sourceDir + "alpha/minicard.png"); //alpha merging single alpha
-            // let alpha = await sharp(sourceDir + "alpha/" + file); //alpha merging
+            // let alpha = await sharp(sourceDir + "alpha/minicard.png"); //alpha merging single alpha
+            let alpha = await sharp(sourceDir + "alpha/" + file); //alpha merging
             // alpha = await alpha.resize(meta.width, meta.height).rotate(180); //city boards
             alpha = await alpha.resize(meta.width, meta.height); //minis
 
@@ -39,6 +39,7 @@ function parsse(file)
 }
 
 console.log("Parsing:");
+console.log("0%");
 let dir = fs.readdirSync(sourceDir + "rgb/");
 let fileNumber = 1;
 dir.forEach(async file =>

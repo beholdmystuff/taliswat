@@ -1,0 +1,42 @@
+DEFSTRING(CHARACTER_CARD_ROGUE,\
+"SPECIAL ABILITIES\n\n\
+Whenever you fight more than 1 Enemy at the same time you may roll 1 die and add the result to your attack score.\n\n\
+Whenever you defeat a character in battle or psychic combat and choose to take a gold, you may take all of their gold instead.\n\n\
+Whenever you visit the Tavern, Mystic, or Enchantress, you may roll 2 dice and choose one of the results to use.\n\n\
+Start: Tavern          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_ALCHEMISTCHAR,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 5 gold.\n\n\
+During your turn, you may alchemise any Objects you have into gold. Discard the chosen Objects and gain 1 gold for each Object and 3 gold for each Magic Object.\n\n\
+During your turn, you may alchemise any gold you have into potions. For each gold you discard, you may replenish 1 fate, heal 1 life, or gain 1 Spell, if your Craft allows.\nYou may alchemise Objects into gold and alchemise gold into potions during the same turn.\n\n\
+Start: City         Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_VALKYRIE,\
+"SPECIAL ABILITIES\n\n\
+You may add 1 to your attack score during battle.\n\n\
+You may visit the Graveyard as if you were of evil alignment.\n\n\
+Whenever a Follower is killed, you may resurrect it and keep it as your Follower instead of allowing it to be placed on the discard pile. You may only resurrect each Follower once per turn.\n\n\
+Start: Ruins          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_HIGHLANDER,\
+"SPECIAL ABILITIES\n\n\
+You need not roll the die in the Crags or the Chasm unless you wish to. If you choose to roll, you must accept the result.\n\n\
+Whenever you land on the Hills, you may draw two Adventure Cards, instead of one, but you must encounter both cards. If there is a card already on the Hills when you land there, you may draw a second card, but you must encounter both cards.\n\n\
+Whenever you are about to engage in battle, you may charge and add 2 to your attack score. If you charge, you must miss your next turn recovering your wits.\n\n\
+Start: Crags          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_SPRITE,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 2 Spells.\n\n\
+During the game, you always have at least 2 Spells. (Whenever casting a Spell reduces your total to less than 2, draw another Spell immediately to replace it).\n\n\
+You may evade creatures and characters in the Woods and Forest.\n\n\
+Start: Forest          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_VAMPIRESS,\
+"SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Whenever you visit the Graveyard you may heal up to your life value.\n\n\
+You may take any 1 Follower from a character that you land on.\n\n\
+During your turn, you may drain the life-force from any of your Followers. Discard the chosen Followers and gain 1 life for each.\n\n\
+Start: Graveyard          Alignment: Evil")

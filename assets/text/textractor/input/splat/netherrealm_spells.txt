@@ -1,0 +1,12 @@
+DEFSTRING(CARDTEXT_DESC_EXORCISE,							"Cast when you have just completed your move. Discard 1 Spirit in any Region.\n\n\
+If it is Day, you may take the Spirit as a trophy instead of discarding it.")
+DEFSTRING(CARDTEXT_DESC_REANIMATE,							"Cast on an Enemy you just killed (place this card on the Enemy). The reanimated Enemy becomes your Follower and adds its Strength or Craft to yours during 1 battle or psychic combat of your choice. Then, discard this card and the reanimated Enemy.")
+DEFSTRING(CARDTEXT_DESC_DRAIN_LIFE,							"Cast on an Enemy you are about to encounter. Discard the Enemy and heal an amount of life equal to the Enemy's Strength or Craft.")
+DEFSTRING(CARDTEXT_DESC_BENEDICTION,						"Cast on any character at the start of their turn. The character gains 2 lives.\n\n\
+If it is Day, the character gains an additional 2 lives.")
+DEFSTRING(CARDTEXT_DESC_BURIAL_RITES,						"Cast at the start of your turn. If it is Day, roll 1 die to pray with the same results as at the Chapel. If it is Night, roll 1 die to pray with the same results as at the Graveyard.")
+DEFSTRING(CARDTEXT_DESC_FERAL_HUNGER,						"Cast when a character is about to engage a creature in battle or psychic combat. The creature automatically rolls a 6 for its attack roll.\n\n\
+If it is Night, all creatures automatically roll a 6 for their attack rolls until the start of your next turn.")
+DEFSTRING(CARDTEXT_DESC_SOLSTICE_RITUAL,					"Cast at any time to flip the Time Card.")
+DEFSTRING(CARDTEXT_DESC_HAUNTING_POLTERGEIST,				"Cast on any character at the start of their turn. The character must take this card as a Follower and only moves 1 space per turn. The character must discard this card if they cross the River, either by bridge, raft, or ferry.")
+DEFSTRING(CARDTEXT_DESC_CURSE_OF_THE_WEREWOLF,				"Cast on any character at the start of their turn. If the character is not a Lycanthrope, they become a Lycanthrope. If the character is a Lycanthrope, they must roll 1 die on the Werewolf's chart.")

@@ -1,0 +1,30 @@
+DEFSTRING(CARDTEXT_NAME_ARCHON,						"Archon")
+DEFSTRING(CARDTEXT_DESC_ARCHON,						"")
+DEFSTRING(CHARACTER_CARD_ARCHON,						"\
+SPECIAL ABILITIES\n\n\
+Whenever a character casts a Spell, put 1 Overload token on your character card.\n\n\
+At the end of your turn, if you have 3 or more Overload tokens on your character card, you must discard all of the Overload tokens to force all other characters in the same Region as you to lose 1 life.\n\n\
+Whenever you land on the Runes, you may gain 1 Spell, if your Craft allows.\n\n\
+Start: Ruins	         Alignment: Neutral")
+DEFSTRING(CARDTEXT_NAME_CLAIRVOYANT_CHARACTER,		"Clairvoyant")
+DEFSTRING(CARDTEXT_DESC_CLAIRVOYANT_CHARACTER,		"")
+DEFSTRING(CHARACTER_CARD_CLAIRVOYANT_CHARACTER,		"\
+SPECIAL ABILITIES\n\n\
+After paying fate to reroll a die, you may use either of the results. \n\n\
+Whenever you draw Adventure Cards, you may put one card of your choice that you do not wish to encounter at the bottom of the deck and draw one more card to replace it, which you must encounter.\n\n\
+Start: Village          Alignment: Good")
+DEFSTRING(CARDTEXT_NAME_SPECTRE_COLLECTOR,			"Spectre Collector")
+DEFSTRING(CARDTEXT_DESC_SPECTRE_COLLECTOR,			"")
+DEFSTRING(CHARACTER_CARD_SPECTRE_COLLECTOR,			"\
+SPECIAL ABILITIES\n\n\
+If you move into a space that contains one or more faceup Spirits or Veil Cards, you may end your move there and encounter the Spirits and Veil Cards, instead of moving the full distance as indicated by the die roll. \n\n\
+Each Spirit trophy you have adds 1 to your attack roll in psychic combat against Spirits.\n\n\
+You may take 1 Spirit trophy of your choice from a character that you land on.\n\n\
+Start: Graveyard          Alignment: Evil")
+DEFSTRING(CARDTEXT_NAME_GREAT_WIZARD, "Great Wizard")
+DEFSTRING(CARDTEXT_DESC_GREAT_WIZARD, "")
+DEFSTRING(CHARACTER_CARD_GREAT_WIZARD, "SPECIAL ABILITIES\n\n\
+You begin the game with 2 Spells.\n\n\
+During the game, you always have at least 1 Spell.\n(Gain a Spell each time you cast your last Spell).\n\n\
+When you kill a Spirit in psychic combat, you may capture it instead of taking it as a trophy. Captured Spirits add their Craft to yours in psychic combat, after which they depart to the discard pile. You may use any number of captured Spirits during a psychic combat.\n\n\
+Start: Ruins            Alignment: Neutral")

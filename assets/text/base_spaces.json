@@ -1,0 +1,814 @@
+{
+    "Base":
+    {
+        "City":
+        [
+            {"description": "VISIT THE DOCTOR: Heal up to two lives at the cost of one gold each."},
+            {"description": "VISIT THE ALCHEMIST: Discard any number of Objects you have and gain one gold for each."},
+            {"description": "VISIT THE ENCHANTRESS (Roll 1 die):"},
+            {"roll": [{"line": "Turned into a Toad.", "values": [1]},
+                {"line": "Lose 1 Strength.", "values":[2]},
+                {"line": "Lose 1 Craft.", "values": [3]},
+                {"line": "Gain 1 Craft.", "values":[4]},
+                {"line": "Gain 1 Strength.", "values": [5]},
+                {"line": "Gain 1 Spell.", "values": [6]}], "option": "Enchantress: roll", "dice": [1]}
+        ],
+        "Fields":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Hills":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Plains":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Woods":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Tavern":
+        [
+            {"description": "ROLL 1 DIE"},
+            {"roll": [{"line": "Get drunk and collapse in a corner; miss 1 turn.", "values": [1]},
+                {"line": "Get tipsy and fight a farmer with Strength 3.", "values": [2]},
+                {"line": "Gamble and lose 1 gold.", "values": [3]},
+                {"line": "Gamble and win 1 gold.", "values": [4]},
+                {"line": "A wizard offers to teleport you to any other space in this Region as your next move.", "values": [5]},
+                {"line": "A boatman offers to ferry you to the Temple as your next move.", "values": [6]}], "option": "Tavern: roll", "dice": [1]}
+        ],
+        "Ruins":
+        [
+            {"description": "DRAW 2 CARDS"},
+            {"description": "If there are any cards already in this space, draw only enough to take the total to two cards."},
+            {"draw": {"count": 2, "limit": 2, "deck": "Adventure"}}
+        ],
+        "Forest":
+        [
+            {"description": "ROLL 1 DIE"},
+            {"roll": [{"line": "Attacked by a brigand with Strength 4.", "values":[1]},
+                {"line": "Lost; lose your next turn.", "values": [2, 3]},
+                {"line": "Safe; no effect.", "values": [4, 5]},
+                {"line": "A ranger guides you out, gain 1 Craft.", "values": [6]}], "option": "Forest encounter: roll", "dice": [1]}
+        ],
+        "Village":
+        [
+            {"description": "VISIT THE BLACKSMITH (Purchase any, if available):"},
+            {"description": "Helmet (2G), Sword (2G), Axe (3G), Shield (3G), Armour (4G)"},
+            {"description": "VISIT THE HEALER: Heal up to your life value at the cost of one gold each."},
+            {"description": "VISIT THE MYSTIC (Roll 1 die):"},
+            {"roll": [{"line": "Become evil.", "values": [1]},
+                {"line": "Ignored.", "values":[2, 3]},
+                {"line": "Become good.", "values":[4]},
+                {"line": "Gain 1 Craft.", "values":[5]},
+                {"line": "Gain 1 Spell.", "values":[6]}], "option": "Mystic: roll", "dice": [1]},
+            {"browse": "purchase"}
+        ],
+        "Graveyard":
+        [
+            {"description": "BASED ON ALIGNMENT"},
+            {"description": "GOOD: Lose one life."},
+            {"description": "NEUTRAL: Replenish fate up to your fate value at the cost of one gold each."},
+            {"description": "EVIL: Either replenish fate up to your fate value for free, or pray by rolling one die:"},
+            {"roll": [{"line": "Ignored.", "values":[1, 2, 3, 4]},
+                {"line": "Gain 1 fate.", "values":[5]},
+                {"line": "Gain 1 Spell.", "values":[6]}], "option": "Pray: roll", "dice": [1]}
+        ],
+        "Sentinel":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"description": "If you are crossing to the Middle Region, do not draw a card. Instead, you must first defeat the Sentinel with Strength 9. Do not fight the Sentinel when crossing from the Middle Region."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Chapel":
+        [
+            {"description": "BASED ON ALIGNMENT"},
+            {"description": "EVIL: Lose one life."},
+            {"description": "NEUTRAL: Heal up to your life value at the cost of one gold each."},
+            {"description": "GOOD: Either heal up to your life value for free, or pray by rolling 1 die:"},
+            {"roll":[{"line": "Ignored.", "values":[1, 2, 3, 4]},
+                {"line": "Gain 1 life.", "values": [5]},
+                {"line": "Gain 1 Spell.", "values": [6]}], "option": "Pray: roll", "dice": [1]}
+        ],
+        "Crags":
+        [
+            {"description": "ROLL 1 DIE"},
+            {"roll": [{"line": "Attacked by a Spirit with Craft 4.", "values": [1]},
+                {"line": "Lost; lose your next turn.", "values":[2, 3]},
+                {"line": "Safe; no effect.", "values":[4, 5]},
+                {"line": "A barbarian leads you out; gain 1 Strength.", "values":[6]}], "option": "Crags encounter: roll", "dice": [1]}
+        ],
+        "Warlock's Cave":
+        [
+            {"description": "YOU MAY ROLL 1 DIE TO ACCEPT A QUEST"},
+            {"roll":[{"line": "Take 1 life from another character.", "values":[1]},
+                {"line": "Kill 1 Enemy.", "values":[2]},
+                {"line": "Deliver (discard) 1 Follower.", "values":[3]},
+                {"line": "Deliver (discard) 1 Magic Object.", "values":[4]},
+                {"line": "Deliver (discard) 3 gold.", "values":[5]},
+                {"line": "Deliver (discard) 2 gold.", "values":[6]}], "option": "Quest: roll", "dice": [1]},
+            {"description": "When you complete the quest, the Warlock immediately teleports you back here and gives you a Talisman, if available, as your reward."}
+        ],
+        "Desert":
+        [
+            {"description": "LOSE 1 LIFE THEN DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Oasis":
+        [
+            {"description": "DRAW 2 CARDS"},
+            {"description": "If there are any cards already in this space, draw only enough to take the total to two cards."},
+            {"draw": {"count": 2, "limit": 2, "deck": "Adventure"}}
+        ],
+        "Temple":
+        [
+            {"description": "PRAY: ROLL 2 DICE"},
+            {"roll":[{"line": "Lose 2 lives.", "values":[2]},
+                {"line": "Lose 1 life.", "values":[3]},
+                {"line": "Lose 1 Follower.", "values":[4]},
+                {"line": "Enslaved: stay here until you roll a 4, 5, or 6 for your move.", "values":[5]},
+                {"line": "Gain 1 Strength.", "values":[6]},
+                {"line": "Gain 1 Craft.", "values":[7]},
+                {"line": "Gain 1 Spell.", "values":[8, 9]},
+                {"line": "Gain a Talisman.", "values":[10]},
+                {"line": "Gain 2 fate.", "values":[11]},
+                {"line": "Gain 2 lives.", "values":[12]}], "option": "Pray: roll", "dice": [2]}
+        ],
+        "Runes":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"description": "Any creatures that you fight here add 2 to their attack rolls."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Castle":
+        [
+            {"description": "ROYAL DOCTOR"},
+            {"description": "Heal up to your life value at the cost of one gold each."},
+            {"description": "If you have the Prince or Princess, heal up to two lives for free."}
+        ],
+        "Portal of Power":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space. If you are crossing to the Plain of Peril, do not draw a card. Instead, you must first use Craft to pick the lock or Strength to force it."},
+            {"description": "Choose which ability you are using and roll two dice. If the total is equal to or less than your chosen ability, move to the Plain of Peril. If it is higher, remain here and lose one from that ability."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Adventure"}}
+        ],
+        "Black Knight":
+        [
+            {"description": "SUFFER ONE PENALTY"},
+            {"description": "Either pay one gold or lose one life."}
+        ],
+        "Hidden Valley":
+        [
+            {"description": "YOU MUST HAVE A TALISMAN TO ENTER"},
+            {"description": "You can only enter if you have a Talisman. If you do not have one, you must turn back. The Crown of Command can only be reached from this space."}
+        ],
+        "Cursed Glade":
+        [
+            {"description": "Strength and Craft derived from Objects and Magic Objects do not count on this space, nor may you use Magic Objects or cast Spells."}
+        ],
+        "Chasm":
+        [
+            {"description": "Roll one die for yourself, and one for each of your Followers."},
+            {"description": "If a 1 or 2 is rolled for yourself, lose 1 life. If a 1 or 2 is rolled for a Follower, it is killed."}
+        ],
+        "Valley of Fire":
+        [
+            {"description": "YOU MUST HAVE A TALISMAN TO ENTER"},
+            {"description": "You can only enter if you have a Talisman. If you do not have one, you must turn back. The Crown of Command can only be reached from this space."}
+        ],
+        "Werewolf Den":
+        [
+            {"description": "FIGHT THE WEREWOLF"},
+            {"description": "Roll two dice for the Werewolf's Strength, then fight it. If you lose, lose one life and you fight the same Werewolf again on your next turn. You cannot move on until you have defeated the Werewolf."},
+            {"roll": [], "option": "Werewolf strength: roll", "dice": [2]}
+        ],
+        "Death":
+        [
+            {"description": "DICE WITH DEATH"},
+            {"description": "Roll two dice for yourself and then two dice for Death. If the scores are equal: Dice with Death again on your next turn. If your score is lower: Lose one life and Dice with Death again on your next turn. If your score is higher: You may move on your next turn."},
+            {"roll": [], "option": "Play dice with Death: roll", "dice": [2]}
+        ],
+        "Crypt":
+        [
+            {"description": "ROLL 3 DICE"},
+            {"description": "Subtract your Strength from the total and move directly to:"},
+            {"roll": [{"line": "Crypt", "values":[0]},
+                {"line": "Plain of Peril", "values":[1]},
+                {"line": "Portal of Power", "values":[2, 3]},
+                {"line": "Warlock's Cave", "values":[4, 5]},
+                {"line": "City", "values":[6]}], "option": "Crypt exit: roll", "dice": [3]}
+        ],
+        "Plain of Peril":
+        [
+            {"description": "STOP HERE"},
+            {"description": "Move only one space per turn."}
+        ],
+        "Mines":
+        [
+            {"description": "ROLL 3 DICE"},
+            {"description": "Subtract your Craft from the total and move directly to:"},
+            {"roll": [{"line": "Mines", "values":[0]},
+                {"line": "Plain of Peril", "values":[1]},
+                {"line": "Portal of Power", "values":[2, 3]},
+                {"line": "Warlock's Cave", "values":[4, 5]},
+                {"line": "Tavern", "values":[6]}], "option": "Mines exit: roll", "dice": [3]}
+        ],
+        "Vampire's Tower":
+        [
+            {"description": "SUFFER BLOOD LOSS"},
+            {"description": "Roll one die to determine how many lives the Vampire takes."},
+            {"description": "You may discard any number of Followers to avoid this loss of life."},
+            {"description": "Each Follower you discard prevents the loss of one life."},
+            {"roll": [{"line": "Lose 1 life", "values":[1, 2]},
+                {"line": "Lose 2 lives", "values":[3, 4]},
+                {"line": "Lose 3 lives", "values":[5, 6]}], "option": "Vampire hunger: roll", "dice": [1]}
+        ],
+        "Pits":
+        [
+            {"description": "FIGHT THE PITFIENDS"},
+            {"description": "Roll one die and fight that many Pitfiends with Strength 4 each, one-by-one, until you either lose a life or defeat all of the Pitfiends. You may move on the turn after all are defeated."}
+        ],
+        "Crown of Command":
+        [
+            {"description": "The Ending has yet to be revealed."}
+        ]
+    },
+    "City":
+    {
+        "City Gate":
+        [
+            {"description": "WANTED LIST"},
+            {"description": "You may either buy any Wanted Posters on this space for 1 gold each, or claim any bounties from Wanted Posters on this space."},
+            {"description": "At the end of your turn, draw new Wanted Posters until there are a total of 3 on this space."},
+            {"draw": {"count": 3, "limit": 3, "deck": "Wanted"}}
+        ],
+        "Square of Kings":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Royal Lane":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "South Side Alley":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Sanctuary Square":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "High Temple":
+        [
+            {"description": "ROLL DICE TO PRAY"},
+            {"description": "Pay 1, 2, or 3 gold, then roll 1 die for each gold you paid:"},
+            {"roll": [{"line": "Lose all of your gold.", "values": [1,2,3]},
+                {"line": "Move to the Temple.", "values": [4,5,6]},
+                {"line": "Roll 1 die to accept a Quest at the Warlock's Cave.", "values": [7,8,9]},
+                {"line": "Gain 1 Strength or 1 Craft.", "values": [10,11,12]},
+                {"line": "Gain 1 Strength and 1 Craft.", "values": [13,14,15]},
+                {"line": "Gain a Talisman.", "values": [16,17,18]}], "option": "Pray: roll", "dice": [1, 2, 3]},
+            {"draw": {"count": 1, "deck": "Talisman"}}
+        ],
+        "Noble Street":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Academy":
+        [
+            {"description": "RECEIVE TRAINING"},
+            {"description": "You may discard 7 points of trophies to gain your choice of 1 Strength or 1 Craft."}
+        ],
+        "Flask Street":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Apothecary":
+        [
+            {"description": "BUY POTIONS"},
+            {"description": "Pay 1, 2, or 3 gold, then draw 1 Potion card for each gold you paid."},
+            {"draw": {"count": 1, "deck": "Potions"}}
+        ],
+        "Elemental Avenue":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Sorcerer Square":
+        [
+            {"description": "BUY OR SELL SPELLS"},
+            {"description": "Either discard any number of Spells you have and gain 1 gold for each, or buy Spells for 2 gold each, if your Craft allows."},
+            {"draw": {"count": 1, "limit": 3, "deck": "Spells"}}
+        ],
+        "Town Square":
+        [
+            {"description": "MOVE 1 CARD"},
+            {"description": "Move 1 card of your choice in this Region to this space. If there are no other cards in this Region, draw 1 card instead."},
+            {"description": "Discard all cards remaining on this space at the end of your turn."}
+        ],
+        "Magic Emporium":
+        [
+            {"description": "BUY ANY, IF AVAILABLE"},
+            {"description": "Scroll (1G), Psychic Crystal (2G), Mirror Shield (3G), Crystal Sceptre (4G), Magic Ring (5G), Spellbook (6G)"},
+            {"browse": "emporium"}
+        ],
+        "Jail":
+        [
+            {"description": "ESCAPE: ROLL 1 DIE"},
+            {"description": "Before you roll the die, you may pay any amount of gold to bribe the guard. Add 1 to your score for each gold you paid."},
+            {"roll": [{"line": "Caught trying to escape; lose 1 life.", "values": [1,2]},
+                {"line": "You fail to escape.", "values":[3,4]},
+                {"line": "Escape; leave the Jail.", "values": [5]}], "option": "Prison Break: roll", "dice": [1]}
+        ],
+        "Soothsayer":
+        [
+            {"description": "READ FORTUNE"},
+            {"description": "Replenish fate up to your fate value, at the cost of 1 gold each."}
+        ],
+        "Guild Street":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Armoury":
+        [
+            {"description": "BUY ANY, IF AVAILABLE"},
+            {"description": "Stiletto (1G), Bow (2G), Greatsword (3G), Battle Axe (4G), Flail (5G), Full Plate (6G)"},
+            {"browse": "armoury"}
+        ],
+        "Rat's Road":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Menagerie":
+        [
+            {"description": "BUY A PET"},
+            {"description": "Pay 2 gold plus 1 additional gold for each Pet you already own, then draw 1 Pet card."},
+            {"description": "You may only buy 1 Pet per visit."},
+            {"draw": {"count": 1, "limit": 3, "deck": "Pets"}}
+        ],
+        "Droppings Lane":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Stables":
+        [
+            {"description": "BUY ANY, IF AVAILABLE"},
+            {"description": "Riding Horse (2G), Mule (3G), Warhorse (4G), Horse and Cart (5G)"},
+            {"browse": "stables"}
+        ],
+        "Beggar's Row":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Wharf":
+        [
+            {"description": "PAY 1 GOLD"},
+            {"description": "On your next turn, instead of moving normally, move to any space in the Outer or Middle Region."}
+        ],
+        "Thieves' Alley":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Rogues' Guild":
+        [
+            {"description": "VISIT THE ROGUE CHAPLAIN OR GUILDMASTER"},
+            {"description": "ROGUE CHAPLAIN: If you are good or evil, you become neutral. If you are neutral, you become good or evil."},
+            {"description": "GUILDMASTER: You may only visit the Guildmaster if you are neutral. Roll 1 die:"},
+            {"roll": [{"line": "Ignored.", "values": [1,2,3,4]},
+                {"line": "Gain 1 gold.", "values":[5]},
+                {"line": "Gain 2 gold.", "values": [6]}], "option": "Guildmaster: roll", "dice": [1]}
+        ],
+        "North Side Alley":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Cobble Lane":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Gold Street":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ],
+        "Speakers Corner":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there are already 3 cards in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "City"}}
+        ]
+    },
+    "Dungeon":
+    {
+        "Dungeon Entrance":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "Dungeon"}}
+        ],
+        "Corridor":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "Dungeon"}}
+        ],
+        "Tunnel":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 3, "deck": "Dungeon"}}
+        ],
+        "Library":
+        [
+            {"description": "OPEN A TOME"},
+            {"description": "Roll 1 die to see what knowledge the ancient book contains:"},
+            {"roll": [{"line": "Have a good read.", "values": [1, 2]},
+                {"line": "Discover a secret passage - immediately take an extra turn.","values": [3, 4]},
+                {"line": "Gain 1 Spell.","values": [5, 6]}], "option": "Open a tome: roll", "dice": [1]},
+            {"draw": {"count": 1, "limit": 1, "deck": "Spells"}}
+        ],
+        "Cavern":
+        [
+            {"description": "DRAW 2 CARDS"},
+            {"description": "If there are any cards already in this space, draw only enough to take to total to two."},
+            {"draw": {"count": 2, "limit": 2, "deck": "Dungeon"}}
+        ],
+        "Guard Room":
+        [
+            {"description": "BRIBE THE GUARD"},
+            {"description": "Either pay 2 gold or you are attacked by a Guard with Strength 5."}
+        ],
+        "Cell":
+        [
+            {"description": "LOSE 1 FOLLOWER"},
+            {"description": "You must leave one of your Followers in the Cell."},
+            {"description": "If there are any Followers already here, you may take one of them with you."}
+        ],
+        "Vault":
+        [
+            {"description": "DRAW 3 CARDS"},
+            {"description": "If there are any cards already in this space, draw only enough to take the total to three."},
+            {"draw": {"count": 3, "limit": 3, "deck": "Dungeon"}}
+        ],
+        "Hall of Darkness":
+        [
+            {"description": "ENTER THE DARKNESS"},
+            {"description": "On your next turn, instead of moving normally, roll 1 die:"},
+            {"roll": [{"line": "Move back 3 spaces.", "values": [1]},
+                {"line": "Move back 2 spaces.", "values": [2]},
+                {"line": "Move back 1 spaces.", "values": [3]},
+                {"line": "Move forward 1 space.", "values": [4]},
+                {"line": "Move forward 2 spaces.", "values": [5]},
+                {"line": "Move forward 3 spaces.", "values": [6]}], "option": "Darkness exit: roll", "dice": [1]}
+        ],
+        "Kitchen":
+        [
+            {"description": "YOU MAY ROLL 1 DIE TO EAT"},
+            {"description": "Roll 1 die to see what knowledge the ancient book contains:"},
+            {"roll": [{"line": "Poison; lose 1 life.", "values": [1]},
+                {"line": "Tastes great!", "values": [2, 3]},
+                {"line": "Heal 1 life.","values": [4, 5]},
+                {"line": "Heal 2 life!", "values": [6]}], "option": "Cook the recipe: roll", "dice": [1]}
+        ],
+        "Torture Chamber":
+        [
+            {"description": "PAY THE TORTURER"},
+            {"description": "Either pay 1 gold or lose 1 point of Strength or Craft."}
+        ],
+        "Monster Pit":
+        [
+            {"description": "Roll 1 die to determine how many cards to draw:"},
+            {"description": "If there are already any cards in this space, draw only enough to take the total to the number of cards instructed by your die roll."},
+            {"roll": [{"line": "Draw 1 card.","values": [1]},
+                {"line": "Draw 2 cards.", "values": [2, 3]},
+                {"line": "Draw 3 cards.", "values": [4, 5]},
+                {"line": "Draw 1, 2, or 3 cards (you choose how many).", "values": [6]}], "option": "Number of cards: roll", "dice": [1]
+            }
+        ],
+        "Summoning Circle":
+        [
+            {"description": "SUMMON ENEMY"},
+            {"description": "Move the closest Enemy in the Dungeon to this space."},
+            {"description": "If two or more Enemies are an equal distance away, you choose which Enemy is moved here. If there are no Enemies in the Dungeon, draw 2 cards instead."},
+            {"description": "Drawn Enemies must be encountered, all other cards are discarded."},
+            {"draw": {"count": 2, "limit": 2, "deck": "Dungeon"}}
+        ],
+        "Treasure Chamber":
+        [
+            {"description": "FIGHT THE LORD OF DARKNESS"},
+            {"description": "The Lord of Darkness has Strength 12 and Craft 12."},
+            {"description": "If you win, gain 1 Treasure Card. Whether you win or lose, subtract the Lord of Darkness's attack score from your attack score to see where you emerge:"},
+            {"description": "0 - Crags, 1 - Forest, 2 - Chasm, 3 - Cursed Glade, 4 - Warlock's Cave, 5 - Temple, 6 - Portal of Power, 7 - Plain of Peril, 8+ Crown of Command."},
+            {"draw": {"count": 1, "deck": "Treasure"}}
+        ]
+    },
+    "Highland":
+    {
+        "Highland Entrance":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Highland"}}
+        ],
+        "Hills":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Highland"}}
+        ],
+        "Cliff":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Highland"}}
+        ],
+        "Ridgeway":
+        [
+            {"description": "CROSS THE RIDGEWAY"},
+            {"description": "Roll 1 die to see what dangers lurk on the Ridgeway:"},
+            {"roll": [{"line": "Marauders demand all your gold. Pay up or fight them with Strength 6.", "values": [1]},
+                {"line": "Rock slide, lose 1 life.", "values":[2,3]},
+                {"line": "Safe.", "values": [4,5]},
+                {"line": "A prospector leads you across; gain 1 gold.", "values":[6]}], "option": "Ridgeway encounter: roll", "dice": [1]}
+        ],
+        "Ravine":
+        [
+            {"description": "DRAW 2 CARDS"},
+            {"description": "If there are any card already in this space, draw only enough to take the total to two cards."},
+            {"draw": {"count": 2, "limit": 2, "deck": "Highland"}}
+        ],
+        "Ruined Mine":
+        [
+            {"description": "ROLL 1 DIE:"},
+            {"roll": [{"line": "Attacked by a Cave Troll with Strength 6.", "values": [1]},
+                {"line": "Attacked by a Wraith with Craft 5.", "values":[2]},
+                {"line": "Lost for 1 turn.", "values": [3]},
+                {"line": "Gain 1 gold.", "values": [4]},
+                {"line": "Gain 2 gold.", "values": [5]},
+                {"line": "Gain 3 gold.", "values": [6]}], "option": "Mine encounter: roll", "dice": [1]}
+        ],
+        "Glacier":
+        [
+            {"description": "ROLL 2 DICE:"},
+            {"description": "If the score is less than your combined Strength and Craft, move to any Hills in any Region. If the score is equal to or higher, you lose your next turn."},
+            {"roll": [], "option": "Glacier: roll", "dice": [2]}
+        ],
+        "Canyon":
+        [
+            {"description": "DRAW 3 CARDS"},
+            {"description": "If there are any card already in this space, draw only enough to take the total to three cards."},
+            {"draw": {"count": 3, "limit": 3, "deck": "Highland"}}
+        ],
+        "Mountain Pass":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Draw 1 card even if there are already any cards in this space. On your next turn, instead of your normal move, roll 1 die:"},
+            {"roll": [{"line": "No way across; encounter this space again.", "values": [1,2,3]},
+                {"line": "Move away normally.", "values": [4,5]},
+                {"line": "Move to the Lost City.", "values": [6]}], "option": "Instead of move: roll", "dice": [1]
+            },
+            {"description": "Draw 1 card even if there are already any cards in this space. Discard all cards remaining on this space at the end of your turn."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Highland"}}
+        ],
+        "Precipice":
+        [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Draw 1 card even if there are already any cards in this space. Discard all cards remaining on this space at the end of your turn."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Highland"}}
+        ],
+        "Waterfall":
+        [
+            {"description": "CHOOSE ONE"},
+            {"description": "Either heal 1 life, replenish 1 fate, or gain 1 Spell, if your Craft allows."},
+            {"draw": {"count": 1, "deck": "Spell"}}
+        ],
+        "Lost City":
+        [
+            {"description": "ROLL 2 DICE"},
+            {"roll": [{"line": "Lose 1 Craft.", "values":[2]},
+                {"line": "Lose 1 Strength.", "values": [3]},
+                {"line": "Lose 1 life.", "values": [4]},
+                {"line": "Either lose 1 Follower or 1 life.", "values": [5]},
+                {"line": "Lost; stay here until you roll a 4, 5, or a 6 for your move.", "values": [6]},
+                {"line": "Gain 1 gold.", "values": [7]},
+                {"line": "Gain 3 gold.", "values": [8]},
+                {"line": "Gain a Talisman.", "values": [9]},
+                {"line": "Gain 1 Armour from the Purchase deck.", "values": [10]},
+                {"line": "Gain 1 Weapon from the Purchase deck.", "values": [11]},
+                {"line": "Gain 1 Relic from the Relic deck.", "values": [12]}], "option": "Lost City: roll", "dice": [2]
+            },
+            {"browse": "purchase"},
+            {"draw": {"count": 1, "deck": "Talisman"}},
+            {"draw": {"count": 1, "deck": "Relic"}}
+        ],
+        "Ice Bridge":
+        [
+            {"description": "CROSS THE BRIDGE"},
+            {"description": "Roll 1 die and subtract the number of Followers you have."},
+            {"description": "If the score is zero or less, the bridge gives way and you are killed!"},
+            {"description": "You may ditch any number of Followers before you roll the die."},
+            {"roll": [], "option": "Crossing: roll", "dice": [1]}
+        ],
+        "Eyrie":
+        [
+            {"description": "FIGHT THE EAGLE KING"},
+            {"description": "The Eagle King has Strength 8 and Craft 8."},
+            {"description": "If you win, you may gain 1 Relic and move to any space in the Outer or Middle Region."},
+            {"description": "If you have a stand-off or are defeated, move to the Crags."},
+            {"draw": {"count": 1, "deck": "Relic"}}
+        ]
+    },
+    "Woodland":
+    {
+       "Woodland Entrance":
+       [
+            { "description": "DRAW 1 CARD" },
+            { "description": "Do not draw a card if there is already one in this space." },
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}},
+            {"draw": {"count": 1, "deck": "Path"}}
+       ],
+       "Woods":
+       [
+           { "description": "DRAW 1 CARD" },
+           { "description": "Do not draw a card if there is already one in this space." },
+           {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Glade":
+       [
+            { "description": "DRAW 1 CARD" },
+            { "description": "Do not draw a card if there is already one in this space." },
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Faerie Ring":
+       [
+            { "description": "REPLENISH 1 FATE AND ROLL 1 DIE:" },
+            { "roll":
+                [{"line": "Cursed; lose all of your fate.", "values": [1]},
+                {"line": "Enchanted; lose 1 turn.", "values": [2]},
+                {"line": "Attacked; lose 1 life.", "values": [3]},
+                {"line": "Welcomed; heal 1 life.", "values": [4]},
+                {"line": "Blessed; gain 1 fate.", "values": [5]},
+                {"line": "Favoured; draw 1 Spell.","values": [6]}], "option": "Farie Ring: roll", "dice": [1]},
+            {"draw": {"count": 1, "deck": "Spell"}}
+        ],
+       "Witch Tree":
+       [
+           {"description": "ROLL 1 DIE"},
+           {"description": "If you roll evens, move that many spaces clockwise. If you roll odds, move that many spaces counterclockwise."},
+           {"roll": [], "option": "Move direction: roll", "dice": [1]}
+       ],
+       "Thicket":
+       [
+           {"description": "DRAW 2 CARDS"},
+           {"description": "If there are any cards already in this space, draw only enough to take to total to two."},
+           {"draw": {"count": 2, "limit": 2, "deck": "Woodland"}}
+       ],
+       "Crossroads":
+       [
+           {"description": "ROLL 2 DICE"},
+           {"description": "If the score is less than your combined Strength and Craft, move to the Woods in any Region. Otherwise, discard your Path and draw a new one from the top of the deck."},
+           {"draw": {"count": 1, "limit": 1, "deck": "Path"}}
+       ],
+       "Dense Forest":
+       [
+           {"description": "DRAW 3 CARDS"},
+           {"description": "If there are any cards already in this space, draw only enough to take the total to three."},
+           {"draw": {"count": 3, "limit": 3, "deck": "Woodland"}}
+       ],
+       "Swampland":
+       [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Draw 1 card even if there are already any cards in this space."},
+            {"description": "On your next turn, instead of your normal move, roll 1 die:"},
+            {"roll": [{"line": "Trapped in the Swamp; encounter this space again", "values": [1, 2, 3]},
+                {"line": "Move 1 space.", "values": [4, 5, 6]}], "option": "Swampland: roll", "dice": [1]},
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Bog":
+       [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Draw 1 card even if there are already any cards in this space."},
+            {"description": "Subtract 1 from each of your die rolls while on this space, to a minimum of 1."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Faerie Village":
+       [
+            {"description": "GAIN 1 FATE AND DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Blasted Heath":
+       [
+            {"description": "DRAW 1 CARD"},
+            {"description": "Do not draw a card if there is already one in this space. You cannot spend fate while on this space."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Mystic Glen":
+       [
+            {"description": "EXPLORE THE GLEN"},
+            {"description": "Roll 2 dice. Draw a number of cards equal to the difference between each die result. If you roll doubles, teleport to the Swampland or the Faerie Ring."},
+            {"description": "If there are already any cards in this space, draw only enough to take the total to a number of cards equal to the difference between each die result."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Woodland"}}
+       ],
+       "Mab's Lair":
+       [
+            {"description": "CONFRONT QUEEN MAB"},
+            {"description": "Queen Mab has a Strength 10 and Craft 10."},
+            {"description": "You must fight her in either battle or psychic combat. She adds 3 to her Attack Score for each Destiny you have. If you win, gain a Destiny."},
+            {"draw": {"count": 1, "limit": 1, "deck": "Destiny"}}
+       ],
+       "Meeting with Destiny":
+       [
+            {"description": "FACE YOUR DESTINY"},
+            {"description": "Resolve the Meeting with Destiny effect on your Path card. Then, if you are still on this space, move to the Forest."},
+            {"draw": {"count": 1, "deck": "Destiny"}}
+       ]
+   },
+   "Deeprealm":
+   {
+       "Rat Run":
+       [
+           {"description": "DRAW 2 CARDS"},
+           {"description": "Draw 2 cards from the Bridge deck, even if there are already any cards on this space."},
+           {"description": "At the end of your turn, shuffle all cards on this space into the Bridge deck."},
+           {"description": "Rats add 1 to their Strength."},
+           {"draw": {"count": 2, "limit": 2, "deck": "Bridge"}}
+       ],
+       "Skull Passage":
+       [
+           {"description": "DRAW 2 CARDS"},
+           {"description": "Draw 2 cards from the Bridge deck, even if there are already any cards on this space."},
+           {"description": "At the end of your turn, shuffle all cards on this space into the Bridge deck."},
+           {"description": "Spirits add 1 to their Craft."},
+           {"draw": {"count": 2, "limit": 2, "deck": "Bridge"}}
+       ],
+       "Old Sewers":
+       [
+           {"description": "SEARCH THE TUNNELS"},
+           {"description": "Take the top 3 Tunnel cards and put them in a stack in front of you."},
+           {"description": "Encounter the top card of your stack each turn until you have no cards remaining."},
+           {"draw": {"count": 3, "limit": 3, "deck": "Tunnel"}}
+       ],
+       "Rat's Nest":
+       [
+            {"description": "FIGHT THE RAT QUEEN"},
+            {"description": "You must fight the verminous Rat Queen in battle."},
+            {"description": "She has a Strength of 3 and adds 1 for each Object on this space."}
+       ],
+       "Throne Room":
+       [
+           {"description": "FIGHT THE WRAITH LORD"},
+           {"description": "You must fight the Wraith Lord in psychic combat."},
+           {"description": "He has a Craft of 4 and adds 1 for each Treasure card on this space."}
+       ],
+       "Catacombs":
+       [
+           {"description": "SEARCH THE TUNNELS"},
+           {"description": "Take the top 3 Tunnel cards and put them in a stack in front of you."},
+           {"description": "Encounter the top card of your stack each turn until you have no cards remaining."},
+           {"draw": {"count": 3, "limit": 3, "deck": "Tunnel"}}
+       ]
+   }
+}

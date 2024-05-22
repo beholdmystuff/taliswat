@@ -1,0 +1,320 @@
+DEFSTRING(CARDTEXT_NAME_WEREWOLF_CHARACTER, "Werewolf")
+DEFSTRING(CARDTEXT_DESC_WEREWOLF_CHARACTER, "")
+DEFSTRING(CHARACTER_CARD_WEREWOLF_CHARACTER, "SPECIAL ABILITIES\n\n\
+You begin the game with Lycanthropy.\n\n\
+Whenever you land on a space with another character and attempt to encounter them, they must roll 1 die:\n\n\
+1-3) Fight! You set upon them in Battle. If you win, they become a Lycanthrope in addition to losing a life.\n\
+4-5) Scratched! They escape but become a Lycanthrope.\n\
+6) Flee! They escape unscathed.\n\n\
+You cannot have or gain spells.\n\
+Spells cannot affect you (except the Command Spell).\n\
+May never have followers.\n\
+Cannot have or gain Objects.\n\
+Whenever you defeat an Enemy, you must discard it and heal 1 life, instead of taking it as a trophy.\n\n\
+You are shunned and unwelcome in society, you may only encounter spaces with instructions to draw cards. In all other spaces, nothing happens.\n\
+You may only encounter the following Adventure Card types - Events, Strangers and Enemies.")
+
+DEFSTRING(CARDTEXT_NAME_RANGER, "Ranger")
+DEFSTRING(CARDTEXT_DESC_RANGER, "")
+DEFSTRING(CHARACTER_CARD_RANGER, "SPECIAL ABILITIES\n\n\
+You need not roll the die in the Chasm, Crags, or Forest unless you wish to. If you choose to roll, you must accept the result.\n\n\
+You do not lose a life in the Desert.\n\n\
+Add 1 to your attack roll in battle with Dragons or Animals.\n\n\
+You always know what the top card is on the Adventure deck. You may look at it whenever you wish.\n\n\
+Whenever you are instructed to draw Adventure Cards, you may spend 1 fate to ignore this instruction.\n\n\
+Start: Forest          Alignment: Neutral")
+
+DEFSTRING(CARDTEXT_NAME_SWORDSMAN, "Swordsman")
+DEFSTRING(CARDTEXT_DESC_SWORDSMAN, "")
+DEFSTRING(CHARACTER_CARD_SWORDSMAN, "SPECIAL ABILITIES\n\n\
+You begin the game with a Sword from the Purchase deck. If you lose the Sword, you may take one from the Purchase deck for free if you visit the Castle or Village.\n\n\
+Whilst you have a Weapon equipped you may:\n\
+- Attempt to disarm another character that has a Weapon equipped at the start of a battle. To do so, roll 1 die, if the result is a 5 or 6, their Weapon falls to the floor and must be ditched on their current space.\n\n\
+- Choose to Parry when being attacked by another character in battle. Add 2 to your attack score, but if you win, the result is considered a stand-off.\n\n\
+Start: Castle          Alignment: Neutral")
+
+DEFSTRING(CARDTEXT_NAME_VAMPIRE_CHAR, "Vampire")
+DEFSTRING(CARDTEXT_DESC_VAMPIRE_CHAR, "")
+DEFSTRING(CHARACTER_CARD_VAMPIRE_CHAR, "SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Whenever you defeat a character in battle or psychic combat, if you choose to take one of their lives, add it to your own.\n\n\
+During your turn, you may drain the life-force from any of your Followers. Discard the chosen Followers and gain 1 life for each.\n\n\
+At the start of your turn, you may transform into a Bat until the start of your next turn, to do so costs you 1 life.\n\n\
+^Whilst in Bat form:^ \n\
+During battle and psychic combat, you may ^exhaust^ your opponent, reducing their attack score by 2.\n\n\
+You may either: Roll two dice for your movement, choosing one of the results to use for your move or adding them together to determine how far you can move.\n^Or^\n\
+Cross the Storm River as if you were using a Raft.\n\n\
+Start: Graveyard          Alignment: Evil")
+
+
+DEFSTRING(CARDTEXT_NAME_WITCH_HUNTER, "Witch Hunter")
+DEFSTRING(CARDTEXT_DESC_WITCH_HUNTER, "")
+DEFSTRING(CHARACTER_CARD_WITCH_HUNTER, "SPECIAL ABILITIES\n\n\
+At the start of your turn you may change your alignment to that of another character.\n\n\
+You begin the game with 1 Witch token.\n\n\
+^Accusation^ At the start of your turn, if no other character has your Witch token, you may accuse another character and give them a Witch token.\n\n\
+^Hunting^ If you move into a space that contains a character with your Witch token, you may end your move there, instead of moving the full distance as indicated by the die roll.\n\n\
+^Trial^ Whenever you attack or are attacked by a character that has your Witch token or whose alignment is different to your own, add 2 to your attack score.\n\n\
+^Judgement^ Whenever you defeat a character in battle or psychic combat that has your Witch token, in addition to your normal reward, take back your Witch token and gain one fate. They must then lose one life or kill a Follower of their choice.\n\n\
+Start: Tavern          Alignment: Evil")
+
+DEFSTRING(CARDTEXT_NAME_SATYR,		"Satyr")
+DEFSTRING(CARDTEXT_DESC_SATYR, "")
+DEFSTRING(CHARACTER_CARD_SATYR, "\
+SPECIAL ABILITIES\n\n\
+You may evade creatures and characters in the Woods and Fields.\n\n\
+You may take any one Follower from a character that you land on.\n\n\
+You need not roll the die in the Crags unless you wish to. If you choose to roll, you may add up to 2 to the score.\n\n\
+Animals will not attack you, although you may choose to attack them.\n\n\
+When you encounter another character, you may use your pipes to ^startle^ them, forcing them to ditch one of their Objects at random.\n\n\
+Start: Crags          Alignment: Evil")
+DEFSTRING(CARDTEXT_NAME_PILGRIM,	"Pilgrim")
+DEFSTRING(CARDTEXT_DESC_PILGRIM, "")
+DEFSTRING(CHARACTER_CARD_PILGRIM, "\
+SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+After you roll the die for your move, you may add 1 to the score.\n\n\
+Your unwavering resolve means that if you are instructed to miss 1 or more turns, you ignore the effect.\n\n\
+Whenever you are about to pray, you may replenish 1 fate.\n\n\
+After rolling the die when praying, you may add up to 2 to the score.\n\n\
+Start: Chapel          Alignment: Good")
+
+//Exorcist Character Card
+/////
+DEFSTRING(CHARACTER_CARD_EXORCIST,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Whenever you defeat a Spirit, you may gain one Spell, if your Craft allows.\n\n\
+You may choose to automatically destroy any Spirits without resorting to psychic combat. When you destroy a Spirit in this manner, you may not keep the Enemy as a trophy or gain a Spell.\n\n\
+You may take Objects that cannot be used by good characters, but they must be immediately destroyed (discarded). You may then gain one Spell, if your Craft allows.\n\n\
+Start: City          Alignment: Good")
+
+//Black Witch Character Card
+/////
+DEFSTRING(CHARACTER_CARD_BLACK_WITCH,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+You may roll two dice for your movement. After the dice have been rolled, you may either choose one of the results to use for your move or add them together to determine how far you can move.\n\n\
+If another character casts a Spell on your character (except for the Command Spell), you may attempt to resist it. Roll 1 die:\n\
+1-3) The Spell affects you as normal.\n\
+4-6) You are unaffected by the Spell.\n\n\
+Start: Cursed Glade          Alignment: Evil")
+
+//Apprentice Mage Character Card
+/////
+DEFSTRING(CHARACTER_CARD_APPRENTICE_MAGE,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\
+During the game, you always have at least one Spell. (Gain a Spell each time you cast your last Spell).\n\
+If your Craft is 7 or more, you always have at least 2 Spells. (Whenever casting a Spell reduces your total to less than 2, draw another Spell immediately to replace it).\n\
+Whenever you cast a Spell, if your Craft is 6 or less, you must roll 1 die:\n\
+1) The Spell misfires and you lose 1 life.\n\
+2) The Spell has no effect.\n\
+3-6) The Spell functions normally.\n\
+Whenever you draw a Spell card, you may draw from the top of the discard pile instead of the top of the Spell deck. You may only do this if the Spell card on the top of the discard pile is a Spell you have not successfully cast before.\n\
+Whenever you discard a Spell, it is placed at the bottom of the discard pile.\n\n\
+Start: City                Alignment: Neutral")
+
+//Pirate Character Card
+/////
+DEFSTRING(CHARACTER_CARD_PIRATE,\
+"SPECIAL ABILITIES\n\n\
+Whenever another character gambles and loses a gold at the Tavern, it is given directly to you to add to your plunder.\n\n\
+When you visit the Tavern, you may sell any of your Objects or Followers on the black market instead of resolving the instructions on the space. Discard the chosen cards and gain 1 gold for each.\n\n\
+Whenever you encounter a Stranger, you may immediately press-gang them into your crew and take them as a Follower. The press-ganged Stranger will add 3 to your Strength in battle, after which they depart to the discard pile. You may only use one press-ganged Stranger per battle.\n\n\
+When you would lose a life in battle, you may discard one of your press-ganged Strangers to prevent the loss of life.\n\n\
+Whenever you roll a 6 for your move, you may sail across the Storm River as if you were using a Raft.\n\
+Start: Tavern                           Alignment: Evil")
+
+//Ninja Character Card
+//////
+DEFSTRING(CHARACTER_CARD_NINJA,\
+"SPECIAL ABILITIES\n\n\
+You may never have any Followers.\n\n\
+You may make a secret strike when you attack a character or creature. You cannot do this when you are attacked by another character. The battle takes place as normal except that you deduct your Craft value from your opponent's attack score, to a minimum of 1.\n\n\
+You may evade Enemies in any Region (except the Inner Region).\n\n\
+Whenever you visit the City, Tavern, Village, Chapel or Graveyard, you may draw 1 Adventure Card instead of resolving the instructions on the space.\n\n\
+Start: Forest                               Alignment: Neutral")
+
+//Shape Shifter Character Card
+/////
+DEFSTRING(CHARACTER_CARD_SHAPE_SHIFTER,\
+"SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Whenever you attack and defeat another character in battle or psychic combat, and they lose a life as a result of the attack, you may shift into their shape and use all of their special abilities. If you do so, the other character's special abilities replace your own special abilities (except this one). If you lose a life as a result of an attack whilst in this form, you immediately revert to your original shape.\n\n\
+Whenever you fight a character or creature, you may morph into the shape of one of your trophies and use its Strength or Craft instead of your own. If you are defeated, you do not lose a life and the trophy is discarded instead.\n\n\
+You cannot be turned into a Toad; ignore any effect that would turn you into a Toad.\n\
+Start: Tavern                            Alignment: Evil")
+
+//Devil's Minion Character Card
+/////
+DEFSTRING(CHARACTER_CARD_DEVILS_MINION,\
+"SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\
+Whenever you are about to encounter an Enemy Spirit, you may choose to have it attack another character in your Region instead of encountering the Spirit yourself.\n\
+Whenever any of the following cards are drawn, you encounter them as well as the character who drew them: Devil, Mephistopheles, and Phantom.\n\
+Whenever you land on the Graveyard or the Cursed Glade, you may choose not to encounter the space and heal 1 life, gain 1 Spell, or teleport to any other space in the same Region instead.\n\
+You are always evil; ignore any effect that changes your alignment.\n\
+You may not use any Armour in battle, nor any Weapon in battle, except for the Runesword.\n\
+Start: Graveyard                               Alignment: Evil")
+
+//Gambler Character Card
+/////
+DEFSTRING(CHARACTER_CARD_GAMBLER,\
+"SPECIAL ABILITIES\n\n\
+You may tempt fate with a character that you land on. You and the other character must roll 1 die and add your Craft. If your score is equal to or higher than the other character's score, you gain 1 fate. Otherwise, you must choose to lose 1 fate or 1 life.\n\n\
+After you make a die roll, you may discard fate to reduce the odds. Add 1 to or subtract 1 from the result for each fate you discard.\n\n\
+During your turn, you may sell any trophies you have for gold. Discard the chosen trophies and gain 1 gold for each.\n\n\
+You are always neutral; ignore any effect that changes your alignment.\n\n\
+Start: City                               Alignment: Neutral")
+
+//Goblin Shaman Character Card
+/////
+DEFSTRING(CHARACTER_CARD_GOBLINSHAMAN,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+You need not roll the die in the Crags unless you wish to. If you choose to roll, you must accept the result.\n\n\
+Whenever you land on the Crags, you may replenish fate up to your fate value.\n\n\
+Whenever you encounter an Enemy card that has the word \"Goblin\" or \"Hobgoblin\" in its title, you may spellbind it and take it as a Follower instead of attacking it. At the end of your turn, you may discard one of your spellbound Enemies and gain 1 Spell, if your Craft allows.\n\n\
+When you would lose a life you may discard one of your spellbound Enemies to prevent the loss of life.\n\n\
+Start: Crags          Alignment: Evil")
+
+//Saracen Character Card
+/////
+DEFSTRING(CHARACTER_CARD_SARACEN,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Shield from the Purchase deck.\n\n\
+You do not lose a life in the Desert.\n\n\
+You may attempt to recruit from a character that you land on, allowing you to take one Follower of your choice. To do so, roll one die: you must roll less than or equal to the number of Followers they have.\n\n\
+You treat all Followers as if they had an encounter number of 1.\n\n\
+Start: Oasis          Alignment: Neutral")
+
+//Martial Artist Character Card
+/////
+DEFSTRING(CHARACTER_CARD_MARTIAL_ARTIST,\
+"SPECIAL ABILITIES\n\n\
+If you defeat another character in battle, you deliver a crippling blow, slowing their movement to 1 space for their next turn.\n\n\
+Whenever you land on a space with a character, you may make a heroic leap and move to the next space in the same direction (clockwise or counterclockwise). You may only leap over one space at a time.\n\n\
+Add 2 to your Strength in battle if you are not using a Weapon.\n\n\
+Start: Village          Alignment: Neutral")
+
+//Witch Doctor Character Card
+/////
+DEFSTRING(CHARACTER_CARD_WITCH_DOCTOR,\
+"SPECIAL ABILITIES\n\n\
+Whenever you land on the Graveyard, you may gain your full complement of Spells, according to your current Craft.\n\n\
+At the start of your turn, you may use your powers of healing. To do so, discard any Spirit trophies and heal 1 life for each.\n\n\
+You may use your power of the Evil Eye on a character that you land on. To throw a curse on them, roll one die:\n\
+1) The curse fails - nothing happens.\n\
+2-3) Slowness - their movement is reduced to 1 space per turn for the next 2 turns.\n\
+4-5) Confusion - they take their move as normal next turn, except that you decide in which direction they move.\n\
+6) Running scared - they immediately move back to their start space.\n\n\
+Start: Graveyard          Alignment: Evil")
+
+//Martyr Character Card
+/////
+DEFSTRING(CHARACTER_CARD_MARTYR,\
+"SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+When you attack a character or creature in battle, and you have at least two lives, you may sacrifice one life to automatically win the battle. You cannot sacrifice a life when you are attacked by another character.\n\n\
+After rolling the die when praying, you may add 1 to the score.\n\n\
+You are always good; ignore any effect that changes your alignment.\n\n\
+Start: Village          Alignment: Good")
+
+//Illusionist Character Card
+/////
+DEFSTRING(CHARACTER_CARD_ILLUSIONIST,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+You create a likeness as a decoy when in battle or psychic combat with a character or creature. If your attack roll is lower than your Craft value, the decoy is effective and your opponent cannot add their attack roll to their attack score.\n\n\
+Whenever you encounter an Event or Stranger that refers to alignment, you may attempt to obscure your own alignment. Roll 1 die:\n1-3) No effect\n4-6) You may choose any alignment for encountering the card, but your actual alignment does not change.\n\n\
+Start: City          Alignment: Good")
+
+//Jester Character Card
+/////
+DEFSTRING(CHARACTER_CARD_JESTERCHAR,\
+"SPECIAL ABILITIES\n\n\
+When you are attacked by another character, your constant juggling causes a distraction and they must reduce their attack roll by 1 (to a minimum of 1).\n\n\
+Instead of attacking a character, you may impress them with your skills and take one gold from them.\n\n\
+Whenever you encounter a creature, you may try to confuse it. Roll one die and add your fate. If the total is higher than the creature's Strength or Craft, you may evade it. If you fail to confuse the creature, you must attack it as normal.\n\n\
+Whenever you visit the City, Tavern or Village, instead of encountering the space, you may perform there and earn one gold.\n\n\
+Whenever you visit the Castle, you may heal up to your life value for free.\n\n\
+Start: City          Alignment: Good")
+
+//Genie Character Card
+/////
+DEFSTRING(CHARACTER_CARD_GENIECHAR,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+You need not roll the die in the Forest or the Crags unless you wish to do so. If you choose to roll, you must accept the result.\n\n\
+You do not lose life in the Desert.\n\n\
+Whenever you defeat a character in battle or psychic combat, you may take a Follower instead of taking a gold, Object, or life.\n\n\
+You may combine all types of Enemy trophies (Animals, Dragons, Monsters, Spirits, etc.) to gain either Strength or Craft.\n\n\
+Start: Oasis          Alignment: Neutral")
+
+//Gambler Character Card
+/////
+DEFSTRING(CHARACTER_GAMBLER,\
+"SPECIAL ABILITIES\n\n\
+Whenever you engage an Enemy or character in battle, you may pay 1 fate to force them to reroll their attack roll.\n\n\
+You may tempt fate with a character that you land on. You and the other character must roll 1 die and add your Craft. If your score is equal to or higher than the other character's score, you gain 1 fate. Otherwise you must choose to lose 1 fate or 1 life.\n\n\
+You may declare that you are taking a risk before you roll a die. If the result is an even number, you may add 1 to the score. If the result is an odd number, you must subtract 1 from the score (to a minimum of 1).\n\n\
+During your turn, you may sell any trophies you have for gold. Discard the chosen trophies and gain 1 fate for each.\n\n\
+You are always neutral; ignore any effect that changes your alignment.\n\n\
+Start: City          Alignment: Neutral")
+
+//Apprentice Mage Character Card
+/////
+DEFSTRING(CHARACTER_APPRENTICE_MAGE,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with one Spell.\n\n\
+During the game, you always have at least one Spell. (Gain a Spell each time you cast your last Spell).\n\n\
+Whenever you cast a Spell, you must roll 1 die:\n\
+1) The Spell misfires and you lose 1 life.\n\
+2) The Spell has no effect.\n\
+3-6) The Spell functions normally.\n\
+When you have at least 7 Craft, you do not need to roll a die.\n\n\
+Whenever you draw a Spell that you do not wish to keep, you may discard it and draw another one to replace it, which you must keep.\n\n\
+Start: City          Alignment: Neutral")
+
+//Courtesan Character Card
+/////
+DEFSTRING(CHARACTER_CARD_COURTESAN,\
+"SPECIAL ABILITIES\n\n\
+You may seduce a character that you encounter, allowing you to take one gold or Object of your choice. When you do this, you must lose your next turn.\n\n\
+You may take any one Follower from a character that you land on.\n\n\
+Whenever you encounter a card or space and need to pay a total of 2 or more gold, you create a distraction and pay 1 gold less.\n\n\
+You captivate any Stranger that grants you wishes. If you meet the conditions of the card you are granted two different wishes of your choice. If not, you are granted the wish regardless.\n\n\
+Start: City          Alignment: Neutral")
+
+//Shaman Character Card
+/////
+DEFSTRING(CHARACTER_CARD_SHAMAN,\
+"SPECIAL ABILITIES\n\n\
+You need not roll the die in the Forest unless you wish to. If you choose to roll, you must accept the result.\n\n\
+You may evade creatures and characters in the Woods and Forest.\n\n\
+At the start of your turn, if you are in human form, you may spend 1 fate and transform into a Bear, Owl or Cheetah:\nBear - Add 2 to your Strength\nOwl - Add 2 to your Craft\nCheetah - After you roll the die for your move, you may add up to 2 to the result.\nIf you lose a life as a result of an attack whilst transformed, you immediately revert to your human form.\n\n\
+If you are turned into a Toad, you may revert to your human form at the start of your next turn.\n\n\
+Start: Forest          Alignment: Neutral")
+
+//Samurai Character Card
+/////
+DEFSTRING(CHARACTER_CARD_SAMURAI,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Sword from the Purchase deck. If you lose the Sword, you may take one from the Purchase deck for free if you visit the Castle.\n\n\
+At the start of battle, you may use Kyujutsu and discard 1 gold to roll 1 die and add the result to your attack score. You may only do this once per battle.\n\n\
+Whenever another character in your Region engages an Enemy in battle, you may use your Yu to aid them. Move to the character's space and add your Strength value to the character's attack score. If the Enemy is killed, you receive a reward of 1 gold.\n\n\
+Whenever you are attacked by another character in battle, you may use Jujutsu to add your Craft value to your attack score.\n\n\
+Start: Castle          Alignment: Neutral")
+
+//Woodsman Character Card
+/////
+DEFSTRING(CHARACTER_CARD_WOODSMAN,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with an Axe from the Purchase deck. If you lose the Axe, you may take one from the Purchase deck for free if you visit the Forest.\n\n\
+You add 1 to your attack score when you use a Weapon that has the word \"Axe\" in its title.\n\n\
+Whenever you land on the Woods, you may draw two Adventure Cards, instead of one, but you must encounter both cards. If there is a card already on the Woods when you land there, you may draw a second card, but you must encounter both cards.\n\n\
+You may add 1 to your die roll in the Forest.\n\n\
+Animals will not attack you, although you may choose to attack them.\n\n\
+Start: Forest          Alignment: Neutral")

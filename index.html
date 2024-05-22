@@ -4082,7 +4082,7 @@ function loadLobby(event)
 
     sortCharacters();
     //TODO
-    //game expansions
+    //game expansions selection
 
     let gameLobby = document.createElement("div");
     gameLobby.className = "gameLobby";
@@ -4090,7 +4090,7 @@ function loadLobby(event)
     let gameSlotsContainer = document.createElement("div");
     gameSlotsContainer.className = "gameSlotsContainer";
 
-    //get selected game details
+    //get game details
 
     currentGameLobby = gameDetails[event.target.getAttribute("gameid")];
 

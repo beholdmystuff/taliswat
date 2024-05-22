@@ -1,0 +1,15 @@
+/* WOODLAND BOARD */
+.woodlandEntranceSpace
+{
+     width: 370px;
+    height: 295px;
+       top: 35px;
+      left: 1420px;
+}
+.woodlandWoods1Space
+{
+     width: 370px;
+    height: 265px;
+       top: 335px;
+      left: 1420px;
+}

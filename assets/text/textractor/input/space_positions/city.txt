@@ -1,0 +1,231 @@
+.cityGateSpace
+{
+    width: 440px;
+    height: 365px;
+    top: -320px;
+    left: -405px;
+}
+.citySquareOfKingsSpace
+{
+    width: 400px;
+    height: 235px;
+    top: 45px;
+    left: -405px;
+}
+.cityRoyalLaneSpace
+{
+    width: 400px;
+    height: 230px;
+    top: 280px;
+    left: -405px;
+}
+.citySouthSideAlleySpace
+{
+    width: 400px;
+    height: 360px;
+    top: 505px;
+    left: -405px;
+}
+.citySanctuarySquareSpace
+{
+    width: 280px;
+    height: 360px;
+    top: 505px;
+    left: -685px;
+}
+.citySanctuarySquareSpace
+{
+    width: 280px;
+    height: 360px;
+    top: 505px;
+    left: -685px;
+}
+.cityHighTempleSpace
+{
+    width: 375px;
+    height: 360px;
+    top: 505px;
+    left: -1060px;
+}
+.cityNobleStreetSpace
+{
+    width: 280px;
+    height: 225px;
+    top: 285px;
+    left: -685px;
+}
+.cityAcademySpace
+{
+    width: 375px;
+    height: 225px;
+    top: 285px;
+    left: -1060px;
+}
+.cityFlaskStreetSpace
+{
+    width: 280px;
+    height: 230px;
+    top: 50px;
+    left: -685px;
+}
+.cityApothecarySpace
+{
+    width: 375px;
+    height: 225px;
+    top: 55px;
+    left: -1060px;
+}
+.citySorcererSquareSpace
+{
+    width: 280px;
+    height: 265px;
+    top: -220px;
+    left: -685px;
+}
+.cityElementalAvenueSpace
+{
+    width: 280px;
+    height: 265px;
+    top: -220px;
+    left: -685px;
+}
+.citySorcererSquareSpace
+{
+    width: 380px;
+    height: 265px;
+    top: -220px;
+    left: -1060px;
+}
+.cityTownSquareSpace
+{
+    width: 370px;
+    height: 315px;
+    top: -540px;
+    left: -685px;
+}
+.cityMagicEmporiumSpace
+{
+    width: 370px;
+    height: 265px;
+    top: -485px;
+    left: -1060px;
+}
+.cityJailSpace
+{
+    width: 410px;
+    height: 360px;
+    top: -840px;
+    left: -1060px;
+}
+.citySoothsayerSpace
+{
+    width: 335px;
+    height: 300px;
+    top: -840px;
+    left: -650px;
+}
+.cityGuildStreetSpace
+{
+    width: 305px;
+    height: 215px;
+    top: -540px;
+    left: -315px;
+}
+.cityArmourySpace
+{
+    width: 305px;
+    height: 300px;
+    top: -840px;
+    left: -315px;
+}
+.cityRatsRoadSpace
+{
+    width: 315px;
+    height: 215px;
+    top: -540px;
+    left: -10px;
+}
+.cityMenagerieSpace
+{
+    width: 315px;
+    height: 300px;
+    top: -840px;
+    left: -10px;
+}
+.cityDroppingsLaneSpace
+{
+    width: 290px;
+    height: 215px;
+    top: -540px;
+    left: 305px;
+}
+.cityStablesSpace
+{
+    width: 290px;
+    height: 300px;
+    top: -840px;
+    left: 305px;
+}
+.cityStablesSpace
+{
+    width: 290px;
+    height: 300px;
+    top: -840px;
+    left: 305px;
+}
+.cityBeggarsRowSpace
+{
+    width: 300px;
+    height: 215px;
+    top: -540px;
+    left: 600px;
+}
+.cityWharfSpace
+{
+    width: 300px;
+    height: 300px;
+    top: -840px;
+    left: 600px;
+}
+.cityThievesAlleySpace
+{
+    width: 495px;
+    height: 215px;
+    top: -540px;
+    left: 900px;
+}
+.cityRoguesGuildSpace
+{
+    width: 495px;
+    height: 300px;
+    top: -840px;
+    left: 900px;
+}
+.cityNorthSideAlleySpace
+{
+    width: 495px;
+    height: 320px;
+    top: -325px;
+    left: 900px;
+}
+.cityCobbleLaneSpace
+{
+    width: 300px;
+    height: 320px;
+    top: -325px;
+    left: 600px;
+}
+.cityGoldStreetSpace
+{
+    width: 290px;
+    height: 320px;
+    top: -325px;
+    left: 305px;
+}
+.citySpeakersCornerSpace
+{
+    width: 270px;
+    height: 320px;
+    top: -325px;
+    left: 35px;
+}

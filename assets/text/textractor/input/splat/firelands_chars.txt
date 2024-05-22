@@ -1,0 +1,29 @@
+DEFSTRING(CHARACTER_CARD_DERVISH,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Sword and a Water Bottle from the Purchase deck.\n\n\
+One Weapon you are carrying does not count towards your carrying capacity.\n\n\
+You may use two Weapons at the same time in battle.\n\n\
+When you defeat an Enemy in battle and take it as a trophy, you may immediately move a number of spaces equal to the defeated Enemy's Strength. You then encounter the space you land on.\n\n\
+Start: Oasis          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_WARLORD,\
+"SPECIAL ABILITIES\n\n\
+When you encounter a Follower you may immediately conscript it. Take that Follower as a conscripted Follower, even if you normally could not take it. Ignore all the card text on your conscripted Followers and instead treat them as if they said \"Add 1 to your Strength during battle.\"\n\n\
+When you defeat another character in battle you may take one of their Followers as a conscripted Follower, in addition to the normal reward.\n\n\
+When you would lose a life you may discard one of your conscripted Followers to prevent the loss of that life.\n\n\
+Start: Ruins          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_NOMAD,\
+"SPECIAL ABILITIES\n\n\
+When you encounter a space not in the Inner Region, you may ignore all the printed text on that space and instead treat it as if it said \"Draw 1 Card. Do not draw a card if there is already one in this space.\" \n\n\
+When you encounter a Place card, you may choose to ignore it. \n\n\
+Instead of moving normally you may spend 1 fate to stay in your current space and encounter it. You cannot use this ability if you used it during your last turn.\n\n\
+Start: Any space in the Outer Region          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_JIN_BLOODED,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 2 Spells.\n\n\
+At the start of your turn, you may discard 1 of your Spells to gain 1 fate.\n\n\
+When your turn ends, you may spend 1 fate to draw 1 Spell, if your Craft allows.\n\n\
+Whenever another character casts a Spell on you, your space, or one of your cards, you may either gain 1 fate or spend 2 fate to bind that Spell. If you bind the Spell it has no effect and you may immediately cast it on a new target, ignoring Region and timing restrictions. If you do not use the Spell, it is discarded.\n\n\
+Start: City          Alignment: Neutral")

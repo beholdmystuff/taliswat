@@ -1,0 +1,8 @@
+DEFSTRING(CARDTEXT_NAME_WHITE_CROWN, "The White Crown")
+DEFSTRING(CARDTEXT_DESC_WHITE_CROWN, "When a character first enters the Crown of Command or at the start of a character's turn on the Crown of Command, move The King of the Dead there immediately, regardless of where the card is currently situated. Then place 1 life counter on The King of the Dead for every character still in the game.\n\n\
+During each of their turns, a character on the Crown of Command must encounter The King of the Dead. Each time The King of the Dead is defeated, remove one life counter from it. If the character is defeated, in addition to losing 1 life, they must place 1 life counter on The King of the Dead.\n\n\
+If a character removes The King of the Dead's last life or successfully encounters him with a Talisman, they win the game! If another character has already removed some of The King of the Dead's lives, then a character only needs to remove The King of the Dead's remaining lives to win the game.")
+DEFSTRING(CARDTEXT_NAME_NIGHT_OF_THE_DANCING_SKULLS,"Night of the Dancing Skulls")
+DEFSTRING(CARDTEXT_DESC_NIGHT_OF_THE_DANCING_SKULLS,"When revealed, each character in the Inner Region, starting with the character to your left and proceeding clockwise, must teleport to any space in the Outer or Middle Region. Characters cannot enter the Inner Region for the rest of the game. Then, all players are killed.\n\n\
+Whenever only one character is a Ghost character at any time, that character loses the game.\n\n\
+All remaining characters are killed once again and play continues until the last character alive wins the game!")

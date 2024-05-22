@@ -4,20 +4,20 @@ module.exports = function()
 {
     let expansions = [
         { name: "Talisman", filename: "base_cards.txt"},
-        { name: "The Ancient Beasts", filename: "ancientbeasts_cards.txt"},
-        { name: "The Blood Moon", filename: "bloodmoon_cards.txt"},
+        // { name: "The Ancient Beasts", filename: "ancientbeasts_cards.txt"},
+        // { name: "The Blood Moon", filename: "bloodmoon_cards.txt"},
         { name: "The City", filename: "city_cards.txt"},
-        { name: "The Cataclysm", filename: "cataclysm_cards.txt"},
-        { name: "The Clockwork Kingdom", filename: "clockwork_cards.txt"},
-        { name: "The Dragon", filename: "dragon_cards.txt"},
+        // { name: "The Cataclysm", filename: "cataclysm_cards.txt"},
+        // { name: "The Clockwork Kingdom", filename: "clockwork_cards.txt"},
+        // { name: "The Dragon", filename: "dragon_cards.txt"},
         { name: "The Dungeon", filename:  "dungeon_cards.txt"},
-        { name: "The Firelands", filename:  "firelands_cards.txt"},
-        { name: "The Frostmarch", filename: "frostmarch_cards.txt"},
-        { name: "The Harbinger", filename: "harbinger_cards.txt"},
+        // { name: "The Firelands", filename:  "firelands_cards.txt"},
+        // { name: "The Frostmarch", filename: "frostmarch_cards.txt"},
+        // { name: "The Harbinger", filename: "harbinger_cards.txt"},
         { name: "The Highland", filename:  "highland_cards.txt"},
-        { name: "The Realm of Souls", filename:  "realmofsouls_cards.txt"},
-        { name: "The Reaper", filename: "reaper_cards.txt"},
-        { name: "The Sacred Pool", filename: "sacredpool_cards.txt"},
+        // { name: "The Realm of Souls", filename:  "realmofsouls_cards.txt"},
+        // { name: "The Reaper", filename: "reaper_cards.txt"},
+        // { name: "The Sacred Pool", filename: "sacredpool_cards.txt"},
         { name: "The Woodland", filename: "woodland_cards.txt"}
     ];
 
@@ -48,7 +48,10 @@ module.exports = function()
                 fileName += segment.toLowerCase();
             }
 
-            let cardObj = {description: g2, card: cardName, filePrefix: fileName, type: "", encounter: 0, copies: 1};
+            // let description = g2.replace("\n\n----------\n\n", "").replace("%s\n", "").replace("\n\n", "").replace("\\n", "");
+            // console.log(description);
+
+            let cardObj = {description: g2, card: cardName, filePrefix: fileName};
             expansionObj[cardName] = cardObj
         });
 
@@ -62,5 +65,5 @@ module.exports = function()
         cards[expansion.name] = sorted;
     });
 
-    fs.writeFileSync("output/cards.js", "var cards = " + JSON.stringify(cards));
+    fs.writeFileSync("output/cards.js", "var cards = " + JSON.stringify(cards, null, 2));
 }

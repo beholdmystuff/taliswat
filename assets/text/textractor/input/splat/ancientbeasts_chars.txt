@@ -1,0 +1,12 @@
+DEFSTRING(CHARACTER_CARD_EXPLORER,
+"SPECIAL ABILITIES\n\n\
+Whenever you are instructed to draw Adventure Cards, you must draw 1 additional card.\n\nYou start with 3 facedown (greyed out) Catalogue tokens, one for each of 3 Enemy types (Animal, Dragon and Monster).\n\nWhen you defeat an Enemy and take it as a trophy, if that Enemy's type matches one of your facedown Catalogue tokens, flip that token faceup.\n\nEach faceup Catalogue token adds 1 to your Craft value.\n\nStart: Village          Alignment: Neutral")
+DEFSTRING(CHARACTER_CARD_TROPHY_HUNTER_CHAR,
+"SPECIAL ABILITIES\n\n\
+During your turn, you may sell any trophies you own. Discard the chosen trophies and gain 1 gold for each.\n\nIf you move into a space that has one or more Enemies, you may end your move there, instead of moving the full distance as indicated by the die roll.\n\nAdd 1 to your Strength in battle for each Animal and Beast in the battle.\n\n\
+After turning in trophies to gain Strength, roll 1 die to receive a bonus reward:\n\
+1-2) Gain 1 gold\n\
+3-4) Gain 1 fate\n\
+5) Gain 1 life\n\
+6) Gain 1 Strength\n\n\
+Start: Castle          Alignment: Evil")

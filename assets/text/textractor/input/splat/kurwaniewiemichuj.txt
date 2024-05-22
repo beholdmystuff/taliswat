@@ -1,0 +1,2 @@
+DEFSTRING(CARDTEXT_DESC_BLESSED_CHALLENGE,				"Cast on yourself at any time. Replenish your fate up to your fate value.")
+DEFSTRING(CARDTEXT_DESC_WEREWOLF_ENEMY_CHALLENGE,		"%s")

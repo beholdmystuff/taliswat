@@ -1,0 +1,210 @@
+.dungeonEntranceSpace
+{
+    width: 360px;
+    height: 260px;
+    top: 605px;
+    left: 4100px;
+}
+.dungeonCorridor1Space
+{
+    width: 360px;
+    height: 270px;
+    top: 335px;
+    left: 4100px;
+}
+.dungeonTunnel1Space
+{
+    width: 360px;
+    height: 270px;
+    top: 65px;
+    left: 4100px;
+}
+.dungeonLibrarySpace
+{
+    width: 365px;
+    height: 340px;
+    top: -280px;
+    left: 4095px;
+}
+.dungeonCavern1Space
+{
+    width: 340px;
+    height: 275px;
+    top: -280px;
+    left: 3750px;
+}
+.dungeonCorridor2Space
+{
+    width: 340px;
+    height: 275px;
+    top: -280px;
+    left: 3410px;
+}
+.dungeonGuardRoomSpace
+{
+    width: 340px;
+    height: 275px;
+    top: -280px;
+    left: 3065px;
+}
+.dungeonTunnel2Space
+{
+    width: 335px;
+    height: 275px;
+    top: -280px;
+    left: 2730px;
+}
+.dungeonCavern2Space
+{
+    width: 335px;
+    height: 245px;
+    top: -530px;
+    left: 2730px;
+}
+.dungeonCorridor3Space
+{
+    width: 340px;
+    height: 245px;
+    top: -530px;
+    left: 3065px;
+}
+.dungeonCellSpace
+{
+    width: 340px;
+    height: 245px;
+    top: -530px;
+    left: 3410px;
+}
+.dungeonTunnel3Space
+{
+    width: 340px;
+    height: 245px;
+    top: -530px;
+    left: 3755px;
+}
+.dungeonVault1Space
+{
+    width: 305px;
+    height: 245px;
+    top: -530px;
+    left: 4095px;
+}
+.dungeonHallOfDarknessSpace
+{
+    width: 375px;
+    height: 320px;
+    top: -530px;
+    left: 4400px;
+}
+.dungeonHallOfDarknessSpace
+{
+    width: 375px;
+    height: 320px;
+    top: -530px;
+    left: 4400px;
+}
+.dungeonTunnel4Space
+{
+    width: 315px;
+    height: 270px;
+    top: -210px;
+    left: 4460px;
+}
+.dungeonCorridor4Space
+{
+    width: 315px;
+    height: 270px;
+    top: 65px;
+    left: 4460px;
+}
+.dungeonKitchenSpace
+{
+    width: 315px;
+    height: 270px;
+    top: 335px;
+    left: 4460px;
+}
+.dungeonCavern3Space
+{
+    width: 315px;
+    height: 260px;
+    top: 605px;
+    left: 4460px;
+}
+.dungeonCorridor5Space
+{
+    width: 405px;
+    height: 260px;
+    top: 605px;
+    left: 4775px;
+}
+.dungeonTunnel5Space
+{
+    width: 405px;
+    height: 270px;
+    top: 335px;
+    left: 4775px;
+}
+.dungeonTortureChamberSpace
+{
+    width: 405px;
+    height: 270px;
+    top: 65px;
+    left: 4775px;
+}
+.dungeonVault2Space
+{
+    width: 405px;
+    height: 270px;
+    top: -205px;
+    left: 4775px;
+}
+.dungeonCorridor6Space
+{
+    width: 405px;
+    height: 255px;
+    top: -465px;
+    left: 4775px;
+}
+.dungeonMonsterPitSpace
+{
+    width: 455px;
+    height: 375px;
+    top: -840px;
+    left: 4725px;
+}
+.dungeonTunnel6Space
+{
+    width: 325px;
+    height: 310px;
+    top: -840px;
+    left: 4400px;
+}
+.dungeonCavern4Space
+{
+    width: 305px;
+    height: 310px;
+    top: -840px;
+    left: 4095px;
+}
+.dungeonSummoningCircleSpace
+{
+    width: 485px;
+    height: 310px;
+    top: -840px;
+    left: 3605px;
+}
+.dungeonVault3Space
+{
+    width: 345px;
+    height: 310px;
+    top: -840px;
+    left: 3255px;
+}
+.dungeonTresureChamberSpace
+{
+    width: 520px;
+    height: 310px;
+    top: -840px;
+    left: 2735px;
+}

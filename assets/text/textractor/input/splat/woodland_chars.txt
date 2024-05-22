@@ -1,0 +1,24 @@
+DEFSTRING(CHARACTER_CARD_ANCIENT_OAK,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 1 Growth token on your character card, with either side faceup.\n\nWhenever you turn in trophies to gain 1 point of Strength or Craft, you may put a Growth token on your character card instead. You cannot have more than 5 Growth tokens on your character card.\n\nFor each Growth token on your character card increase your life value by 1. For each Growth token with the red side faceup, increase your Strength value by 1. For each Growth token with the blue side faceup, increase your Craft value by 1.\n\nAt the start of your turn, you may flip your Growth tokens to any side you wish.\n\nWhen you end your turn in the Woods or the Forest, you may either heal 1 life or replenish 1 fate.\n\nYou cannot use Armour or Weapons.\n\n\
+Start: Forest          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_TOTEM_WARRIOR,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with an Axe from the Purchase deck.\n\nWhen you defeat an Enemy in battle or psychic combat, put 1 Totem Spirit token on your character card. You cannot have more than 3 Totem Spirit tokens on your character card.\n\nAfter dice are rolled in battle or psychic combat, you may discard 1 Totem Spirit token from your character card to add 1 to your attack score.\n\nAt the start of your turn, you may discard 1 Totem Spirit token from your character card to either heal 1 life, replenish 1 fate, or gain 1 Spell, if your Craft allows.\n\n\
+Start: Forest          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_LEYWALKER,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 3 Portal tokens on your character card.\n\nWhenever a character not in the Inner Region casts a Spell, you may place a Portal token from your character card onto their space.\n\nInstead of your normal move, you may teleport to any space with one of your Portal tokens. After moving, return that Portal token to your character card.\n\nWhenever you land on the Runes and/or on a space with one of your Portal tokens, you may gain 1 Spell, if your Craft allows.\n\nWhen you are about to engage in battle, you may discard a Spell to use your Craft instead of your Strength during that battle. \n\n\
+Start: Portal of Power          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_SPIDER_QUEEN,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 6 Spider tokens on your character card.\n\nAt the start of your turn you may place a Spider token from your character card onto any space with a character, with its Web side faceup.\n\nWhen you enter a space with a Web token, you may immediately end your movement.\n\nWhen another character enters a space with a Web token they must immediately end their movement. Whenever a character ends their movement in a space with a Web token, flip the token to its Crawler side.\n\nWhenever a character on a space with a Crawler token makes a roll, you may return a Crawler token on their space to your character card to add or subtract 1 from that roll, to a minimum of 1. \n\n\
+Start: Cursed Glade          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_SCOUT,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 5 Hidden Path tokens on your character card. When you draw an Enemy, Stranger, or Place, you may place one of your Hidden Path tokens from your character card onto that card.\n\nIf you do so, draw 1 extra card and add it to your space.\n\nYou may choose not to encounter cards with Hidden Path tokens on them. Other characters cannot encounter cards with a Hidden Path token on them. They still count as faceup cards in that space. If a card with a Hidden Path token is removed from its space, return that token to your character card.\n\nWhen you roll the die for movement, you may add 1 to the result.\n\nYou need not roll the die in the Chasm, Crags, or Forest unless you wish to. If you choose to roll, you must accept the result. \n\n\
+Start: Crags          Alignment: Good")

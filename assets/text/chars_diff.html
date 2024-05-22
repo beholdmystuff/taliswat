@@ -1,0 +1,34 @@
+<script src="chars.js"></script>
+<script src="chars_unsorted.js"></script>
+<script>
+let chars_a = {};
+let chars_b = {};
+
+for (let expansion in chars)
+{
+    let e = chars[expansion];
+    for (let char in e)
+    {
+        chars_a[char] = e;
+    }
+}
+console.log(Object.keys(chars_a));
+for (let rev in chars_unsorted)
+{
+    let e = chars_unsorted[rev];
+    for (let char in e)
+    {
+        chars_b[char] = e;
+    }
+}
+console.log(Object.keys(chars_b));
+
+let keys = Object.keys(chars_b);
+for (let i = 0, l = keys.length; i < l; i++)
+{
+    if (!(keys[i] in chars_a))
+    {
+        console.log(keys[i]);
+    }
+}
+</script>

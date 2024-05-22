@@ -1,0 +1,156 @@
+DEFSTRING(CARDTEXT_DESC_MIDNIGHT_HOWL,						"When revealed, flip the Time Card to Night.\nWhenever a character is defeated by an Enemy in battle or psychic combat, in addition to losing 1 life, they must roll 1 die on the Werewolf's chart.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_MOON_MIST,							"When revealed, flip the Time Card to Night.\nWhenever a character rolls a die for their movement, they must roll an additional die and use the lowest result for their move.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_AEGIS_OF_DAYLIGHT,					"When revealed, flip the Time Card to Day.\nWhenever a character is defeated by a creature, the attack is considered a stand-off instead.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_GUIDING_LIGHT,						"When revealed, flip the Time Card to Day.\nWhenever a character rolls a die for their move, they may move any number of spaces up to their die roll, instead of moving the full distance as indicated by their die roll.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_BLINDING_RADIANCE,					"When revealed, flip the Time Card to Day.\nCharacters may evade Enemies instead of attacking them.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_HOLY_DAY,							"When revealed, flip the Time Card to Day.\nAfter a character rolls the die when praying, they may add up to 3 to the score.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_DIVINE_RETRIBUTION,					"When revealed, flip the Time Card to Day.\nWhenever a character kills an Enemy during their turn, they may take an extra turn (each character may only do this once per round).\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_CHILDREN_OF_THE_NIGHT,				"When revealed, flip the Time Card to Night.\nWhenever a character encounters a space with instructions to draw 1 or more Adventure Cards, they must draw 1 more card than required.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_TRIUMPHANT_DAYBREAK,				"When revealed, flip the Time Card to Day.\nWhenever a character engages a creature in battle or psychic combat, they may add 2 to their attack score.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_LUMINOUS_BLESSING,					"When revealed, flip the Time Card to Day.\nWhenever a character starts their turn, they may either heal 1 life or replenish 1 fate.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_FRIGHT_NIGHT,						"When revealed, flip the Time Card to Night.\nWhenever a character moves into a space that has an Enemy, they must end their move there instead of moving the full distance as indicated by the die roll.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_MORNING_SONG,						"When revealed, flip the Time Card to Day.\nWhenever a character has just completed their move, they may discard any Adventure Cards of their choice on their space.\nDiscard this card when Night falls.")
+DEFSTRING(CARDTEXT_DESC_ALL_HALLOWS_EVE,					"When revealed, flip the Time Card to Night.\nWhenever a character visits a Stranger or Place, they may gain 2 gold.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_VAMPIRIC_THIRST,					"When revealed, flip the Time Card to Night.\nWhenever a character kills an Enemy, they may gain 1 life.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_WITCHING_HOUR,						"When revealed, flip the Time Card to Night.\nWhenever a character starts their turn, they may gain their full complement of Spells, according to their current Craft.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_NIGHT_OF_THE_PUMPKIN_KING,			"When revealed, flip the Time Card to Night.\nAll Fields spaces are considered to be \"Draw 3 Cards\" spaces. If there are already any cards in the Fields space, draw only enough to take the total to 3 cards.\nDiscard this card when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_RESTLESS_DEAD,						"Take all trophies from all characters and shuffle them. Starting with your space and continuing clockwise, place 1 Enemy faceup in each space until all of the cards have been placed. Then discard this card.")
+DEFSTRING(CARDTEXT_DESC_GROWING_SUSPICIONS,					"Each character must roll 1 die and subtract 1 from their score for each Lycanthrope character in play (to a minimum of 1):\n\
+1) Lose 2 lives\n\
+2-3) Lose 1 life\n\
+4-5) Miss 1 turn\n\
+6) No effect\n\
+Then discard this card.")
+DEFSTRING(CARDTEXT_DESC_SCARECROW,							"%s\nWhen revealed, place the Scarecrow in a Fields space of your choice in any Region. It will remain there until it is killed.")
+DEFSTRING(CARDTEXT_DESC_HERALD_OF_THE_DAWN,					"%s\nWhen revealed, flip the Time Card to Day.\n\
+Good characters may automatically evade the Herald of the Dawn instead of attacking it. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_HARVEST_HORROR,						"%s\nA minion of the Pumpkin King has claimed this area for its master. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_MUMMY_KING,							"%s\nIf you kill the Mummy King, you may look through the discard pile and take one Object of your choice. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_HEADLESS_HORSEMAN,					"%s\nIf you are defeated, the Horseman will move to your space at the end of your movement next turn.")
+DEFSTRING(CARDTEXT_DESC_DUSKWOOD_WRAITH,					"%s\nIf it is Night, add 1 to the Wraith's attack score. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_LUNAR_WITCH,						"%s\nIf you kill the Witch during the Night, you may gain 1 Spell, if your Craft allows. She will remain here until she is killed.")
+DEFSTRING(CARDTEXT_DESC_EVENTIDE_INVOKER,					"%s\nWhen revealed, flip the Time Card to Night. If you kill the Invoker, flip the Time Card to Day. He will remain here until he is killed.")
+DEFSTRING(CARDTEXT_DESC_NIGHT_STALKER,						"%s\nIf you are defeated during the Night, you do not lose a life. Instead, you must take the Night Stalker as a Follower with the following effect: You lose 1 life at the start of each of your turns. Discard the Night Stalker when Day breaks.")
+DEFSTRING(CARDTEXT_DESC_FIRE_SALAMANDER,					"%s\nWhen revealed, discard all other cards in this Region. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_DIREWOLF,							"%s\nIf you are defeated, in addition to losing 1 life, you become a Lycanthrope. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_WOLFEN,								"%s\nIf you are defeated, in addition to losing 1 life, you must roll 1 die on the Werewolf's chart. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_CRAWLING_HAND,						"%s\nIf you do not kill the Crawling Hand, roll 1 die and move it that number of spaces clockwise.")
+DEFSTRING(CARDTEXT_DESC_SWAMP_CREATURE,						"%s\nA creature from the swamp is menacing this area. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_LURKING_HORROR,						"%s\nIf you attack the Lurking Horror during the Night, you cannot roll a die for your attack roll. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_FIRE_GIANT,							"%s\nIf you do not kill the Fire Giant, roll 1 die and move him that number of spaces clockwise. For each space he moves onto, any characters there lose 1 life and any cards there are discarded.")
+DEFSTRING(CARDTEXT_DESC_PIT_FIEND_SHIRKER,					"%s\nYou may move the Shirker to any other space in this Region instead of attacking it.")
+DEFSTRING(CARDTEXT_DESC_UMBRAL_DRAKE,						"%s\nYou may evade the Dragon during the Day. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_BALEFIRE_DRAGON,					"%s\nBefore you engage the Dragon in battle, it makes a breath attack; roll 1 die. If the result is equal to or higher than your Craft, you must discard all other cards in this Region. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_ZOMBIE_DRAGON,						"%s\nA dreadful Zombie Dragon is terrorising this area. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_CRYPT_WYVERN,						"%s\nIt will remain here until it is killed. If you are defeated, in addition to your losing 1 life, the Dragon drops you in the Graveyard.")
+DEFSTRING(CARDTEXT_DESC_DERANGED_ALCHEMIST,					"Roll 1 die:\n\
+1) Become a Toad for 3 turns\n\
+2) Lose 1 Craft\n\
+3) Lose 1 Strength\n\
+4) Gain 1 Strength\n\
+5) Gain 1 Craft\n\
+6) You may change any or all Strength points you have into Craft points, or vice versa; then discard this card")
+DEFSTRING(CARDTEXT_DESC_MISCHIEVOUS_DEVIL,					"Roll 1 die:\n\
+1-2) You must give one of your Objects to another character of your choice\n\
+3-4) You must ditch one of your Objects at random\n\
+5-6) Take one Object of your choice from any character, then discard this card")
+DEFSTRING(CARDTEXT_DESC_THE_PHANTOM,						"When revealed, draw 8 Adventure Cards and place any Followers on this card; then discard the rest. Once per visit, you may take one Follower of your choice from this card. When all Followers have been taken, discard this card. The Followers do not count towards the number of cards on this space.")
+DEFSTRING(CARDTEXT_DESC_LANTERN_SPRITE,						"The Lantern Sprite will remain here for the rest of the game. Take a secret look at the top card on the Adventure deck and place it facedown in front of any character of your choice. At the start of that character's next turn, they must place the card on top of the Adventure deck.")
+DEFSTRING(CARDTEXT_DESC_DAWN_BRINGER,						"Gain 2 fate; then all other characters in this Region may gain 1 fate.\nIf it is Night, flip the Time Card to Day; then discard this card.")
+DEFSTRING(CARDTEXT_DESC_GHOSTWOOD_ENT,						"You may discard one of your trophies to gain your full complement of Spells, according to your current Craft. Once a character chooses to do so, discard this card.")
+DEFSTRING(CARDTEXT_DESC_PEASANT_MOB,						"If you are a Lycanthrope, you are killed!\n\n\
+If you are not a Lycanthrope, you may move the Peasant Mob to any space with an Adventure Card; then discard all other Adventure Cards on that space.")
+DEFSTRING(CARDTEXT_DESC_NIGHT_CARRIAGE,						"If it is Day, roll 1 die and move the Carriage that many spaces clockwise.\n\
+If it is Night, immediately move to any other space in this Region; then discard this card.")
+DEFSTRING(CARDTEXT_DESC_FALLEN_ADVENTURER,					"If it is Night, the corpse springs to life and attacks you with Strength 4.\n\n\
+If it is Day, you may take one Object of your choice from the Purchase deck for free; then discard this card.")
+DEFSTRING(CARDTEXT_DESC_CAIRN_CARETAKER,					"The Caretaker will remain here for the rest of the game. You may discard any of your trophies to gain 1 Strength or Craft for each.")
+DEFSTRING(CARDTEXT_DESC_NIGHTSHROUD,						"If it is Night, you may evade any creatures or characters.")
+DEFSTRING(CARDTEXT_DESC_TRICKS_AND_TREATS,					"If you land on another character, you may take one Object of your choice from them and then give them this card. This counts as your encounter for the turn.")
+DEFSTRING(CARDTEXT_DESC_BOOK_OF_THE_DEAD,					"Whenever you kill an Enemy in psychic combat, you may place it on this card instead of keeping it as a trophy. You may discard any Enemies on this card to add their Craft to yours during a psychic combat of your choice.")
+DEFSTRING(CARDTEXT_DESC_WOODEN_STAKE,						"You may discard the Stake when you are about to engage a creature in battle or psychic combat to automatically roll a 6 for your attack roll.")
+DEFSTRING(CARDTEXT_DESC_WOLFSBANE,							"After rolling the die for the Werewolf's chart, you may add up to 2 to the score.\n\n\
+If you are a Lycanthrope, you may discard the Wolfsbane to discard your Lycanthrope Card.")
+DEFSTRING(CARDTEXT_DESC_PRAYER_BOOK,						"After rolling the die when praying, you may add up to 3 to the score.")
+DEFSTRING(CARDTEXT_DESC_WITCHS_BROOM,						"Whenever you move during the Night, you may move any number of spaces up to your die roll instead of moving the full distance as indicated by the die roll.")
+DEFSTRING(CARDTEXT_DESC_GHOSTWOOD_WAND,						"Whenever a Spirit is placed in the discard pile, you may gain 1 Spell, if your Craft allows.")
+DEFSTRING(CARDTEXT_DESC_HOLY_WATER,							"No evil character may have the Holy Water.\n\
+You do not lose a life in the Desert.\n\
+You may discard the Holy Water to discard any Enemies you are about to engage in psychic combat.")
+DEFSTRING(CARDTEXT_DESC_HAMMER_OF_LIGHT,					"Add 1 to your Strength during battle.\n\n\
+If it is Day, add 3 to your Strength during battle instead.")
+DEFSTRING(CARDTEXT_DESC_HUNGERING_ARTEFACT,					"At the end of your turn, you must discard all Adventure Cards on your space.")
+DEFSTRING(CARDTEXT_DESC_SHADOW_DAGGER,						"Add 1 to your Craft during psychic combat.\n\n\
+If it is Night, add 3 to your Craft during psychic combat instead.")
+DEFSTRING(CARDTEXT_DESC_CORPSE_COLLECTOR,					"When revealed, draw 8 Adventure Cards and place any Enemies on this card as trophies; then discard the rest. Once per visit, you may take one trophy of your choice from this card. When all trophies have been taken, discard this card. The trophies do not count towards the number of cards on this space.")
+DEFSTRING(CARDTEXT_DESC_PHARAOHS_CROWN,						"If you engage a creature in battle or psychic combat, you may force the creature to reroll its attack roll. You may only do this once per turn.")
+DEFSTRING(CARDTEXT_DESC_DOOMSWORD,							"Add 3 to your Strength during battle. If you roll a 1 for your attack roll, you are automatically defeated regardless of your attack score.")
+DEFSTRING(CARDTEXT_DESC_LIVING_DOLL,							"You must take the Doll and ditch all of your other Objects. You may have no other Objects until you visit the Alchemist in the City and discard this Object to gain a gold.")
+DEFSTRING(CARDTEXT_DESC_SELF_PORTRAIT_BM,					"When revealed, place 4 lives on this card. Whenever you lose a life, you may discard 1 life from the Portrait instead. Discard this card when all its lives have been discarded.")
+DEFSTRING(CARDTEXT_DESC_SYPHONING_SCEPTRE,					"If you defeat a character in battle or psychic combat, you may take one of their Strength or Craft points and add it to your own instead of your normal reward.")
+DEFSTRING(CARDTEXT_DESC_SUN_SHIELD,							"If you are defeated in battle or psychic combat, roll 1 die (if it is Day, you may add up to 3 to the score):\n\
+1-5) You lose the attack as normal\n\
+6) You do not lose the attack; it is considered a stand-off instead")
+DEFSTRING(CARDTEXT_DESC_KEEPER_OF_THE_VIGIL,				"When revealed, flip the Time Card to Day.\n\
+After you draw an Adventure Card, you may discard it and draw another Adventure Card to replace it, which you must encounter. The Keeper of the Vigil then departs to the discard pile.")
+DEFSTRING(CARDTEXT_DESC_BLACK_CAT,							"You must take the Cat as a Follower and discard all of your fate. You cannot replenish or gain fate. You may discard the Cat if you roll a 1 during your turn.")
+DEFSTRING(CARDTEXT_DESC_LOST_SOUL,							"After you visit the Chapel or Graveyard, you may discard the Lost Soul to gain 1 Strength, Craft, life, fate, or Spell, if your Craft allows.")
+DEFSTRING(CARDTEXT_DESC_WITCH_FINDER,						"After you encounter a space with instructions to draw one or more Adventure Cards and have drawn the required number of cards, you may draw one additional card if there are no Enemies on your space.")
+DEFSTRING(CARDTEXT_DESC_CHAMPION_OF_LIGHT,					"No Evil character may have the Champion of Light.\n\
+If it is Day, you may roll an additional die in battle and psychic combat and add the result to your attack score.\n\
+If it is Night, you may discard the Champion to flip the Time Card to Day.")
+DEFSTRING(CARDTEXT_DESC_DISCIPLE_OF_DARKNESS,				"No good character may have the Disciple of Darkness.\n\
+During the Night, you may always have at least 1 Spell if your Craft allows (gain a Spell each time you cast your last Spell).\n\
+If it is Day, you may discard the Disciple to flip the Time Card to Night.")
+DEFSTRING(CARDTEXT_DESC_FORTUNE_TELLER,						"At the start of your turn, you may take a secret look at the top card on the Adventure deck.")
+DEFSTRING(CARDTEXT_DESC_WOLF_SLAYER,						"No Lycanthrope character may have the Wolf Slayer.\n\
+If it is Day, add 2 to your Strength.\n\
+If it is Night, add 2 to your Craft.")
+DEFSTRING(CARDTEXT_DESC_TORCHBEARER,						"When revealed, flip the Time Card to Day.\n\
+If you are defeated by a creature, you suffer all the penalties but you may immediately attack the creature again instead of ending your turn. You may only do this once per turn.")
+DEFSTRING(CARDTEXT_DESC_RED_RIDING_HOOD,					"After you have completed your move, you must move the closest Enemy in your Region to your space. If two or more Enemies are an equal distance away, you choose which Enemy is moved.")
+DEFSTRING(CARDTEXT_DESC_THE_BRIDE,							"The Bride will become your Follower if you discard one of your trophies.\n\
+Whenever you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.")
+DEFSTRING(CARDTEXT_DESC_RAGING_VOLCANO,						"Roll 1 die:\n\
+1-2) Lose 1 life\n\
+3-4) Discard all other Adventure Cards in this Region\n\
+5-6) Discard all Adventure Cards (including this card) in every Region")
+DEFSTRING(CARDTEXT_DESC_WALL_OF_FIRE,						"Any character who enters this space during their move must end their movement.\n\
+If you do not have a Talisman, lose 1 life. If you have a Talisman, gain 1 Strength and 1 Craft and then discard this card.")
+DEFSTRING(CARDTEXT_DESC_TREASURE_TROVE,						"When revealed, roll 2 dice and place that much gold on this card. Once per visit, you may take up to 2 gold from this card. When all gold has been taken, discard this card.")
+DEFSTRING(CARDTEXT_DESC_BONEYARD,							"The Boneyard will remain here for the rest of the game. Once per visit, if the top card on the discard pile is an Enemy, you must place it on this space.")
+DEFSTRING(CARDTEXT_DESC_HAUNTED_HAMLET,						"The Hamlet will remain here for the rest of the game.\n\
+If you visit the Hamlet during the Day, it is treated as if you were visiting the Village.\n\
+If you visit the Hamlet during the Night, you must move 1 Spirit from any Region to this space.")
+DEFSTRING(CARDTEXT_DESC_SACRED_GROUND,						"The Sacred Ground will remain here for the rest of the game.\n\
+If it is Day, roll 1 die to pray with the same results as at the Chapel.\n\
+If it is Night, roll 1 die to pray with the same results as at the Graveyard.")
+DEFSTRING(CARDTEXT_DESC_WOLFWOOD,							"The Wolfwood will remain here for the rest of the game.\n\
+If you are a Lycanthrope, move the Werewolf to any space with another character. The character must then roll 1 die on its chart.\n\
+If you are not a Lycanthrope, move the Werewolf to this space and roll 1 die on its chart.")
+DEFSTRING(CARDTEXT_DESC_TWILIGHT_FOREST,					"If it is Day, flip the Time Card to Night; then discard this card.\n\
+If it is Night, roll 1 die and draw that number of Adventure Cards. Place 1 Adventure Card of your choice on this space and then discard the rest.")
+DEFSTRING(CARDTEXT_DESC_CITY_OF_SHADOWS,					"If it is Day, roll 1 die; if it is Night, roll 2 dice:\n\
+1-2) Attacked by a Vampire Prince with Craft 9\n\
+3-5) Roll 1 die on the Werewolf's chart\n\
+6-8) Gain 1 Spell\n\
+9-11) Gain 1 Craft\n\
+12) Gain a Talisman; then discard this card")
+DEFSTRING(CARDTEXT_DESC_GYPSY_CARAVAN,						"Once per visit, you may pay 3 gold to do the following:\nIf it is Day, gain 1 Strength. If it is Night, gain 1 Craft. Then roll 1 die and move the Caravan that many spaces clockwise.")
+DEFSTRING(CARDTEXT_DESC_LABORATORY,							"You may reanimate one of your trophies (place this card on the Enemy). The reanimated Enemy becomes your Follower and adds its Strength or Craft to yours during a battle or psychic combat of your choice; then discard this card and the reanimated Enemy.")
+DEFSTRING(CARDTEXT_DESC_NIGHT_GAUNT_BM,						"%s\nIf you kill the Night Gaunt during the Night, flip the Time Card to Day and gain 1 Craft. It will remain here until it is killed.")
+DEFSTRING(CARDTEXT_DESC_WEREWOLF_PLAYER_ENEMY,				"")
+DEFSTRING(CARDTEXT_DESC_WEREWOLF_ENDING_ENEMY,				"")
+DEFSTRING(CARDTEXT_DESC_FALLEN_ADVENTURER_ENEMY,			"")
+
+DEFSTRING(CHARACTER_CARD_WEREWOLF_PLAYER,					"If a player rolls a 1 for their movement, at the end of their turn they must roll to move the Werewolf. If the Werewolf lands on a character they must roll 1 die.\n\
+^1)^ You become a Lycanthrope.\n\
+^2)^ Lose 1 life then immediately roll again on this chart.\n\
+^3)^ One of your Followers, determined at random, is killed. If you have no Followers, you lose 1 life instead.\n\
+^4)^ The Werewolf attacks you with a Strength of 8.\n\
+^5)^ The Werewolf teleports to another character of your choice, who must immediately roll 1 die on this chart.\n\
+^6+)^ You may either heal all of your lives, replenish all of your fate, discard any Adventure Card from the board, or teleport to any other space in this Region as your next move.")
+DEFSTRING(CARDTEXT_NAME_WEREWOLF_PLAYER, 					"Werewolf")
+DEFSTRING(CARDTEXT_DESC_WEREWOLF_PLAYER, 					"")
+DEFSTRING(CARDTEXT_NAME_LYCANTHROPE_CARD,					"Lycanthrope")
+DEFSTRING(CARDTEXT_DESC_LYCANTHROPE_CARD,					"You gain the following abilities during the Night:\n\nAdd 2 to your attack score during battle and psychic combat.\n\nWhenever you land on a space with another character (except in the Inner Region), you must attack them instead of encountering the space.\n\n Whenever you defeat another character in battle or psychic combat, the defeated character must roll 1 die on the Werewolf's chart instead of you claiming your normal reward.")

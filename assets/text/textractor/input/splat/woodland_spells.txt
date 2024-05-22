@@ -1,0 +1,3 @@
+DEFSTRING(CARDTEXT_DESC_FORGE_DESTINY, 			    "Cast on any character at the start of their turn.\n\nΩ: Pay 2 light fate to have that character draw 1 Destiny card.\n\nπ: Pay 2 dark fate to force that character to discard one of their Destiny cards.")
+DEFSTRING(CARDTEXT_DESC_CUT_THE_THREAD, 		    "Cast on another character when they spend a fate.\n\nΩ: The effect of that fate is cancelled and you replenish all your fate.\n\nπ: The effect of that fate is cancelled and that character loses all of their fate.\n\nCannot be cast if unbound/fateless.")
+DEFSTRING(CARDTEXT_DESC_REJUVENATION,	 			"Cast on yourself at the start of your turn. Heal all of your lives and replenish all of your fate. You may then discard any of your Objects, Followers, or Spells.")

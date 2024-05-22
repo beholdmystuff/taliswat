@@ -1,0 +1,218 @@
+/* HIGHLAND BOARD */
+.highlandEntranceSpace
+{
+     width: 300px;
+    height: 300px;
+       top: 45px;
+      left: 815px;
+}
+.highlandHills1Space
+{
+     width: 300px;
+    height: 265px;
+       top: 345px;
+      left: 815px;
+}
+.highlandCliff1Space
+{
+     width: 300px;
+    height: 265px;
+       top: 605px;
+      left: 815px;
+}
+.highlandRidgewaySpace
+{
+     width: 300px;
+    height: 330px;
+       top: 870px;
+      left: 815px;
+}
+.highlandRavine1Space
+{
+     width: 325px;
+    height: 255px;
+       top: 945px;
+      left: 1115px;
+}
+.highlandHills2Space
+{
+     width: 330px;
+    height: 255px;
+       top: 945px;
+      left: 1440px;
+}
+.highlandRuinedMineSpace
+{
+     width: 330px;
+    height: 255px;
+       top: 945px;
+      left: 1770px;
+}
+.highlandCliff2Space
+{
+     width: 410px;
+    height: 255px;
+       top: 945px;
+      left: 2105px;
+}
+.highlandRavine2Space
+{
+     width: 410px;
+    height: 230px;
+       top: 1205px;
+      left: 2105px;
+}
+.highlandHills3Space
+{
+     width: 330px;
+    height: 230px;
+       top: 1205px;
+      left: 1770px;
+}
+.highlandGlacierSpace
+{
+     width: 330px;
+    height: 230px;
+       top: 1205px;
+      left: 1440px;
+}
+.highlandCliff3Space
+{
+     width: 325px;
+    height: 230px;
+       top: 1205px;
+      left: 1115px;
+}
+.highlandCanyon1Space
+{
+     width: 295px;
+    height: 230px;
+       top: 1205px;
+      left: 820px;
+}
+.highlandMountainPassSpace
+{
+     width: 360px;
+    height: 305px;
+       top: 1130px;
+      left: 455px;
+}
+.highlandCliff4Space
+{
+     width: 360px;
+    height: 260px;
+       top: 870px;
+      left: 455px;
+}
+.highlandHills4Space
+{
+     width: 360px;
+    height: 265px;
+       top: 605px;
+      left: 455px;
+}
+.highlandPrecipice1Space
+{
+     width: 360px;
+    height: 255px;
+       top: 350px;
+      left: 455px;
+}
+.highlandRavine3Space
+{
+     width: 360px;
+    height: 300px;
+       top: 45px;
+      left: 455px;
+}
+.highlandHills5Space
+{
+     width: 395px;
+    height: 300px;
+       top: 45px;
+      left: 60px;
+}
+.highlandCanyon2Space
+{
+     width: 395px;
+    height: 260px;
+       top: 345px;
+      left: 60px;
+}
+.highlandCliff5Space
+{
+     width: 395px;
+    height: 265px;
+       top: 345px;
+      left: 60px;
+}
+.highlandWaterfallSpace
+{
+     width: 395px;
+    height: 265px;
+       top: 605px;
+      left: 60px;
+}
+.highlandWaterfallSpace
+{
+     width: 395px;
+    height: 265px;
+       top: 605px;
+      left: 60px;
+}
+.highlandCanyon2Space
+{
+     width: 395px;
+    height: 260px;
+       top: 870px;
+      left: 60px;
+}
+.highlandCliff6Space
+{
+     width: 395px;
+    height: 245px;
+       top: 1130px;
+      left: 60px;
+}
+.highlandLostCitySpace
+{
+     width: 445px;
+    height: 365px;
+       top: 1380px;
+      left: 60px;
+}
+.highlandPrecipice2Space
+{
+     width: 310px;
+    height: 310px;
+       top: 1435px;
+      left: 505px;
+}
+.highlandRavine4Space
+{
+     width: 300px;
+    height: 310px;
+       top: 1435px;
+      left: 815px;
+}
+.highlandIceBridgeSpace
+{
+     width: 470px;
+    height: 310px;
+       top: 1435px;
+      left: 1115px;
+}
+.highlandCanyon3Space
+{
+     width: 330px;
+    height: 310px;
+       top: 1435px;
+      left: 1585px;
+}
+.highlandEyrieSpace
+{
+     width: 590px;
+    height: 310px;
+       top: 1435px;
+      left: 1915px;
+}

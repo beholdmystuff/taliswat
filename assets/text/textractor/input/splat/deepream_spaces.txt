@@ -1,0 +1,11 @@
+DEFSTRING(SPACETITLE_RAT_RUN,						"Rat Run")
+DEFSTRING(SPACETITLE_SKULLS_PASSAGE,				"Skull Passage")
+DEFSTRING(SPACETITLE_OLD_SEWERS,					"Old Sewers")
+DEFSTRING(SPACETITLE_RATS_NEST,						"Rat's Nest")
+DEFSTRING(SPACETITLE_THRONE_ROOM,					"Throne Room")
+DEFSTRING(SPACETITLE_CATACOMBS,						"Catacombs")
+
+DEFSTRING(BRIDGE_SPACE_MESSAGE, 					"DRAW 2 CARDS\n\nDraw 2 cards from the Bridge deck, even if there are already any cards on this space. At the end of your turn, shuffle all cards on this space into the Bridge deck.")
+DEFSTRING(TUNNEL_SPACE_MESSAGE, 					"SEARCH THE TUNNELS\n\nTake the top 3 Tunnel cards and put them in a stack in front of you. Encounter the top card of your stack each turn until you have no cards remaining.")
+DEFSTRING(RATS_NEST_MESSAGE, 						"FIGHT THE RAT QUEEN\n\nYou must fight the verminous Rat Queen in battle. She has a Strength of 3 and adds 1 for each Object on this space.")
+DEFSTRING(THRONE_ROOM_MESSAGE, 						"FIGHT THE WRAITH LORD\n\nYou must fight the Wraith Lord in psychic combat. He has a Craft of 4 and adds 1 for each Treasure card on this space.")

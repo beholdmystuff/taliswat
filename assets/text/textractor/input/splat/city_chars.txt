@@ -1,0 +1,45 @@
+DEFSTRING(CHARACTER_CARD_TINKERER,\
+"SPECIAL ABILITIES\n\n\
+You start the game with 3 Objects of your choice from the Purchase deck.\n\n\
+You may turn any Objects you have into automated Followers:\n\
+You may use the abilities and effects of your automated Followers as normal (Weapon and Armour limits still apply).\n\
+Automated Followers are no longer considered Objects and do not count towards your carrying capacity.\n\
+After you encounter a space and have drawn the required number of cards, you may discard an automated Follower to discard any number of cards on the space and draw new cards to replace them, which you must encounter.\n\n\
+Whenever you encounter a Construct, you may take it as an automated Follower instead of attacking it. However, while a Construct is an automated Follower, you cannot use its ability.\n\n\
+Start: City          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_CAT_BURGLAR,\
+"SPECIAL ABILITIES\n\n\
+Whenever you encounter a space with 2 or more cards, you may encounter the cards in any order you wish, instead of the order of their encounter number. If 2 or more Enemies have the same encounter number, they still fight together in the battle or psychic combat as normal.\n\n\
+Whenever you visit a card or space that allows you to buy an Object, you may burgle instead. To do so, choose 1 Object that is available to purchase from the encounter, roll 1 die, and add the result to the Object's cost. If the score is equal to or lower than your Craft, you take the card for free. If the score is higher than your Craft, you must miss your next turn and discard the Object.\n\n\
+Start: City          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_BOUNTY_HUNTER,\
+"SPECIAL ABILITIES\n\n\
+Whenever you defeat a character that does not match your current alignment in battle or psychic combat, you may gain 1 gold in addition to your normal reward.\n\n\
+Whenever you kill an Enemy you may gain 1 gold.\n\n\
+If you have a stand-off during battle or psychic combat, you win the attack instead.\n\n\
+You may take 1 trophy of your choice from a character that you land on.\n\n\
+Start: Sentinel          Alignment: Evil")
+
+DEFSTRING(CHARACTER_CARD_ELEMENTALIST,\
+"SPECIAL ABILITIES\n\n\
+At the start of the game, and once during your turn, you may choose to add 4 to your Strength or Craft.\n\n\
+You automatically kill Enemy Elementals without resorting to battle or psychic combat (you keep killed Elementals as trophies as normal).\n\n\
+Start: City          Alignment: Neutral")
+
+DEFSTRING(CHARACTER_CARD_TAVERN_MAID,\
+"SPECIAL ABILITIES\n\n\
+You start the game with 5 Potion Cards.\n\n\
+Whenever you visit the Tavern, you choose which result to use instead of rolling a die.\n\n\
+If you move into a space that has any characters, you may end your move there and pour them a drink. If there are 2 or more characters, you choose the order in which you encounter them. The characters must give you 1 gold (if able) and roll 1 die:\n\
+1) Generous tip: Give the Tavern Maid 1 of your Objects\n2) Another round!: Give the Tavern Maid another gold (if able) and roll again on this chart\n3) One too many: Miss your next turn\n4) Strange brew: You take your move as normal next turn, except that the Tavern Maid decides in which direction you move\n5) Hearty brew: Gain 1 life\n6) One for the road: Gain 1 Potion Card\n\n\
+Start: Tavern          Alignment: Good")
+
+DEFSTRING(CHARACTER_CARD_SPY,\
+"SPECIAL ABILITIES\n\n\
+Once during your turn, you may take a secret look at the top card on any deck.\n\n\
+At any time during the game, you may look at the Spell Cards held by other characters.\n\n\
+Instead of rolling the die for your movement, you may shadow a character in the same Region and teleport to their space. If you choose to do so, you cannot encounter that character during this turn.\n\n\
+Start: Any space with another character\n\n\
+Alignment: Evil")

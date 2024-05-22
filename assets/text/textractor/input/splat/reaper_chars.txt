@@ -1,0 +1,30 @@
+DEFSTRING(CHARACTER_CARD_DARK_CULTIST,\
+"SPECIAL ABILITIES\n\n\
+When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.\n\n\
+Whenever you kill an Enemy or defeat another character and force them to lose a life, roll 1 die to receive a gift from the Forces of Darkness (if you defeat a good character, you may add 1 to the score):\n\
+1) Gain 1 fate   2) Gain 1 gold\n\
+3) Gain 1 life   4) Gain 1 Strength\n\
+5) Gain 1 Craft   6+) Gain 1 Spell\n\n\
+You are always evil; ignore any effect that changes your alignment.\n\n\
+Start: Graveyard          Alignment: Evil")
+DEFSTRING(CHARACTER_CARD_KNIGHT,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with a Sword and Armour from the Purchase deck.\n\n\
+After rolling the die when praying, you may add up to 2 to the score.\n\n\
+You are always good; ignore any effect that changes your alignment.\n\n\
+You may not attack other good characters when you encounter them, except on the Crown of Command space, where you must attack them as normal.\n\n\
+Start: Chapel          Alignment: Good")
+DEFSTRING(CHARACTER_CARD_MERCHANT,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 5 gold.\n\n\
+You may evade Enemy Dragons and Monsters by paying 1 gold (discard).\n\n\
+You may trade with a character that you land on by exchanging any one Object of yours for one of theirs (including Magic Objects).\n\n\
+When you visit the Village, Market, or Market Day you may also discard one of your own Objects to take any one Object from the Purchase deck. You may also sell any of your Objects for 1 gold each and Magic Objects for 3 gold each.\n\n\
+Start: City          Alignment: Neutral")
+DEFSTRING(CHARACTER_CARD_SAGE,\
+"SPECIAL ABILITIES\n\n\
+You begin the game with 1 Spell.\n\n\
+If you do not have any Spells at the start of your turn, you may gain 1 Spell.\n\n\
+You always know what the top card is on the Adventure and Spell deck. You may look at them whenever you wish.\n\n\
+When you roll the die for your move, you may ignore the result of your first die roll and roll again. You must accept the result of this second die roll.\n\n\
+Start: Village          Alignment: Neutral")

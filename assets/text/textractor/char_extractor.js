@@ -4,10 +4,11 @@ module.exports = function()
 {
     let expansions = [
         { name: "Talisman", filename: "base_chars.txt"},
+        { name: "Character Packs", filename: "charpacks_chars.txt"},
         { name: "The Ancient Beasts", filename: "ancientbeasts_chars.txt"},
         { name: "The Blood Moon", filename: "bloodmoon_chars.txt"},
-        { name: "The City", filename: "city_chars.txt"},
         { name: "The Cataclysm", filename: "cataclysm_chars.txt"},
+        { name: "The City", filename: "city_chars.txt"},
         { name: "The Clockwork Kingdom", filename: "clockwork_chars.txt"},
         { name: "The Dragon", filename: "dragon_chars.txt"},
         { name: "The Dungeon", filename:  "dungeon_chars.txt"},
@@ -55,7 +56,7 @@ module.exports = function()
             let description = g2.replace(/\\n\\n/g, "</br>").replace(/\r\n/g, "</br>").replace(/\\/g, "").replace(/<\/br>/g, "<\/br><\/br>").replace(/<\/br><\/br><\/br><\/br>/g, "<\/br><\/br>");
 
             let classObj = {description: description, start: g3, alignment: g4, filePrefix: fileName,
-                            strength: 0, craft: 0, gold: 0, life: 0, fate: 0};
+                            strength: 0, craft: 0, life: 0, fate: 0};
             expansionObj[charName] = classObj
         });
 

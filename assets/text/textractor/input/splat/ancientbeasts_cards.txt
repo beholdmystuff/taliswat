@@ -1,0 +1,265 @@
+DEFSTRING(CARDTEXT_DESC_ECHIDNA, "\
+~The Mother of Monsters has arisen into a land of opportunity. She devours the creatures of the realm, preparing herself to spawn a new generation of monsters.~\n\n\
+At the end of each round, Nuguasha moves to the nearest Enemy on the board and devours it (placing the card onto Nuguasha). If there are multiple Enemies on the space, one is chosen at random. Any characters on the space lose 1 life.\n\n\
+Each card on Nuguasha symbolises another head she has grown and adds 1 to her attack rolls.\n\n\
+Once Nuguasha has amassed 20 Enemies on her card, she will move 1 space closer to the Chasm per turn. If she is on the Chasm and has 20 or more cards Nuguasha reaches the Apex, spawning horrors which decimate the land.\n\n\
+Each time you defeat Nuguasha, remove one of her heads and immediately exchange it for either a Strength or Craft. If Nuguasha had only one head remaining, she is killed.\n\n\
+If you kill Nuguasha, take the Heart of Monsters Beast Reward.")
+DEFSTRING(CARDTEXT_DESC_ECHIDNA_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_DESC_GANYMAI, "\
+~Deep beneath the current of the Storm River stirs a dormant life force. Emerging gracefully above the surface and on to the land, it begins blindly weaving a path forward, never straying too far from the comfort of the waters.~\n\n\
+At the end of each round, Ganymai crosses the Storm River to the space which is furthest clockwise.\n\n\
+Each time Ganymai moves, it leaves behind a Wellspring Terrain card. When Ganymai moves onto a Wellspring it heals 1 life, then moves 1 space clockwise.\n\n\
+Characters on the same space as, or adjacent to Ganymai at the end of their turn may remove 1 life from Ganymai to heal 1 life or replenish 1 fate.\n\n\
+If a character would be killed whilst on the same space as, or adjacent to Ganymai, that character may choose to kill Ganymai to prevent their death and heal 1 life.")
+DEFSTRING(CARDTEXT_DESC_TERRAIN_WELLSPRING, "HEAL 1 LIFE THEN DRAW 2 CARDS\n\nIf there are any cards already in this space, draw only enough to take the total to two cards.\n\nEnemies on or adjacent to a Wellspring add 1 to their attack score.")
+DEFSTRING(CARDTEXT_DESC_TERRAIN_CURSED_GLADE, "DRAW 1 CARD\n\nDo not draw a card if there is already one in this space.\n\nStrength and Craft derived from Objects and Magic Objects do not count on this space, nor may you use Magic Objects or cast Spells.")
+DEFSTRING(CARDTEXT_DESC_BEAST_HUNT, "There is always a minimum of 1 Beast on the board.\n\nThe first character to reach the Crown of Command with 3 or more Beast Reward cards wins!")
+DEFSTRING(CARDTEXT_DESC_BEAST_HUNTERS, "When this ending is revealed, each character in the Inner Region, starting with the character to your left and proceeding clockwise, must teleport to any space in the Outer or Middle Region not containing a character.\n\nCharacters cannot enter the Inner Region for the rest of the game.\n\nWhen no more players are in the Inner Region, draw 5 new Beasts and place them on the board, after which no more Beasts will appear.\n\nIf all Beasts are defeated, all players win.")
+DEFSTRING(CARDTEXT_DESC_EXPLORER, "")
+DEFSTRING(CARDTEXT_DESC_TROPHY_HUNTER_CHAR, "")
+DEFSTRING(CARDTEXT_DESC_HEART_OF_MONSTERS,		"~A writhing heart with a maw of teeth. Feeding it the flesh of the living empowers the user.~\n\nWhenever you land on a space with any Enemies, you may remove them and place them on this card.\n\nAdd 1 to your attack roll for each Enemy on this card.")
+
+DEFSTRING(CHARACTER_CARD_EXPLORER,
+"SPECIAL ABILITIES\n\n\
+Whenever you are instructed to draw Adventure Cards, you must draw 1 additional card.\n\nYou start with 3 facedown (greyed out) Catalogue tokens, one for each of 3 Enemy types (Animal, Dragon and Monster).\n\nWhen you defeat an Enemy and take it as a trophy, if that Enemy's type matches one of your facedown Catalogue tokens, flip that token faceup.\n\nEach faceup Catalogue token adds 1 to your Craft value.\n\nStart: Village          Alignment: Neutral")
+DEFSTRING(CHARACTER_CARD_TROPHY_HUNTER_CHAR,
+"SPECIAL ABILITIES\n\n\
+During your turn, you may sell any trophies you own. Discard the chosen trophies and gain 1 gold for each.\n\nIf you move into a space that has one or more Enemies, you may end your move there, instead of moving the full distance as indicated by the die roll.\n\nAdd 1 to your Strength in battle for each Animal and Beast in the battle.\n\n\
+After turning in trophies to gain Strength, roll 1 die to receive a bonus reward:\n\
+1-2) Gain 1 gold\n\
+3-4) Gain 1 fate\n\
+5) Gain 1 life\n\
+6) Gain 1 Strength\n\n\
+Start: Castle          Alignment: Evil")
+
+DEFSTRING(CARDTEXT_NAME_CANCER, "Trovius")
+DEFSTRING(CARDTEXT_DESC_CANCER, "\
+~A shimmering mountain of treasure assimilated over generations into Trovius' carapace can be seen for miles.~\n\n\
+At the end of each round, Trovius rolls 2 dice. The first die will cause Trovius to move that many spaces clockwise. The second determines how many spaces Trovius moves counter-clockwise.\n\n\
+Trovius assimilates any Objects laying faceup on the spaces he moves through, adding them to his carapace.\n\n\
+Any characters Trovius passes whilst moving are forced to relinquish 1 Object as an offering, those who don't suffer his wrath and lose 1 life.\n\n\
+If you defeat Trovius, the attack counts as a stand-off unless your attack score wins by more points than the number of Objects Trovius has.\n\n\
+If Trovius' carapace has 20 Objects he will achieve the Apex.\n\n\
+Each time you defeat Trovius, you may take an Object from his treasure cache.\n\n\
+If you kill Trovius, take the Carapace of Burden Beast Reward, along with any Objects remaining in his cache.")
+DEFSTRING(CARDTEXT_NAME_CANCER_ENEMY,		"Trovius")
+DEFSTRING(CARDTEXT_DESC_CANCER_ENEMY,		"%s")
+
+DEFSTRING(CARDTEXT_NAME_MECHANICAL_HELPER, "Mechanical Helper")
+DEFSTRING(CARDTEXT_DESC_MECHANICAL_HELPER, "Add 2 to your Strength in battles.\n\nAdd 2 to your Craft in psychic combat.")
+DEFSTRING(CARDTEXT_NAME_MECHANICAL_MONSTER, "Mechanical Monster")
+DEFSTRING(CARDTEXT_DESC_MECHANICAL_MONSTER, "")
+DEFSTRING(CHARACTER_CARD_MECHANICAL_MONSTER, \
+"SPECIAL ABILITIES\n\n\
+You may not cast, have or gain any Spells, nor are you affected by them.\n\n\
+Players cannot equip Weapons when engaging you in battle or psychic combat.\n\n\
+You cannot heal, carry any Objects, nor hold any Followers.\n\n\
+The Mechanical Monster wishes for nothing more than to destroy the Dwarf and the Mine. If the Mechanical Monster reaches the Mines in the Inner Region, all other players lose.\n\n\
+Start: City          Alignment: Evil")
+
+DEFSTRING(CARDTEXT_NAME_CARAPACE_OF_BURDEN,		"Carapace of Burden")
+DEFSTRING(CARDTEXT_DESC_CARAPACE_OF_BURDEN,		"~The large shell weighs nothing and slowly absorbs any Objects placed onto it.~\n\nYou have no inventory limit.\n\nIf you are defeated in battle and just lost a life, roll 1 die. If you roll a 6, the Carapace protected you and you did not lose that life, though you still lost the battle. You may add 1 to this roll for each Object you are carrying.")
+DEFSTRING(CARDTEXT_NAME_ZEPHYR, "Zephyr")
+DEFSTRING(CARDTEXT_DESC_ZEPHYR, "\
+~Never faltering or ending, its destruction knows no bias. Its winds blow with enough force to wipe away a whole village in an instant. Constantly on the move, it neither knows, nor cares for anything that may be in its path.~\n\n\
+At the end of each round, Zephyr moves 1 space clockwise, and 1 additional space for each card currently on its space.\n\n\
+Zephyr will remove 1 life from each character it moves through.\n\n\
+When Zephyr moves, it brings any cards from its original space with it. Depositing them on the space it moves to.\n\n\
+Before encountering Zephyr in battle or psychic combat, lose 1 life for each Armour and Weapon you have.\n\n\
+If Zephyr passes the space it started its movement on, Zephyr reaches the Apex, completing the Eternal Storm.\n\n\
+If you kill Zephyr, take the Eternal Spark Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_ZEPHYR_ENEMY,		"Zephyr")
+DEFSTRING(CARDTEXT_DESC_ZEPHYR_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_ETERNAL_SPARK,		"Eternal Spark")
+DEFSTRING(CARDTEXT_DESC_ETERNAL_SPARK,		"~A shard of the Eternal Storm. A fraction of power that few could ever hope to control.~\n\nWhenever you are encountered by a character, they lose 1 life for each Armour and Weapon they have.")
+
+DEFSTRING(CARDTEXT_NAME_ATROPAS_HUSK,		"Atropa's Husk")
+DEFSTRING(CARDTEXT_DESC_ATROPAS_HUSK,		"~The Husk offers protection against the power of destiny.~\n\nIf you are defeated in battle or psychic combat and just lost a life, replenish 1 fate then roll 1 die.\nIf the result is less than or equal to your current fate, you are protected and you did not lose that life, though you still lost the attack.")
+DEFSTRING(CARDTEXT_NAME_ASPECT_OF_THE_MIRE,		"Aspect of the Mire")
+DEFSTRING(CARDTEXT_DESC_ASPECT_OF_THE_MIRE,		"~This simple boon serves as a reminder of your atrocities.~\n\nIncrease your fate value by 1.\n\nWhenever a character lands on the Cursed Glade, you may replenish fate up to your fate value.")
+DEFSTRING(CARDTEXT_NAME_RUNELORDS_TABLET,		"Runelord's Tablet")
+DEFSTRING(CARDTEXT_DESC_RUNELORDS_TABLET,		"~A symbol of recognition awarded by the last Runelord that allows greater manipulation of the ancient runes.~\n\nAdd 2 to your attack roll on Runes spaces for each Runic token you have, instead of 1.\n\nAfter rolling the die when praying, you may add 1 to the result for each Runic token you have.")
+
+DEFSTRING(CARDTEXT_NAME_ATROPA,		"Atropa")
+DEFSTRING(CARDTEXT_DESC_ATROPA, "\
+~There are rumours a dark magic fills the trees of the swamp, some even bore life. It is also said that these trees protect this magical domain, guarding it from those who would desecrate it.~\n\n\
+After you resolve a battle or psychic combat with Atropa, choose a different Region, and move Atropa to a space within that Region.\n\n\
+Whenever a character spends fate in the same Region as Atropa, Atropa heals 1 life and the Aspect of the Mire is returned to the deck.\n\n\
+Any characters in the same Region as Atropa may not gain or replenish fate.\n\n\
+Each time you defeat Atropa, you may choose to replenish fate up to your fate value, remove a life from Atropa, teleport to any space with the same name, or receive the Aspect of the Mire Beast Reward.\n\n\
+If you kill Atropa, take both the Aspect of the Mire and Atropa's Husk Beast Rewards.")
+DEFSTRING(CARDTEXT_NAME_KERNOS,		"Kernos")
+DEFSTRING(CARDTEXT_DESC_KERNOS, "\
+~In the Great Silence, a mighty Runelord was lain to rest. Their body was salvaged and scattered throughout the land as idols to worship. Aeons passed and with the resurgence of magic across the land, the etched stones began to glow with the power imbued within them, reawakening that which once lay within.~\n\n\
+Kernos starts with five Runic tokens.\n\n\
+Kernos' life is equal to the number of Runic tokens it holds.\n\n\
+At the end of each round, Kernos is drawn towards the nearest character (not in the Inner Region) that has a Spell, move Kernos one space per Spell that character holds. If there is a tie or no characters with a Spell, Kernos does not move. Place a Runes Terrain card wherever Kernos ends its turn.\n\n\
+If you are defeated by Kernos, return any Runic tokens you have instead of losing a life. You are then transported to another Runes space chosen by the character to your right.\n\n\
+Each time you defeat Kernos, the Runelord rewards you with a Runic token. Add 1 to your attack roll on Runes spaces for each Runic token you have.\n\n\
+If you kill Kernos, place the Shrine of Kernos on your space and take the Runelord's Tablet Beast Reward.")
+
+DEFSTRING(CARDTEXT_NAME_VIRGIL, "Virgil")
+DEFSTRING(CARDTEXT_DESC_VIRGIL, "\
+~The origin of man, worshipped for the primal forms of combat. An arm for each style mastered. Every hand armed with a Weapon; every Weapon mastered to perfection. A duel against this titan would be like duelling against an army.~\n\n\
+When Virgil is revealed, remove all Weapons from all spaces and characters and place them on Virgil.\n\n\
+At the end of each round, Virgil moves 1 space counter-clockwise.\n\n\
+All Weapon modifiers on Weapons held by Virgil will be used by him in battle or psychic combat. Ignore any extra effects.\n\n\
+If Virgil lands on the Temple and there are no Weapons on that space, remove all Weapons from all characters and place them on Virgil. If no Weapons are removed this way, Virgil reaches the Apex.\n\n\
+Each time you defeat Virgil, take a Duel Order Beast Reward and any Weapon from him.\n\n\
+If you kill Virgil, you may take any Weapons from him. You also receive the Asura Regalia Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_VIRGIL_ENEMY,		"Virgil")
+DEFSTRING(CARDTEXT_DESC_VIRGIL_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_DUEL_ORDER,		"Duel Order")
+DEFSTRING(CARDTEXT_DESC_DUEL_ORDER,		"~Invoke the Ancient Rites, claim the approval of Asura.~\n\nInstead of moving normally, you may teleport to the same space as another character and attack them. Neither character may use Weapons or Armour in this battle or psychic combat. In addition to any other rewards, the winner gains 1 Strength in battle or 1 Craft in psychic combat.")
+DEFSTRING(CARDTEXT_NAME_ASURA_REGALIA,		"Asura Regalia")
+DEFSTRING(CARDTEXT_DESC_ASURA_REGALIA,		"~An ancient symbol takes root within your soul, it fills with you with the desire for battle. For each Weapon held, a hand appears, ready to wield another.~\n\nYou may use any number of Weapons in battle or psychic combat.\n\nWhenever you land on a space with another character, you must attack them instead of encountering the space.")
+DEFSTRING(CARDTEXT_NAME_PRIMORDIUS, "Ambrades")
+DEFSTRING(CARDTEXT_DESC_PRIMORDIUS, "\
+~There are those who say it was a creature who drank from carelessly discarded potions. Some say it emerged from a stream corrupted by dark magic. Others say it is much more ancient than many would believe. Whatever its origin, one thing is for certain, its hunger for anything to add to its mass is almost impossible to fulfil.~\n\n\
+At the end of each round, Ambrades moves one space to the nearest Beast. If there are no Beasts in play it moves towards the nearest character instead.\n\n\
+If Ambrades lands on a space with a Beast, it attempts to absorb the Beast. Roll 1 die:\n1) Nothing Happens. 2-3) Weaken the Beast. 4-5) Weaken the Beast twice. 6) Kill the Beast.\nIf Ambrades kills the Beast this way place it onto Ambrades.\n\n\
+Ambrades adds 4 to his attack roll for each Beast he has absorbed.\n\n\
+If Ambrades lands on a space with a character, that character is killed and Ambrades gains 1 life.\n\n\
+When Ambrades has absorbed 3 Beasts, he reaches the Apex.\n\n\
+Each time you defeat Ambrades, you gain 1 life and you may take the Rewards on the other Beasts absorbed by Ambrades as though you killed them. Then remove them from the game.\n\n\
+If you kill Ambrades, take the Primal Origin Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_PRIMORDIUS_ENEMY,		"Ambrades")
+DEFSTRING(CARDTEXT_DESC_PRIMORDIUS_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_JURASSUS, "Jurassus")
+DEFSTRING(CARDTEXT_DESC_JURASSUS, "\
+~Sealed long ago by the power of magic, Jurassus learned to pollute the arcane forces that bound him. Through the pollution he manifests, consuming the magic of the land, and spreading his plague.~\n\n\
+At the end of each round, every character (not in the Inner Region) is moved one space closer to Jurassus for each Spell and Magic Object they have.\n\n\
+If Jurassus moves a character onto his space, they lose 1 life for each Spell and Magic Object they have. Jurassus then places a Cursed Glade Terrain card on the closest space that is not already a Cursed Glade.\n\n\
+Jurassus adds 1 to his attack roll for all Spells and Magic Objects held by all characters on a Cursed Glade.\n\n\
+If Jurassus attempts to place a Cursed Glade Terrain card and there are none available, Jurassus reaches the Apex, draining the land of all magic and life.\n\n\
+If you kill Jurassus, take the Magical Blight Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_JURASSUS_ENEMY,		"Jurassus")
+DEFSTRING(CARDTEXT_DESC_JURASSUS_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_KHEPRI, "Su'Rua Tu")
+DEFSTRING(CARDTEXT_DESC_KHEPRI, "\
+~Having fled her original nest that was brought to ruin in a natural disaster, the Hive Queen now terrorises the surface. Drawn to the power and warmth emitting from the Crown of Command, she wishes to establish a new hive, one that will engulf the whole Land of Talisman so that none shall harm her brood.~\n\n\
+At the end of each round, Su'Rua Tu moves 3 spaces clockwise and 1 additional space for each space she moves through containing a Brood token.\n\n\
+Any characters Su'Rua Tu passes whilst moving lose 1 life and must miss their next turn trapped in her web.\n\n\
+When Su'Rua Tu lands on a space, she places 1 Brood token on that space, she then discards all faceup Enemies on that space and places an additional Brood token down for each Enemy discarded.\n\n\
+Characters on spaces with Brood tokens reduce their rolls by 1 for each Brood token on that space.\n\n\
+After a characters ends their turn on a space with a Brood token, remove any Brood tokens there.\n\n\
+If there is a Brood token on each space in Su'Rua Tu's Region, she reaches the Apex.\n\n\
+Each time you defeat Su'Rua Tu, take a Deadly Poison Beast Reward.\n\n\
+If you kill Su'Rua Tu, take the Queen Crest Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_KHEPRI_ENEMY,		"Su'Rua Tu")
+DEFSTRING(CARDTEXT_DESC_KHEPRI_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_THRANO, "Thrano")
+DEFSTRING(CARDTEXT_DESC_THRANO, "\
+~One of few that remain of a species that have existed since a time before recorded history and long thought to be just myth. This horned terror has ventured out of its hidden home to explore and assert its dominance over this unfamiliar land. Those foolish enough to stand against this Beast should not underestimate the wrath it will bring down upon them.~\n\n\
+At the end of each round, Thrano rolls two dice for movement, then moves that many spaces towards the closest character and continues in that direction around the board.\n\n\
+Any characters Thrano passes whilst moving must lose 1 life, or discard a Follower. Thrano will then miss his next turn.\n\n\
+If you defeat Thrano in battle, take a Wild Ivory Beast Reward. If you defeat Thrano in psychic combat, gain 1 Strength.")
+DEFSTRING(CARDTEXT_NAME_THRANO_ENEMY,		"Thrano")
+DEFSTRING(CARDTEXT_DESC_THRANO_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_AMAROK, "Amarok")
+DEFSTRING(CARDTEXT_DESC_AMAROK, "\
+~Having witnessed many beasts young and old have their lives cut short. The Beast King has stepped forth onto the battlefield to strike back against those who wish to slay his kin. Man has built cages and walls around nature, Amarok will return the wilds.~\n\n\
+Amarok rolls two dice in battle and adds them together for his attack roll.\n\n\
+If you attack Amarok, reveal cards from the top of the Adventure deck until you reveal an Animal. Place the Animal on his space, then fight them together, discard all other cards revealed this way.\n\n\
+Whenever an Animal is attacked, Amarok will come to defend it. He moves to that space and fights alongside that Animal.\n\n\
+If Amarok successfully defends an Animal, it joins his pack, and is placed on Amarok's card. Amarok adds 1 to his attack roll in battle or psychic combat for each Animal in his pack.\n\n\
+If you kill Amarok, take the Shard of the Wild Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_AMAROK_ENEMY,		"Amarok")
+DEFSTRING(CARDTEXT_DESC_AMAROK_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_WODAN, "Moroz")
+DEFSTRING(CARDTEXT_DESC_WODAN, "\
+~Tired of the seasonal rules that restrict his time on this land. His cold heart desires to create an eternal winter so that he may roam freely forever more.~\n\n\
+After a character (not in the Inner Region) draws an Event, Moroz moves to their space.\n\n\
+Characters in the same Region as Moroz may only move 1 space per turn.\n\n\
+If defeated by Moroz, in addition to losing 1 life, you must miss your next turn.\n\n\
+Each time you defeat Moroz, take a Frozen Winds Beast Reward.\n\n\
+If you kill Moroz, take the Blizzard Beard Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_WODAN_ENEMY,		"Moroz")
+DEFSTRING(CARDTEXT_DESC_WODAN_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_ORIGIN,		"Primal Origin")
+DEFSTRING(CARDTEXT_DESC_ORIGIN,		"~The core of a monstrosity that has pillaged the land clean of life.~\n\nWhenever you kill an Enemy, you may gain 1 Strength, 1 Craft or 1 life instead of taking it as a trophy.")
+DEFSTRING(CARDTEXT_NAME_FROZEN_WINDS,		"Frozen Winds")
+DEFSTRING(CARDTEXT_DESC_FROZEN_WINDS,		"~The passive power of Moroz can become so cold it can become solid enough to reach out and take it. This frozen power can protect your body from the coldest of storms.~\n\nIf an effect limits your movement to 1 space per turn, you may add up to 3 to your movement.\n\nYou may discard this card to force all other characters in this Region to miss 1 turn.")
+DEFSTRING(CARDTEXT_NAME_BLIZZARD_BEARD,		"Blizzard Beard")
+DEFSTRING(CARDTEXT_DESC_BLIZZARD_BEARD,		"~While Moroz is defeated his curse lives on, for all except the one who holds his head.~\n\nAll other characters in your Region may only move 1 space per turn.\n\nIf you defeat another character in battle, they must miss their next turn.")
+DEFSTRING(CARDTEXT_NAME_MAGICAL_BLIGHT,		"Magical Blight")
+DEFSTRING(CARDTEXT_DESC_MAGICAL_BLIGHT,		"~Too proud of his grand creation for it to perish with him, Jurassus gifts his conqueror the secrets of his plague magic.~\n\nYou cannot be affected by Spells, and Magic Objects cannot be used against you.\n\nYou are unaffected by the Cursed Glade space.\n\nIncrease your Spell limit by 3.")
+DEFSTRING(CARDTEXT_NAME_DEADLY_POISON,		"Deadly Poison")
+DEFSTRING(CARDTEXT_DESC_DEADLY_POISON,		"~A poison which is especially effective against the Ancient Beasts which Su'Rua Tu uses to protect her brood.~\n\nIf you defeat a character in battle or psychic combat and cause them to lose a life, you may discard this card to force them to lose an additional life.\n\nIf you defeat a Beast in battle or psychic combat and weaken it, you may discard this card and weaken it an additional time.")
+DEFSTRING(CARDTEXT_NAME_QUEEN_CREST,		"Queen Crest")
+DEFSTRING(CARDTEXT_DESC_QUEEN_CREST,		"~The Crown of Su'Rua Tu. You can sense the brood around the land of Talisman, they offer themselves in submission to your will.~\n\nWhen taken, place 3 Brood tokens on this card. When Brood tokens are removed from the board, place them on this card.\n\nYou may spend 1 life or 1 fate to place a Brood token from this card on your space.\n\nAt the end of your turn you may remove a Brood token from your space to replenish 1 life or fate.\n\nYou may add 1 to your roll for each Brood token your space.")
+DEFSTRING(CARDTEXT_NAME_WILD_IVORY,			"Wild Ivory")
+DEFSTRING(CARDTEXT_DESC_WILD_IVORY,			"~Contained inside is the wrath of the world. Being near the Ivory fills you with the will of calamity.~\n\nYou may roll two dice for your movement and choose one of the results to use for your move.\n\nYou may add your movement roll to your Strength in battle.")
+DEFSTRING(CARDTEXT_NAME_ATROPA_ENEMY,		"Atropa")
+DEFSTRING(CARDTEXT_DESC_ATROPA_ENEMY,		"%s")
+DEFSTRING(CARDTEXT_NAME_SHARD_OF_THE_WILD,			"Shard of the Wild")
+DEFSTRING(CARDTEXT_DESC_SHARD_OF_THE_WILD,			"~Inside you can hear the creatures in the Realm of Souls; crying in anguish to protect their kin.~\n\nAdd 1 to your attack roll in battle for each Animal on the board and in the discard pile.")
+
+DEFSTRING(CARDTEXT_NAME_IFRIT_SULTAN_10, "Ifrit Sultan")
+DEFSTRING(CARDTEXT_NAME_IFRIT_SULTAN_12, "Ifrit Sultan")
+DEFSTRING(CARDTEXT_NAME_IFRIT_SULTAN_14, "Ifrit Sultan")
+DEFSTRING(CARDTEXT_NAME_MENDICANT_ENEMY, "Mendicant")
+DEFSTRING(CARDTEXT_NAME_OLD_MAN_OF_THE_SEA_ENEMY, "Old Man of the Sea")
+DEFSTRING(CARDTEXT_NAME_WITCH_FINDER_ENEMY, "Witch Finder")
+
+DEFSTRING(CARDTEXT_DESC_IFRIT_SULTAN_10, "%s\n\nA character in the same Region as the Ifrit Sultan at the start of their turn must either place 1 fireland token on their space or burn 1 of their cards. When the Ifrit Sultan is defeated remove all fireland tokens from this Region. He will remain here until killed.")
+DEFSTRING(CARDTEXT_DESC_IFRIT_SULTAN_12, "%s\n\nA character in the same Region as the Ifrit Sultan at the start of their turn must either place 1 fireland token on their space or burn 1 of their cards. When the Ifrit Sultan is defeated remove all fireland tokens from this Region. He will remain here until killed.")
+DEFSTRING(CARDTEXT_DESC_IFRIT_SULTAN_14, "%s\n\nA character in the same Region as the Ifrit Sultan at the start of their turn must either place 1 fireland token on their space or burn 1 of their cards. When the Ifrit Sultan is defeated remove all fireland tokens from this Region. He will remain here until killed.")
+DEFSTRING(CARDTEXT_DESC_MENDICANT_ENEMY, "%s")
+DEFSTRING(CARDTEXT_DESC_OLD_MAN_OF_THE_SEA_ENEMY, "%s")
+DEFSTRING(CARDTEXT_DESC_WITCH_FINDER_ENEMY, "%s")
+DEFSTRING(CARDTEXT_NAME_DEVOUT_BLACKSMITH_ENEMY, "Devout Blacksmith")
+DEFSTRING(CARDTEXT_DESC_DEVOUT_BLACKSMITH_ENEMY, "%s")
+
+DEFSTRING(CARDTEXT_NAME_TERRAIN_SHRINE_OF_KERNOS, "Shrine of Kernos")
+DEFSTRING(CARDTEXT_DESC_TERRAIN_SHRINE_OF_KERNOS, "PRAY: ROLL 2 DICE\n2-4) Discard all of your Spells and miss your next turn.\n5-6) Discard a Spell, if you are unable; lose 1 life instead.\n7-8) Place a Runes Terrain card.\n9-10) Gain 1 Craft or 1 Spell if your Craft allows.\n11+) Gain 1 Craft then gain your full complement of Spells, according to your Craft.")
+
+DEFSTRING(CARDTEXT_NAME_KALLIND, "Kallind")
+DEFSTRING(CARDTEXT_DESC_KALLIND, "\
+~Guardian and ancestor of the Dragons, Kallind was enraged at the defilement of the sacred Dragon Realm and the royal Dragon Tower. The Smouldering Titan seeks its revenge on the heroes of Talisman, rendering those who stand in its path into smouldering heaps of ash.~\n\n\
+Whilst a Dragon is on the board, Kallind cannot be encountered.\n\n\
+Dragons in the same Region as Kallind add 3 to their attack scores.\n\n\
+For each point of life Kallind is missing, increase its Strength and Craft by 2. \n\n\
+Each time you encounter Kallind, you are engulfed by the protective ash cloud and must lose 1 life.\n\n\
+At the end of each round, Kallind heals 1 life and moves up to 4 spaces towards the nearest Dragon if able.\n\n\
+When Kallind comes to rest, it consumes the area in a choking hot ash cloud. Any Followers in that space are killed, and all other Adventure cards remaining which are not Dragons are discarded. Any characters in the space must lose 1 life.\n\n\
+If you defeat Kallind, you may encounter it again immediately.\n\n\
+If you kill Kallind, take the Glaive of Kallind Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_KERNOS_ENEMY, "Kernos")
+DEFSTRING(CARDTEXT_DESC_KERNOS_ENEMY, "%s")
+
+DEFSTRING(CARDTEXT_NAME_PHOBOS, "Phobos")
+DEFSTRING(CARDTEXT_DESC_PHOBOS, "\
+~Embroiled in an eternal sibling rivalry, the Twins roam around the regions in an attempt to gain favour with the gods, standing apart from each other's efforts until brought face to face with one another.~\n\n\
+When Phobos is revealed, Deimos is drawn from the deck as well, then Phobos becomes frenzied.\n\n\
+At the end of each round, Phobos moves 3 spaces clockwise and if frenzied; an additional space.\\n\n\
+The Twins alternate being calm and frenzied. If frenzied, their Strength and Craft values are doubled, and their effects do not take place. If either loses a life, it becomes frenzied and the other calm.\n\n\
+If the Twins are ever across the Storm River from one another, they will exchange places, and whichever is frenzied will take a life from the other. Their temperament is then swapped.\n\n\
+When characters in the same Region as Phobos trade-in trophies to gain Craft, reduce the number of Craft points needed by 1.\n\n\
+If Deimos is killed, Phobos becomes permanently frenzied.\n\n\
+If you defeat Phobos, take the Phobos' Fury Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_PHOBOS_ENEMY, "Phobos")
+DEFSTRING(CARDTEXT_DESC_PHOBOS_ENEMY, "%s")
+DEFSTRING(CARDTEXT_NAME_PHOBOS_FURY, "Phobos' Fury")
+DEFSTRING(CARDTEXT_DESC_PHOBOS_FURY, "~A manifestation of the primitive will and thirst for knowledge.~\n\nIncrease your Craft value by 1.\n\nYou may hold 1 more Spell than your Craft allows.\n\nAt the start of your turn, you may gain 1 Spell if your Craft allows.")
+
+DEFSTRING(CARDTEXT_NAME_DEMIOS, "Deimos")
+DEFSTRING(CARDTEXT_DESC_DEMIOS, "\
+~Embroiled in an eternal sibling rivalry, the Twins roam around the regions in an attempt to gain favour with the gods, standing apart from each other's efforts until brought face to face with one another.~\n\n\
+When Deimos is revealed, Phobos is drawn from the deck as well, then Deimos becomes frenzied.\n\n\
+At the end of each round, Deimos moves 3 spaces clockwise and if frenzied; an additional space.\n\n\
+The Twins alternate being calm and frenzied. If frenzied, their Strength and Craft values are doubled, and their effects do not take place. If either loses a life, it becomes frenzied and the other calm.\n\n\
+If the Twins are ever across the Storm River from one another, they will exchange places, and whichever is frenzied will take a life from the other. Their temperament is then swapped.\n\n\
+When characters in the same Region as Deimos trade-in trophies to gain Strength, reduce the number of Strength points needed by 1.\n\n\
+If Phobos is killed, Deimos becomes permanently frenzied.\n\n\
+If you defeat Deimos, take the Deimos' Wrath Beast Reward.")
+DEFSTRING(CARDTEXT_NAME_DEMIOS_ENEMY, "Deimos")
+DEFSTRING(CARDTEXT_DESC_DEMIOS_ENEMY, "%s")
+DEFSTRING(CARDTEXT_NAME_DEMIOS_WRATH, "Deimos' Wrath")
+DEFSTRING(CARDTEXT_DESC_DEMIOS_WRATH, "~You are overcome with a lust for power and domination.~\n\nIncrease your Strength value by 2.\n\n Your Object carrying limit is increased by 4.")
+DEFSTRING(CARDTEXT_NAME_GLAIVE_OF_KALLIND, "Glaive of Kallind")
+DEFSTRING(CARDTEXT_DESC_GLAIVE_OF_KALLIND, "~The tail of Kallind resonates in the presence of any Ancient Beasts.~\n\n\
+If you defeat a Beast in battle or psychic combat and cause it to lose a life, you may absorb a part of its soul by placing 1 Soul Fragment token on this card.\n\n\
+Add 1 to your attack score for each Soul Fragment token on this card.\n\n\
+If there are 10 or more Soul Fragment tokens are on this card, you win the game.")

@@ -1,0 +1,25 @@
+DEFSTRING(CARDTEXT_DESC_CROWN_OF_COMMAND_ENDING,\
+"If a character is on the Crown of Command and no other characters are present, they must cast one Command Spell at the start of each of their turns. If a 1, 2, or 3 is rolled, the Spell has no effect. On a 4, 5, or 6 all other characters lose 1 life.\n\n\
+If a character is on the Crown of Command and there is another character present, they must encounter the other character instead of casting the Command Spell.")
+DEFSTRING(CARDTEXT_DESC_DANSE_MACABRE,\
+"* Whenever a character rolls on the Grim Reaper's chart, they must subtract one from the result (to a minimum of 1).\n\n\
+If a character is on the Crown of Command and no other characters are present, they must send the Grim Reaper to visit any character in any Region.\n\n\
+If a character is on the Crown of Command and there is another character present, at the beginning of their turn, they must attack the other character instead of sending the Grim Reaper to visit another character.")
+DEFSTRING(CARDTEXT_DESC_WARLOCK_QUESTS_ENDING,\
+"* Each character begins the game with four randomly drawn Warlock Quests.\n\n\
+* Whenever a character completes a Warlock Quest, it is not removed from the game. Instead the card is kept in the character's play area facedown. Characters do not receive any rewards (i.e., being teleported to the Warlock's Cave and gaining a Talisman) for completing their first three Warlock Quests. When a character completes their fourth Warlock Quest (and has four quests facedown in front of them) they receive the normal reward.\n\n\
+* If a character is killed, they must keep all of their Warlock Quests (both completed and uncompleted).\n\n\
+* The first character to reach the Crown of Command with four or more completed Warlock Quests wins the game!")
+DEFSTRING(CARDTEXT_DESC_CROWN_AND_SCEPTRE,\
+"If a character is on the Crown of Command and no other characters are present, they must cast one Command Spell at the start of each character's turn (including their own). However, they do not need to roll a die to cast the Command Spell, it automatically succeeds and all other characters lose one life.\n\n\
+If a character is on the Crown of Command and there is another character present, at the beginning of their turn they must attack the other character instead of casting the Command Spell. However, they may choose to fight in battle or psychic combat. They may not choose when they are attacked by another character.\n\n\
+* Once a character reaches the Crown of Command, characters cannot heal or gain life for the rest of the game. If all other characters are killed, the character on the Crown wins the game!")
+DEFSTRING(CARDTEXT_DESC_ICE_QUEEN_ENDING,\
+"A character on the Crown of Command must choose whether to attack the Ice Queen using Strength or Craft. Each time they defeat the Ice Queen, they must remove one of her lives and immediately attack her again. If they are defeated, in addition to losing 1 life, their turn ends and they must roll 1 die:\n\
+         1-2) They lose their next 2 turns\n\
+         3-4) They lose their next turn\n\
+         5-6) They may flee and immediately move to the Plain of Peril\n\n\
+If a new character removes the Ice Queen's last life, they win the game! If another character has already removed some of the Ice Queen's lives, then a character only needs to remove the Ice Queen's remaining lives to win the game.\n\n\
+If there are no characters on the Crown of Command, the Ice Queen heals all her lives.")
+DEFSTRING(CARDTEXT_DESC_LORD_OF_DARKNESS_ENDING,\
+"This alternative rule replaces the regular victory condition.\n\nInstead of winning the game by reaching the Crown of Command, the first player to kill the Lord of Darkness wins!")
